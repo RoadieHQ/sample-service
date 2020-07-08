@@ -1,0 +1,23 @@
+{
+  "name": "sample-service",
+  "version": "0.0.1",
+  "description": "A toy service for testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoadieHQ/sample-service.git"
+  },
+  "author": "Larder, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoadieHQ/sample-service/issues"
+  },
+  "homepage": "https://github.com/RoadieHQ/sample-service#readme",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
