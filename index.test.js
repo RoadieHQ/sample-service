@@ -1,9 +1,17 @@
 const assert = require('assert');
 
-const { sum } = require('./index');
+const { sum, subtract } = require('./index');
 
-describe('#sum', function () {
-  it('should return 3', function () {
-    assert.equal(sum(2, 1), 3);
+describe('Math', function () {
+  describe('#sum', function () {
+    it('should return 3', function () {
+      assert.equal(sum(2, 1), 3);
+    });
+  });
+
+  describe('#subtract', function () {
+    it('should return 3', function () {
+      assert.equal(subtract(5, 2), 3);
+    });
   });
 });
