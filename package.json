@@ -19,5 +19,9 @@
   "homepage": "https://github.com/RoadieHQ/sample-service#readme",
   "devDependencies": {
     "mocha": "^8.0.1"
+  },
+  "dependencies": {
+    "@sentry/node": "5.19.2",
+    "express": "^4.17.1"
   }
 }

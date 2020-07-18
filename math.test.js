@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const { sum, subtract } = require('./index');
+const { sum, subtract } = require('./math');
 
 describe('Math', function () {
   describe('#sum', function () {
