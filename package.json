@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha *.test.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/RoadieHQ/sample-service#readme",
   "devDependencies": {
+    "eslint": "^7.5.0",
     "mocha": "^8.0.1"
   },
   "dependencies": {
