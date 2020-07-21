@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'yarn run lint'
-        sh 'yarn test'
+        sh 'npm run lint'
+        sh 'npm test'
       }
     }
   }
