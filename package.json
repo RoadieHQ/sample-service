@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@sentry/node": "5.19.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rollbar": "^2.18.0"
   }
 }
