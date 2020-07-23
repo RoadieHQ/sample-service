@@ -2,11 +2,24 @@ const express = require('express');
 const Sentry = require('@sentry/node');
 const Rollbar = require('rollbar');
 const get = require('lodash/get');
+const winston = require('winston');
+const expressWinston = require('express-winston');
 
 const app = express();
 
+
 Sentry.init({ dsn: process.env.SENTRY_INGESTION_URL });
 
+const logger = expressWinston.logger({
+  level: 'info',
+  format: winston.format.json(),
+  defaultMeta: { service: 'sample-service' },
+  transports: [
+    new winston.transports.Console(),
+  ],
+});
+
+app.use(logger);
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
 
