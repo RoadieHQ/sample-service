@@ -1,11 +1,13 @@
 const express = require('express');
 const Sentry = require('@sentry/node');
 const Rollbar = require('rollbar');
+const get = require('lodash/get');
 
 const app = express();
 
 Sentry.init({ dsn: process.env.SENTRY_INGESTION_URL });
 
+app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
 
 var rollbar = new Rollbar({
@@ -21,36 +23,31 @@ app.get('/', function rootHandler(req, res) {
   });
 });
 
-app.get('/debug-sentry', function mainHandler(req, res) {
+app.post('/debug-sentry', function mainHandler(req, res) {
+  const errorMsg = get(req, 'body.errorMessage', 'My first Sentry error!');
+
   try {
-    throw new Error('My first Sentry error!');
+    throw new Error(errorMsg);
   } catch (e) {
-    // Do nothing. We wanted an error.
+    // Do nothing. This is what we wanted.
   }
 
   res.json({
-    message: 'Error sent to Sentry',
+    message: `Error sent to Sentry: "${errorMsg}"`,
   });
 });
 
-app.get('/debug-rollbar', function mainHandler(req, res) {
-  rollbar.error('This is a test Rollbar error');
+app.post('/debug-rollbar', function mainHandler(req, res) {
+  const errorMsg = get(req, 'body.errorMessage', 'My first Rollbar error!');
+  rollbar.error(errorMsg);
 
   res.json({
-    message: 'Error sent to Rollbar',
+    message: `Error sent to Rollbar: "${errorMsg}"`,
   });
 });
 
 // The error handler must be before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler());
-
-// Optional fallthrough error handler
-app.use(function onError(err, req, res) {
-  // The error id is attached to `res.sentry` to be returned and optionally displayed to the
-  // user for support.
-  res.statusCode = 500;
-  res.end(res.sentry + "\n");
-});
 
 app.listen(3000, () => {
   console.log('Server started on port 3000');
