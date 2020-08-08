@@ -8,7 +8,8 @@ metadata:
     Backstage plugin for Sentry.
   annotations:
     circleci.com/project-slug: RoadieHQ/sample-service
-    github.com/project-slug: 'RoadieHQ/sample-service'
+    github.com/project-slug: RoadieHQ/sample-service
+    backstage.io/github-actions-id: RoadieHQ/sample-service
 spec:
   type: service
   owner: david@roadie.io
