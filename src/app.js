@@ -7,7 +7,6 @@ const expressWinston = require('express-winston');
 
 const app = express();
 
-
 Sentry.init({ dsn: process.env.SENTRY_INGESTION_URL });
 
 const logger = expressWinston.logger({
@@ -23,7 +22,7 @@ app.use(logger);
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
 
-var rollbar = new Rollbar({
+const rollbar = new Rollbar({
   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
   captureUncaught: true,
   captureUnhandledRejections: true
@@ -62,6 +61,6 @@ app.post('/debug-rollbar', function mainHandler(req, res) {
 // The error handler must be before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler());
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+module.exports = {
+  app,
+};

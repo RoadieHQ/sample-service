@@ -2,11 +2,20 @@
   "name": "sample-service",
   "version": "0.0.1",
   "description": "A toy service for testing",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "config": {
+    "awsFunctionName": "sample-service"
+  },
   "scripts": {
-    "test": "mocha *.test.js",
-    "start": "node index.js",
-    "lint": "eslint *.js"
+    "test": "mocha dist/*.test.js",
+    "build": "babel src --out-dir dist",
+    "start": "env $(cat .env | xargs) node dist/index.js",
+    "lint": "eslint src/*.js",
+    "build:lambda": "babel src --out-dir dist",
+    "package:lambda": "rm -rf function.zip && zip -rq function.zip . -x src/* *.log .env*",
+    "deploy:lambda": "yarn run clean && yarn run build:lambda && yarn run package:lambda && aws lambda update-function-code --function-name $npm_package_config_awsFunctionName --zip-file fileb://./function.zip",
+    "invoke:lambda": "aws lambda invoke --function-name sample-service aws-invocation.log",
+    "clean": "rm -rf dist function.zip"
   },
   "repository": {
     "type": "git",
@@ -19,11 +28,15 @@
   },
   "homepage": "https://github.com/RoadieHQ/sample-service#readme",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "eslint": "^7.5.0",
     "mocha": "^8.0.1"
   },
   "dependencies": {
     "@sentry/node": "5.19.2",
+    "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1",
     "express-winston": "^4.0.5",
     "lodash": "^4.17.19",

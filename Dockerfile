@@ -8,7 +8,7 @@ COPY yarn.lock ./
 RUN yarn install --production
 
 # Bundle app source
-COPY . .
+COPY dist .
 
 EXPOSE 3000
 
