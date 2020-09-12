@@ -10,7 +10,7 @@ metadata:
     circleci.com/project-slug: RoadieHQ/sample-service
     github.com/project-slug: RoadieHQ/sample-service
     backstage.io/github-actions-id: RoadieHQ/sample-service
-    sentry.io/project-slug: roadie/sample-service
+    sentry.io/project-slug: sample-service
 spec:
   type: service
   owner: david@roadie.io
