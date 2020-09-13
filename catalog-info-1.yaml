@@ -6,7 +6,8 @@ metadata:
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
   annotations:
-    backstage.io/github-actions-id: RoadieHQ/sample-service
+    github.com/project-slug: roadiehq/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
 spec:
   type: service
