@@ -14,3 +14,5 @@ spec:
   type: service
   owner: david@roadie.io
   lifecycle: experimental
+  implementsApis:
+    - sample-service
