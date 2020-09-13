@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-2
+  description: |
+    A service for testing Backstage functionality. Configured for Circle CI
+    and Rollbar.
+  annotations:
+    circleci.com/project-slug: RoadieHQ/sample-service
+    rollbar.com/project-slug: roadie/sample-project
+spec:
+  type: service
+  owner: david@roadie.io
+  lifecycle: experimental

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-1
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    backstage.io/github-actions-id: RoadieHQ/sample-service
+    sentry.io/project-slug: sample-service
+spec:
+  type: service
+  owner: david@roadie.io
+  lifecycle: experimental
