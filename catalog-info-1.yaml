@@ -10,6 +10,7 @@ metadata:
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     backstage.io/techdocs-ref: dir:./
+    backstage.io/aws-lambda: 'sample-service'
 spec:
   type: service
   owner: david@roadie.io
