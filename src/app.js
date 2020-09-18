@@ -35,18 +35,10 @@ app.get('/', function rootHandler(req, res) {
   });
 });
 
-app.post('/debug-sentry', function mainHandler(req, res) {
+app.post('/debug-sentry', function mainHandler(req) {
   const errorMsg = get(req, 'body.errorMessage', 'My first Sentry error!');
 
-  try {
-    throw new Error(errorMsg);
-  } catch (e) {
-    // Do nothing. This is what we wanted.
-  }
-
-  res.json({
-    message: `Error sent to Sentry: "${errorMsg}"`,
-  });
+  throw new Error(errorMsg);
 });
 
 app.post('/debug-rollbar', function mainHandler(req, res) {
