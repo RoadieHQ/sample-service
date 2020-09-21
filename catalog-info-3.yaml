@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-3
+  description: |
+    A service for testing Backstage functionality. Configured for Travis CI.
+  annotations:
+    travis-ci.com/repo-slug: RoadieHQ/sample-project
+spec:
+  type: service
+  owner: dtuite
+  lifecycle: experimental
+  implementsApis:
+    - sample-service
