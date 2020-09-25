@@ -5,7 +5,7 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for Travis CI.
   annotations:
-    travis-ci.com/repo-slug: RoadieHQ/sample-project
+    travis-ci.com/repo-slug: RoadieHQ/sample-service
 spec:
   type: service
   owner: dtuite
