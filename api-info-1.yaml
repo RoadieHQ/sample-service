@@ -7,8 +7,10 @@ metadata:
     - unstable
 spec:
   type: openapi
+  lifecycle: production
+  owner: info@roadie.io
   definition: |
-    openapi: 3.0.3
+    openapi: "3.0.3"
     info:
       title: The Sample Service API
       version: 0.0.1
