@@ -4,6 +4,7 @@ const Rollbar = require('rollbar');
 const get = require('lodash/get');
 const winston = require('winston');
 const expressWinston = require('express-winston');
+const newrelic = require('newrelic');
 
 const app = express();
 
@@ -47,6 +48,20 @@ app.post('/debug-rollbar', function mainHandler(req, res) {
 
   res.json({
     message: `Error sent to Rollbar: "${errorMsg}"`,
+  });
+});
+
+app.post('/debug-newrelic', function mainHandler(req, res) {
+  const key = get(req, 'body.customAttributeKey', 'test-attribute-key');
+  const value = get(req, 'body.customAttributeValue', 'test-attribute-value');
+  newrelic.addCustomAttribute(key, value);
+
+  res.json({
+    message: `Custom attribute sent to newrelic.`,
+    data: {
+      customAttributeKey: key,
+      customAttributeValue: value,
+    },
   });
 });
 
