@@ -22,11 +22,12 @@ kubernetes via Helm and AWS Lambda.
 
 ### Helm
 
-```shell
-docker build . -t roadie/sample-service
-docker tag roadie/sample-service:latest registry.digitalocean.com/larder/sample-service:[VERSION]
-docker push registry.digitalocean.com/larder/sample-service:[VERSION]
-```
+Docker images are automatically built and pushed to Docker Hub by a GitHub action when
+new code is merged into the `master` branch.
+
+The image will be tagged with the version in the `package.json`.
+
+The repo name on Docker Hub is `roadiehq/sample-service`.
 
 There is a [helm chart for deployment to Kubernetes](https://github.com/RoadieHQ/helm-charts/tree/master/sample-service).
 

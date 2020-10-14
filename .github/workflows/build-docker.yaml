@@ -1,0 +1,35 @@
+name: Build and publish docker container
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish_container:
+    runs-on: ubuntu-latest
+
+    env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Docker Login
+        run: docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: build all packages - TS to JS
+        run: yarn run build
+
+      - name: get NPM version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: docker build
+        run: docker build . -t roadiehq/sample-service:${{ steps.package-version.outputs.current-version }}
+
+      - name: docker push
+        run: docker push roadiehq/sample-service:${{ steps.package-version.outputs.current-version }}
