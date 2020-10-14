@@ -1,6 +1,6 @@
 {
   "name": "sample-service",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A toy service for testing",
   "main": "dist/index.js",
   "config": {
