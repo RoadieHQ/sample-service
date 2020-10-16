@@ -8,7 +8,7 @@ metadata:
     github.com/project-slug: roadiehq/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
-    aws.com/lambda: us-east-1
+    aws.com/lambda/region: us-east-1
 spec:
   type: service
   owner: david@roadie.io
