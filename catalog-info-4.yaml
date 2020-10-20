@@ -9,7 +9,7 @@ metadata:
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
-    aws.com/lambda-region: us-east-1
+    aws.com/lambda-region: eu-west-1
 spec:
   type: service
   owner: david@roadie.io
