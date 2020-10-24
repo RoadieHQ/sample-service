@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service-3
+  name: sample-service-lighthouse
   description: |
     A service for testing Backstage functionality. Configured for Travis CI.
   annotations:

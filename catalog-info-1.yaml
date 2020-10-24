@@ -12,7 +12,7 @@ metadata:
     backstage.io/techdocs-ref: dir:./
 spec:
   type: service
-  owner: david@roadie.io
+  owner: dtuite
   lifecycle: experimental
   implementsApis:
     - sample-service
