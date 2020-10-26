@@ -10,7 +10,7 @@ metadata:
     rollbar.com/project-slug: roadie/sample-project
 spec:
   type: service
-  owner: group:team-a
+  owner: group:employees
   lifecycle: experimental
   implementsApis:
     - sample-service
