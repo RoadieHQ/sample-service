@@ -8,7 +8,7 @@ metadata:
     travis-ci.com/repo-slug: RoadieHQ/sample-service
 spec:
   type: service
-  owner: dtuite
+  owner: user:dtuite
   lifecycle: experimental
   implementsApis:
     - sample-service
