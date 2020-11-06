@@ -5,7 +5,7 @@ metadata:
   description: |
     A service linked to the test data API.
   annotations:
-    roadie.io/test-data-api-project: '1'
+    roadie.io/test-data-api-project: asdf
 spec:
   type: service
   owner: david@roadie.io
