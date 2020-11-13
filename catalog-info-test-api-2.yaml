@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service-with-test-data-api
+  name: sample-service-with-test-data-api-2
   description: |
     A service linked to the test data API.
   annotations:
-    roadie.io/test-data-api-project: "3"
+    roadie.io/test-data-api-project: "4"
 spec:
   type: service
   owner: david@roadie.io
