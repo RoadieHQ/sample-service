@@ -12,7 +12,7 @@ metadata:
     aws.com/lambda-region: eu-west-1
 spec:
   type: service
-  owner: david@roadie.io
+  owner: dtuite
   lifecycle: experimental
   implementsApis:
     - sample-service
