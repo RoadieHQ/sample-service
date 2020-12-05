@@ -13,7 +13,7 @@ metadata:
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
 spec:
   type: service
-  owner: david@roadie.io
+  owner: dtuite
   lifecycle: experimental
   implementsApis:
     - sample-service
