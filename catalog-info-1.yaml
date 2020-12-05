@@ -10,6 +10,7 @@ metadata:
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     backstage.io/techdocs-ref: dir:./
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
 spec:
   type: service
   owner: david@roadie.io
