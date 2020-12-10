@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+spec:
+  type: other
+  lifecycle: unknown
