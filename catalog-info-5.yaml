@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service-1
+  name: sample-service-5
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
