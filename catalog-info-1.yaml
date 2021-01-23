@@ -11,6 +11,8 @@ metadata:
     sentry.io/project-slug: sample-service
     backstage.io/techdocs-ref: dir:./
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: dtuite
+    snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
 spec:
   type: service
   owner: dtuite
