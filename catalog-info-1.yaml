@@ -15,5 +15,5 @@ spec:
   type: service
   owner: dtuite
   lifecycle: experimental
-  implementsApis:
+  providesApis:
     - sample-service
