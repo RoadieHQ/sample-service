@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: test-service
   description: Description with emojis 🤖
+annotations:
+  datadog/graph-token: 015256c3f6dfea453cb4b09107a8972ef6f5caa9676de18e44e869e188a24dc0
 spec:
   lifecycle: production
   type: service
