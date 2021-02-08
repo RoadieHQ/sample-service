@@ -1,9 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test-service
-  description: Description with emojis 🤖
+  name: sample-service-4
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: sample-service
+    aws.com/lambda-function-name: HelloWorld
+    aws.com/lambda-region: eu-west-1
 spec:
-  lifecycle: production
   type: service
-  owner: test-team
+  owner: dtuite
+  lifecycle: experimental
+  providesApis:
+    - sample-service
