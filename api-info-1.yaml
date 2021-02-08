@@ -8,7 +8,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: info@roadie.io
+  owner: engineering
   definition: |
     openapi: "3.0.3"
     info:
