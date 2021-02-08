@@ -10,7 +10,7 @@ metadata:
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
-    datadog/graph-token: 015256c3f6dfea453cb4b09107a8972ef6f5caa9676de18e44e869e188a24dc0
+    datadog/graph-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
 spec:
   type: service
   owner: dtuite
