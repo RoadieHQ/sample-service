@@ -1,0 +1,71 @@
+openapi: "3.0.3"
+info:
+  title: The Sample Service API
+  version: 0.0.1
+  description: Send errors to Rollbar or Sentry
+
+servers:
+  - url: https://sample-service.backstage-demo.roadie.io
+    description: A plublic instance which anyone can hit to generate sample data.
+
+paths:
+  /:
+    get:
+      summary: Return Hello World
+      responses:
+        '200':
+          description: A JSON object with a message key and Hello World value.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Hello world!
+
+  /debug-sentry:
+    post:
+      summary: Send an error to Sentry
+
+      requestBody:
+        description: Optional error text to send to Sentry.
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+            example:
+              errorMessage: My first Sentry Error
+
+      responses:
+        '200':
+          description: Confirmation that the error was sent.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Error sent to Sentry: "My first error"'
+                    
+  /debug-rollbar:
+    post:
+      summary: Send an error to Rollbar
+
+      requestBody:
+        description: Optional error text to send to Rollbar.
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+            example:
+              errorMessage: My first Rollbar Error
+
+      responses:
+        '200':
+          description: Confirmation that the error was sent.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Error sent to Rollbar: "My first error"'
