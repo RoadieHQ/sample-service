@@ -6,6 +6,7 @@ metadata:
     A service linked to the test data API.
   annotations:
     roadie.io/test-data-api-project: "3"
+    projectId: "4"
 spec:
   type: service
   owner: david@roadie.io
