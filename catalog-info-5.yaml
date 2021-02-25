@@ -13,7 +13,7 @@ metadata:
     datadog/graph-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     jira/project-key: TEST
     snyk.io/org-name: padraigobrien
-    snyk.io/project-ids: 52c314dc-57b9-4a5d-b001-cc260bb8cb37
+    snyk.io/project-ids: bbd41e98-04b3-4173-8dc4-f4239ed2468d
 spec:
   type: service
   owner: dtuite
