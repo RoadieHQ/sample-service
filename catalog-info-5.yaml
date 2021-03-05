@@ -12,8 +12,8 @@ metadata:
     aws.com/lambda-region: eu-west-1
     datadog/graph-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     jira/project-key: TEST
-    snyk.io/org-name: padraigobrien
-    snyk.io/project-ids: bbd41e98-04b3-4173-8dc4-f4239ed2468d
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0 
 spec:
   type: service
   owner: dtuite
