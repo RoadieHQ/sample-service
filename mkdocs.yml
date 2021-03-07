@@ -2,6 +2,7 @@ site_name: 'sample-service-1'
 
 nav:
   - Home: index.md
+  - Local development: local-development.md
 
 plugins:
   - techdocs-core
