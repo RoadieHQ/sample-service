@@ -13,4 +13,4 @@ spec:
   owner: dtuite
   lifecycle: experimental
   providesApis:
-    - sample-service
+    - spotify
