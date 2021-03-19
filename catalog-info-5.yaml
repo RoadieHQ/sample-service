@@ -10,7 +10,7 @@ metadata:
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
-    datadog/graph-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
+    datadog/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     jira/project-key: TEST
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291 
