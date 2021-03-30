@@ -14,6 +14,7 @@ metadata:
     jira/project-key: TEST
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291 
+    travis-ci.com/repo-slug: RoadieHQ/sample-service
 spec:
   type: service
   owner: dtuite
