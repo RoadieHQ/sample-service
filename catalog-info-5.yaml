@@ -5,7 +5,7 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:
-    github.com/project-slug: roadiehq/sample-service
+    github.com/project-slug: xantier/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
