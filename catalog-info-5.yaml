@@ -17,6 +17,7 @@ metadata:
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     buildkite.com/project-slug: roadie/test-pipe
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    argocd/app-name: control-app
 spec:
   type: service
   owner: dtuite
