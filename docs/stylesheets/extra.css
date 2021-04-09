@@ -1,3 +1,7 @@
+:root {
+  --md-default-fg-color--light: #bada55;
+}
+
 h1 {
   color: red;
 }
