@@ -11,8 +11,3 @@ plugins:
 # These paths are relative to the docs dorectory.
 extra_css:
   - stylesheets/extra.css
-
-theme:
-  name: material
-  palette:
-    primary: red
