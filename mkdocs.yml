@@ -11,3 +11,7 @@ plugins:
 # These paths are relative to the docs dorectory.
 extra_css:
   - extra.css
+
+theme:
+  palette:
+    primary: indigo
