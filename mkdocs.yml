@@ -13,5 +13,6 @@ extra_css:
   - stylesheets/extra.css
 
 theme:
+  name: material
   palette:
     primary: red
