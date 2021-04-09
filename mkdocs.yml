@@ -1,4 +1,4 @@
-site_name: 'sample-service-1'
+site_name: Sample Service 1
 
 nav:
   - Home: index.md
@@ -10,8 +10,8 @@ plugins:
 
 # These paths are relative to the docs dorectory.
 extra_css:
-  - extra.css
+  - stylesheets/extra.css
 
 theme:
   palette:
-    primary: indigo
+    primary: red
