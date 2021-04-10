@@ -3,20 +3,16 @@ name: Build and publish docs
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   publish_docs:
     runs-on: ubuntu-latest
 
-    env:
-      CI: true
-      NODE_OPTIONS: --max-old-space-size=4096
-
     # The following secrets are required in your CI environment for publishing files to AWS S3.
     # e.g. You can use GitHub Organization secrets to set them for all existing and new repositories.
     env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
       TECHDOCS_DIGITAL_OCEAN_SPACES_BUCKET_NAME: ${{ secrets.TECHDOCS_DIGITAL_OCEAN_SPACES_BUCKET_NAME }}
       AWS_ACCESS_KEY_ID: ${{ secrets.DIGITAL_OCEAN_SPACES_ACCESS_KEY }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.DIGITAL_OCEAN_SPACES_SECRET_KEY }}
