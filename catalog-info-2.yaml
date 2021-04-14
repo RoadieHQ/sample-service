@@ -8,6 +8,8 @@ metadata:
   annotations:
     circleci.com/project-slug: github/RoadieHQ/sample-service
     rollbar.com/project-slug: roadie/sample-project
+    aws.com/lambda-function-name: roadie-test-load-to-elastic
+    aws.com/lambda-region: eu-west-1
 spec:
   type: service
   owner: dtuite
