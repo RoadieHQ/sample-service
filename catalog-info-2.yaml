@@ -10,7 +10,7 @@ metadata:
     rollbar.com/project-slug: roadie/sample-project
     aws.com/lambda-function-name: roadie-test-load-to-elastic
     aws.com/lambda-region: eu-west-1
-    backstage.io/techdocs-ref: s3://roadie-roadie-tech-docs/component/service/sample-service-2/
+    backstage.io/techdocs-ref: url:s3://roadie-roadie-tech-docs/component/service/sample-service-2/
 spec:
   type: service
   owner: dtuite
