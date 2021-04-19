@@ -10,6 +10,7 @@ metadata:
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
+    backstage.io/techdocs-ref: url:s3    
 spec:
   type: service
   owner: dtuite
