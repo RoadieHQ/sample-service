@@ -35,7 +35,7 @@
     "mocha": "^8.0.1"
   },
   "dependencies": {
-    "@sentry/node": "5.26.0",
+    "@sentry/node": "5.30.0",
     "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1",
     "express-winston": "^4.0.5",
