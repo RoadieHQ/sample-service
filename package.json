@@ -38,7 +38,7 @@
     "@sentry/node": "5.26.0",
     "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1",
-    "express-winston": "^4.0.5",
+    "express-winston": "^4.1.0",
     "lodash": "^4.17.21",
     "newrelic": "^7.0.1",
     "rollbar": "^2.18.0",
