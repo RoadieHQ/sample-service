@@ -1,7 +1,7 @@
 ![headline](docs/assets/headline.png)
 
 ## Test docs link
-- [Features testing](feature-testing.md) - Features testing
+- [Features testing](docs/feature-testing.md) - Features testing
 - 
 # Sample Service
 
