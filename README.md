@@ -2,7 +2,7 @@
 
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
-- 
+- [Read me](README.md) - Read me document
 # Sample Service
 
 A sample service for testing build tools, displaying in Backstage, and whatever
