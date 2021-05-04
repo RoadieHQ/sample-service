@@ -4,7 +4,6 @@ nav:
   - Home: index.md
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
-  - Readme: README.md
 
 plugins:
   - techdocs-core
