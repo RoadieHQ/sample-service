@@ -27,3 +27,7 @@ Headings
 ### heading three
 
 ### heading 4
+
+Embedded images
+
+![expedia group](./the-power-of-platform-logos-updated.png)
