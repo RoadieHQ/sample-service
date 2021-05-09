@@ -24,6 +24,7 @@ curl :3000/
 
 The sample-service is designed to be deployed on multiple platforms. For example,
 kubernetes via Helm and AWS Lambda.
+Some non ASCII code .भारत .网络
 
 ### Helm
 
