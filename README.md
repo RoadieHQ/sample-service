@@ -2,6 +2,7 @@
 
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
+- [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
 - [Read me](README.md) - Read me document
 # Sample Service
 
