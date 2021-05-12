@@ -25,6 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --frozen-lockfile
+
+    - uses:  RoadieHQ/backstage-entity-validator@v0.1.0
+      with:
+        path: catalog-info-1.yaml
+
     - run: yarn run lint
     - run: yarn run build
     - run: yarn test
