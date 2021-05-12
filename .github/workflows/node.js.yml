@@ -25,6 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - uses:  RoadieHQ/backstage-entity-validator@v0.0.1
+    - uses:  RoadieHQ/backstage-entity-validator@v0.1.0
       with:
         path: 'catalog-info-1.yaml'
