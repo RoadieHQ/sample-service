@@ -28,7 +28,7 @@ jobs:
 
     - uses:  RoadieHQ/backstage-entity-validator@v0.1.0
       with:
-        path: catalog-info-1.yaml
+        path: catalog-info-broken.yaml
 
     - run: yarn run lint
     - run: yarn run build
