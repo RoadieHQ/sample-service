@@ -1,11 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: jlsdfijufio
 metadata:
-  name: sample-service-1
+  name2: sample-service-1
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
-ijflsfkljlklksdjf
 spec:
   type: service
   owner: engineering
