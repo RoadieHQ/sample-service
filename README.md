@@ -1,5 +1,5 @@
 ![headline](docs/assets/headline.png)
-![Alt](docs/assets/headline.png “CC BY-NC-SA 4.0”)
+![alt-text](docs/assets/headline.png “CC BY-NC-SA 4.0”)
 
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
