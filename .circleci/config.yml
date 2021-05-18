@@ -1,14 +1,14 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  entity-validator: "roadiehq/backstage-entity-validator@0.2.3"
+  backstage-entity-validator: roadiehq/backstage-entity-validator@0.2.3
 jobs:
   build-and-test:
     executor:
       name: node/default
     steps:
       - checkout
-      - entity-validator/validate:
+      - backstage-entity-validator/validate:
           path: catalog-info-3.yaml
       - node/with-cache:
           steps:
