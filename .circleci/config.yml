@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  backstage-entity-validator: roadiehq/backstage-entity-validator@0.2.3
+  backstage-entity-validator: roadiehq/backstage-entity-validator@0.2.4
 jobs:
   build-and-test:
     executor:
