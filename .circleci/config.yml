@@ -1,12 +1,15 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  entity-validator: "roadiehq/backstage-entity-validator@dev:alpha"
 jobs:
   build-and-test:
     executor:
       name: node/default
     steps:
       - checkout
+      - entity-validator/validate:
+          path: catalog-info-3.yaml
       - node/with-cache:
           steps:
             - run: yarn install --frozen-lockfile
