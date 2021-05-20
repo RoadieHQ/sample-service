@@ -6,3 +6,5 @@ nav:
 
 plugins:
   - techdocs-core
+
+docs_dir: /home/jussi/Development/test/
