@@ -26,6 +26,8 @@ Headings
 
 ### heading three
 
+Version number: 2
+
 ### heading 4
 
 Embedded images
