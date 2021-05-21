@@ -35,7 +35,7 @@ Embedded images
 
 # Graphviz
 
-{% dot attack_plan.svg
+{% dot
     digraph G {
         rankdir=LR
         Earth [peripheries=2]
