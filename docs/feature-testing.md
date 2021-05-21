@@ -37,8 +37,6 @@ Embedded images
 This should render a small diagram as long as `graphviz` is available in the environment
 where the docs are generated. [MkDocs will use it automatically](https://github.com/backstage/mkdocs-techdocs-core/blob/main/src/core.py#L106).
 
-
-
 {% dot attack_plan.svg
     digraph G {
         rankdir=LR
