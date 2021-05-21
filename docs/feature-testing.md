@@ -32,19 +32,12 @@ Embedded images
 
 ![expedia group](./the-power-of-platform-logos-updated.png)
 
-
 # Graphviz
 
-<dot>
-    digraph G {
-        rankdir=LR
-        Earth [peripheries=2]
-        Mars
-        Earth -> Mars
-    }
-</dot>
+This should render a small diagram as long as `graphviz` is available in the environment
+where the docs are generated. [MkDocs will use it automatically](https://github.com/backstage/mkdocs-techdocs-core/blob/main/src/core.py#L106).
 
-# Graphviz 2
+
 
 {% dot attack_plan.svg
     digraph G {
