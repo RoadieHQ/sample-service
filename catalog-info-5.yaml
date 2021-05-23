@@ -8,6 +8,7 @@ metadata:
     github.com/project-slug: roadiehq/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
+    argocd/app-name: guestbook
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
     datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
