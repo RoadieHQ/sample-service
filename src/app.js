@@ -23,6 +23,7 @@ app.use(logger);
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
 
+// TODO This is a test todo to see what happens.
 const rollbar = new Rollbar({
   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
   captureUncaught: true,
