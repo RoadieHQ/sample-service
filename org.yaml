@@ -14,7 +14,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: jussi@roadie.io
+  name: Xantier
 spec:
   profile:
     displayName: Jussi Hallila
