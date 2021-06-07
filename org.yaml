@@ -21,3 +21,16 @@ spec:
     email: jussi@roadie.io
     picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
   memberOf: [engineering, roadie-backstage-admin]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: roadie-backstage-admin
+  description: Admins for Roadie on Roadie (roadie.roadie.so)
+spec:
+  type: role
+  profile:
+    displayName: Roadie Backstage Admin
+    email: info@roadie.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: []
