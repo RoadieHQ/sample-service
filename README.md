@@ -1,4 +1,3 @@
-![headline](docs/assets/headline.png)
 ![alt-text](docs/assets/headline.png "CC BY-NC-SA 4.0")
 
 ## Test docs link
