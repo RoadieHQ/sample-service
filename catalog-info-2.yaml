@@ -14,3 +14,5 @@ spec:
   lifecycle: experimental
   providesApis:
     - spotify
+  dependencyOf:
+    - Component:sample-service-1
