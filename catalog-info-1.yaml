@@ -31,4 +31,4 @@ spec:
   providesApis:
     - sample-service
   dependsOn:
-    - sample-service-2
+    - Component:sample-service-2
