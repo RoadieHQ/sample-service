@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: demos
+  description: Collection of stuff for demos
+spec:
+  owner: roadie

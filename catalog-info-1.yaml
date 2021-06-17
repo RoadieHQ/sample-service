@@ -32,3 +32,5 @@ spec:
     - sample-service
   dependsOn:
     - Component:sample-service-2
+  partOf:
+    - Domain:demos
