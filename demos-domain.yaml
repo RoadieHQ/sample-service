@@ -5,3 +5,5 @@ metadata:
   description: Collection of stuff for demos
 spec:
   owner: roadie
+  hasPart:
+    - Component:sample-service-1
