@@ -28,9 +28,54 @@ spec:
   type: service
   owner: engineering
   lifecycle: experimental
+  system: sample-system
   providesApis:
     - sample-service
   dependsOn:
     - Component:sample-service-2
+    - Resource:sample-s3-bucket
   partOf:
     - Domain:demos
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sample-service
+  description: The Sample Service API allows you to send errors to Rollbar or Sentry.
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: engineering
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sample-s3-bucket
+  description: The s3 bucket with the sample data in it. Doesn't really exist.
+spec:
+  type: s3-bucket
+  owner: engineering
+  system: sample-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sample-system
+  description: Sample things which are good for demoing.
+spec:
+  owner: engineering
+  domain: demos
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: demos
+  description: Collection of stuff for demos
+spec:
+  owner: roadie
+  hasPart:
+    - Component:sample-service-1

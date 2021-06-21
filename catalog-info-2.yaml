@@ -12,7 +12,12 @@ spec:
   type: service
   owner: dtuite
   lifecycle: experimental
+  system: sample-system
   providesApis:
+    - sample-service
+  consumesApis:
     - spotify
   dependencyOf:
     - Component:sample-service-1
+  partOf:
+    - Domain:demos
