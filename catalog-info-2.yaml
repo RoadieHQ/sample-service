@@ -6,8 +6,8 @@ metadata:
     A service for testing Backstage functionality. Configured for Circle CI
     and Rollbar.
   annotations:
-    circleci.com/project-slug: github/roadie-demos/sample-service
-    rollbar.com/project-slug: roadie-demos/sample-project
+    circleci.com/project-slug: github/RoadieHQ/sample-service
+    rollbar.com/project-slug: RoadieHQ/sample-project
 spec:
   type: service
   owner: dtuite
