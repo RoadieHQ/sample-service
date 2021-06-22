@@ -34,8 +34,6 @@ spec:
   dependsOn:
     - Component:sample-service-2
     - Resource:sample-s3-bucket
-  hasPart:
-    - sentry-js
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -47,6 +45,8 @@ spec:
   lifecycle: production
   owner: engineering
   system: sample-system
+  subcomponentOf:
+    - Component:sample-service-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
