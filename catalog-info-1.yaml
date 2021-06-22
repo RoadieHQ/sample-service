@@ -34,8 +34,19 @@ spec:
   dependsOn:
     - Component:sample-service-2
     - Resource:sample-s3-bucket
-  partOf:
-    - Domain:demos
+  hasPart:
+    - sentry-js
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sentry-js
+  description: A JS client which communicates with the Sentry HTTP API.
+spec:
+  type: library
+  lifecycle: production
+  owner: engineering
+  system: sample-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -48,6 +59,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: engineering
+  system: sample-system
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
 ---
@@ -77,5 +89,3 @@ metadata:
   description: Collection of stuff for demos
 spec:
   owner: roadie
-  hasPart:
-    - Component:sample-service-1
