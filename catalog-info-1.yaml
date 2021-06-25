@@ -45,7 +45,6 @@ spec:
   lifecycle: production
   owner: engineering
   system: sample-system
-  subcomponentOf: sample-service-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
