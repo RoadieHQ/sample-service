@@ -32,7 +32,6 @@ spec:
     - passengers-api
   dependsOn:
     - Component:core-auth-module
-    - Component:core-queueing-library
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
