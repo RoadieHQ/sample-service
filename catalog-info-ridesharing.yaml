@@ -55,8 +55,6 @@ spec:
   type: library
   lifecycle: production
   owner: roadie
-  dependencyOf:
-    - Component:passenger-backend
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
