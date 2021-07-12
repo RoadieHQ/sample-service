@@ -5,6 +5,7 @@ metadata:
   name: sample-service
   annotations:
     github.com/project-slug: RoadieHQ/sample-service
+    backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
 spec:
   type: other
   lifecycle: unknown
