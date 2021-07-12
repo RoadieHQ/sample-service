@@ -41,7 +41,7 @@
     "express-winston": "^4.1.0",
     "lodash": "^4.17.21",
     "newrelic": "^7.0.1",
-    "rollbar": "^2.21.1",
+    "rollbar": "^2.22.0",
     "winston": "^3.3.3"
   }
 }
