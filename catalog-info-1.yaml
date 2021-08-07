@@ -88,3 +88,33 @@ metadata:
   description: Collection of stuff for demos
 spec:
   owner: roadie
+---
+apiVersion: backstage.io/v1beta2
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: log-template
+  title: Log something for demo
+  description: All it does is log things
+spec:
+  owner: roadie
+  type: service
+
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: What to log
+      required:
+        - text
+      properties:
+        text:
+          title: Text
+          type: string
+          description: Some text to log
+          ui:autofocus: true
+
+  steps:
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: "Hello, World"
