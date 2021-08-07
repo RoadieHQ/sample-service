@@ -95,26 +95,26 @@ kind: Template
 metadata:
   name: log-template
   title: Log something for demo
-  description: All it does is log things
+  description: All it does is log things. We should really invest in a better demo.
 spec:
   owner: roadie
   type: service
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:
-    - title: What to log
+    - title: What is your name?
       required:
-        - text
+        - name
       properties:
-        text:
-          title: Text
+        name:
+          title: Name
           type: string
-          description: Some text to log
+          description: You are human, right?
           ui:autofocus: true
 
   steps:
-    - id: log-message
-      name: Log Message
+    - id: proof-of-life
+      name: Log a hello world
       action: debug:log
       input:
-        message: "Hello, World"
+        message: "Hello, {{ parameters.name }}"
