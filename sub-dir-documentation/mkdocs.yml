@@ -1,9 +1,4 @@
-site_name: 'sample-service-1'
+site_name: mycomponent
 
 nav:
-  - Home: index.md
-  - Local development: local-development.md
-  - Feature Testing: feature-testing.md
-
-plugins:
-  - techdocs-core
+  - First page: index.md

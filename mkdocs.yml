@@ -1,9 +1,11 @@
-site_name: 'sample-service-1'
+site_name: Root docs
 
 nav:
   - Home: index.md
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
+  - Subdirectory docs:
+    - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 
 plugins:
-  - techdocs-core
+  - monorepo
