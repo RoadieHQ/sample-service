@@ -1,0 +1,9 @@
+site_name: 'sample-service-1'
+
+nav:
+  - Home: index.md
+  - Local development: local-development.md
+  - Feature Testing: feature-testing.md
+
+plugins:
+  - techdocs-core
