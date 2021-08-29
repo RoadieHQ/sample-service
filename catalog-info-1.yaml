@@ -23,7 +23,6 @@ metadata:
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
-    backstage.io/kubernetes-id: sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
 spec:
   type: service
