@@ -12,11 +12,6 @@ metadata:
     aws.com/lambda-region: eu-west-1
     datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     backstage.io/techdocs-ref: https://github.com/RoadieHQ/sample-service/tree/main
-    jira/project-key: TEST
-    jira/component: COMP
-    snyk.io/org-name: roadie
-    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291 
-    argocd/app-name: guestbook
     bugsnag.com/project-id: 6140a0f4e6e9e5001139af8b
     
 spec:
