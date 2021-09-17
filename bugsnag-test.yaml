@@ -8,7 +8,7 @@ metadata:
     github.com/project-slug: roadiehq/sample-service
     datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     backstage.io/techdocs-ref: https://github.com/RoadieHQ/sample-service/tree/main
-    bugsnag.com/project-id: 6140a0f4e6e9e5001139af8b
+    bugsnag.com/organisation: roadiehq/RoadieHQ
     
 spec:
   type: service
