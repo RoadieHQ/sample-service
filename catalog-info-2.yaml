@@ -9,6 +9,7 @@ metadata:
     circleci.com/project-slug: github/RoadieHQ/sample-service
     rollbar.com/project-slug: RoadieHQ/sample-project
     backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main/sub-dir-documentation
+    github.com/project-slug: RoadieHQ/sample-service
 spec:
   type: service
   owner: dtuite
