@@ -18,8 +18,8 @@ metadata:
     buildkite.com/project-slug: roadie/test-pipe
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     argocd/app-name: control-app
-    prometheus/rule: memUsage|component,node_memory_Active_bytes|instance,sum by (instance) (node_cpu_seconds_total)|instance
-    prometheus/alert: 'Excessive Memory Usage'
+    prometheus.io/rule: memUsage|component,node_memory_Active_bytes|instance,sum by (instance) (node_cpu_seconds_total)|instance
+    prometheus.io/alert: 'Excessive Memory Usage'
 spec:
   type: service
   owner: dtuite
