@@ -19,7 +19,7 @@ metadata:
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     argocd/app-name: control-app
     prometheus.io/rule: memUsage|component,node_memory_Active_bytes|instance,sum by (instance) (node_cpu_seconds_total)|instance
-    prometheus.io/alert: all
+    prometheus.io/alert: 'Excessive Memory Usage'
 spec:
   type: service
   owner: dtuite
