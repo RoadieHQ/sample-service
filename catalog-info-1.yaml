@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service-1
+  title: Sample Service 1
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
@@ -38,6 +39,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
+  title: Sentry JS
   name: sentry-js
   description: A JS client which communicates with the Sentry HTTP API.
 spec:
@@ -50,6 +52,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
+  title: Sample Service API
   name: sample-service
   description: The Sample Service API allows you to send errors to Rollbar or Sentry.
   tags:
@@ -75,6 +78,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
+  title: Sample System
   name: sample-system
   description: Sample things which are good for demoing.
 spec:
