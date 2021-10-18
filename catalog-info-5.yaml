@@ -17,6 +17,7 @@ metadata:
     jira/component: COMP
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    tech-insights/scorecard: SampleScorecard
 spec:
   type: service
   owner: user:dtuite
