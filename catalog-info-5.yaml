@@ -6,14 +6,11 @@ metadata:
     A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:
     github.com/project-slug: xantier/sample-service
-    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
-    datadog/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     jira/project-key: TEST
     snyk.io/org-name: roadie
-    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291 
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     buildkite.com/project-slug: roadie/test-pipe
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
@@ -22,7 +19,7 @@ metadata:
     prometheus.io/alert: 'Excessive Memory Usage'
 spec:
   type: service
-  owner: dtuite
+  owner: Xantier
   lifecycle: experimental
   providesApis:
     - sample-service
