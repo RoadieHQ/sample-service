@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: sample-service-1
   title: Service 1
+  labels:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
