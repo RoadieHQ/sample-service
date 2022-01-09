@@ -35,6 +35,8 @@
     "mocha": "^8.0.1"
   },
   "dependencies": {
+    "@bugsnag/js": "^7.14.1",
+    "@bugsnag/plugin-express": "^7.14.0",
     "@sentry/node": "5.30.0",
     "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1",
