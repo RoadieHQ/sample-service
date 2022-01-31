@@ -1,0 +1,24 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: http-test
+  title: Http test
+  description: test
+spec:
+  owner: user:dtuite
+  type: website
+  steps:
+    - id: readActivationPoints
+      name: Read activation points
+      action: http:backstage:request
+      input:
+        method: 'GET'
+        path: /api/roadie-activation/activation-points
+
+  output:
+    activationPoints: ${{ steps.readActivationPoints.output.body }}
+    activationPointsCode: ${{ steps.readActivationPoints.output.code }}
+    # getResponse: ${{ steps.publishToWeb.output.body }}
+    # getCode: ${{ steps.publishToWeb.output.code }}
+    # getHeaders: ${{ steps.publishToWeb.output.headers }}
