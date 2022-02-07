@@ -10,7 +10,7 @@ metadata:
     bugsnag.com/project-name: Test bugsnag app
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
-    argocd/app-selector: testlabel=roadie
+    argocd/app-selector: testlabel=rsoadie
 spec:
   type: service
   owner: irma
