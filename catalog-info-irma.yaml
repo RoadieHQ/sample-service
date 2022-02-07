@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test-service
-  title: Test service
+  name: irma-test-service
+  title: Irma Test service
   description: |
     A service for testing Backstage functionality. Cofigured for Bugsnag.
   annotations:
