@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mad-men-api
+  description: Mad Men API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: boss
+  definition:
+    $text: https://github.com/RoadieHQ/private-docs-repo/blob/test-json/test.swagger.json
