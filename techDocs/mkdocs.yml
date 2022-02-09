@@ -5,4 +5,4 @@ plugins:
   - techdocs-core
 
 nav:
-  - Overview: test-doc.md
+  - Overview: index.md
