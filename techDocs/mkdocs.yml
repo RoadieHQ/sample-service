@@ -1,8 +1,0 @@
-site_name: testcomponent
-site_description: 'Documentation for the irma-test component'
-
-plugins:
-  - techdocs-core
-
-nav:
-  - Overview: index.md
