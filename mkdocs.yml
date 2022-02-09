@@ -7,6 +7,7 @@ nav:
   - Big ToC: big-table-of-contents.md
   - Subdirectory docs:
     - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
+    - testcomponent: '!include ./techDocs/mkdocs.yml'
 
 plugins:
   - monorepo
