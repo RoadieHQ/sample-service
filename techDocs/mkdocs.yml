@@ -1,4 +1,4 @@
-site_name: 'Irma-test component'
+site_name: testcomponent
 site_description: 'Documentation for the irma-test component'
 
 plugins:
