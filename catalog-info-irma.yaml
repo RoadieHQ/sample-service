@@ -10,7 +10,7 @@ metadata:
     bugsnag.com/project-name: Test bugsnag app
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
-    backstage.io/techdocs-ref: dir:../techdocs/test-doc
+    backstage.io/techdocs-ref: dir:../techDocs/test-doc
 spec:
   type: service
   owner: irma
