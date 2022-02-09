@@ -5,9 +5,9 @@ nav:
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
   - Big ToC: big-table-of-contents.md
+  - TestDoc: test-doc.md
   - Subdirectory docs:
     - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
-    - testcomponent: '!include ./techDocs/mkdocs.yml'
 
 plugins:
   - monorepo
