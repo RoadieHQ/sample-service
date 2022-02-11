@@ -12,7 +12,3 @@ nav:
 plugins:
   - monorepo
   - techdocs-core
-
-theme: mkdocs
-  palette:
-    scheme: slate
