@@ -13,6 +13,6 @@ plugins:
   - monorepo
   - techdocs-core
 
-theme:
+theme: mkdocs
   palette:
     scheme: slate
