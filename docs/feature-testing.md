@@ -41,7 +41,6 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
 
 {% dot attack_plan.svg
     digraph G {
-        bgcolor="lightblue"
         rankdir=LR
         Earth [peripheries=2]
         Mars
