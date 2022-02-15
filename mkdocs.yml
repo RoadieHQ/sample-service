@@ -4,7 +4,4 @@ nav:
   - Home: index.md
   - Local development: local-development.md
 
-plugins:
-  - techdocs-core
-
 docs_dir: docs
