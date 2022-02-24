@@ -1,0 +1,93 @@
+---
+apiVersion: backstage.io/v1beta2
+kind: Template
+metadata:
+  name: create-cypress-project
+  title: Create Cypress Project
+  description: Create Cypress Project for e2e tests
+  tags:
+    - cypress
+    - typescript
+    - testing
+    - e2e
+
+spec:
+  owner: Ivys
+  type: website
+  parameters:
+    - title: Provide some simple information
+      required:
+        - repo_name
+        - owner
+        - product_line
+        - product
+        - project_name
+      properties:
+        repo_name:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+        description:
+          title: Repo description
+          type: string
+          description: Repo description
+        project_name:
+          title: Project name
+          type: string
+          description: Name of the project for k8s
+        product:
+          title: Product name
+          type: string
+          description: Choose your product name
+          anyOf:
+            - type: string
+              title: Loyalty
+              enum:
+                - "Loyalty"
+        product_line:
+          title: Product line
+          type: string
+          description: Choose your product line
+          anyOf:
+            - type: string
+              title: ugc
+              enum:
+                - "ugc"
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+  steps:
+    - id: template
+      name: Fetch Skeleton + Template
+      action: fetch:template
+      input:
+        url: ./skeleton
+        values:
+          description: '{{ parameters.description }}'
+          repo_name: '{{ parameters.repo_name }}'
+          owner: '{{ parameters.owner }}'
+          slack_channel: '{{ parameters.slack_channel }}'
+          product_line: '{{ parameters.product_line }}'
+          product: '{{ parameters.product }}'
+          project_name: '{{ parameters.project_name }}'
+
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: 'A static HTML website. Just like the good old days.'
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: master
+
+
+  output:
+    remoteUrl: '{{ steps.publish.output.remoteUrl }}'
