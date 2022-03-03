@@ -28,7 +28,7 @@ metadata:
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
 spec:
   type: service
-  owner: engineering
+  owner: sample-team
   lifecycle: experimental
   system: sample-system
   providesApis:
@@ -46,7 +46,7 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: engineering
+  owner: sample-team
   system: sample-system
   subcomponentOf: sample-service-1
 ---
@@ -61,7 +61,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: engineering
+  owner: sample-team
   system: sample-system
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
@@ -73,7 +73,7 @@ metadata:
   description: The s3 bucket with the sample data in it. Doesn't really exist.
 spec:
   type: s3-bucket
-  owner: engineering
+  owner: sample-team
   system: sample-system
 ---
 apiVersion: backstage.io/v1alpha1
@@ -83,7 +83,7 @@ metadata:
   name: sample-system
   description: Sample things which are good for demoing.
 spec:
-  owner: engineering
+  owner: sample-team
   domain: demos
 ---
 apiVersion: backstage.io/v1alpha1
@@ -92,7 +92,7 @@ metadata:
   name: demos
   description: Collection of stuff for demos
 spec:
-  owner: roadie
+  owner: sample-team
 ---
 apiVersion: backstage.io/v1beta2
 kind: Template
@@ -102,7 +102,7 @@ metadata:
   title: Log something for demo
   description: All it does is log things. We should really invest in a better demo.
 spec:
-  owner: roadie
+  owner: sample-team
   type: service
 
   # these are the steps which are rendered in the frontend with the form input
