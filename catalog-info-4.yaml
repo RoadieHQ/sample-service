@@ -2,15 +2,17 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service-4
+  title: Sample Service 4
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:
-    github.com/project-slug: roadiehq/sample-service
+    jenkins.io/github-folder: 'roadie/sample-service'
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
-    backstage.io/techdocs-ref: url:s3    
+    backstage.io/techdocs-ref: url:s3
+    buildkite.com/project-slug: 'samroadie/demo-data'
 spec:
   type: service
   owner: dtuite

@@ -1,3 +1,11 @@
+![alt-text](docs/assets/headline.png "CC BY-NC-SA 4.0")
+
+## Test docs link
+- [Features testing](docs/feature-testing.md) - Features testing
+- [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
+- [Read me](README.md) - Read me document
+- [Link to sybling](./LINK_ME.md) - Link to a markdown file outside the techdocs repo
+
 # Sample Service
 
 A sample service for testing build tools, displaying in Backstage, and whatever
@@ -17,6 +25,7 @@ Then run it locally like this:
 
 The sample-service is designed to be deployed on multiple platforms. For example,
 kubernetes via Helm and AWS Lambda.
+Some non ASCII code .भारत .网络
 
 ### Helm
 

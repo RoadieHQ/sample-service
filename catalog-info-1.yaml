@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service-1
+  title: Service 1
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
@@ -16,18 +17,111 @@ metadata:
       icon: dashboard
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/xantier/sample-service/tree/main
-    github.com/project-slug: roadiehq/sample-service
+    github.com/project-slug: RoadieHQ/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
+    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    backstage.io/techdocs-ref: dir:.
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
     backstage.io/kubernetes-id: sample-service
     travis-ci.com/repo-slug: RoadieHQ/sample-service
-
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
 spec:
   type: service
   owner: engineering
   lifecycle: experimental
+  system: sample-system
   providesApis:
     - sample-service
+  dependsOn:
+    - Component:sample-service-2
+    - Resource:sample-s3-bucket
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Sentry JS
+  name: sentry-js
+  description: A JS client which communicates with the Sentry HTTP API.
+spec:
+  type: library
+  lifecycle: production
+  owner: engineering
+  system: sample-system
+  subcomponentOf: sample-service-1
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  title: Sample Service API
+  name: sample-service
+  description: The Sample Service API allows you to send errors to Rollbar or Sentry.
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: engineering
+  system: sample-system
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sample-s3-bucket
+  description: The s3 bucket with the sample data in it. Doesn't really exist.
+spec:
+  type: s3-bucket
+  owner: engineering
+  system: sample-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  title: Sample System
+  name: sample-system
+  description: Sample things which are good for demoing.
+spec:
+  owner: engineering
+  domain: demos
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: demos
+  description: Collection of stuff for demos
+spec:
+  owner: roadie
+---
+apiVersion: backstage.io/v1beta2
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: log-template
+  title: Log something for demo
+  description: All it does is log things. We should really invest in a better demo.
+spec:
+  owner: roadie
+  type: service
+
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: What is your name?
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: You are human, right?
+          ui:autofocus: true
+
+  steps:
+    - id: proof-of-life
+      name: Log a hello world
+      action: debug:log
+      input:
+        message: "Hello, {{ parameters.name }}"

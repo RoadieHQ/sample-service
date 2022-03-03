@@ -6,11 +6,9 @@ services were the norm but few people are willing to spend the time it takes to 
 docs a reality.
 
 Even when you do take the time to write good docs, they end up being so difficult to find that you
-might as well not have bothered. Most teams write their docs in Confluence or Google Docs, never
-again to be seen by another human. Even the NSA couldn’t find a valuable document in Confluence. 
-Motivated teams will create a dedicated website for the software they have lovingly crafted. 
-But searching for internal software isn’t like searching the open web, Google doesn’t index your 
-internal subdomains (hopefully!).
+might as well not have bothered. Motivated teams will create a dedicated website for the software
+they have lovingly crafted. But searching for internal software isn’t like searching the open web,
+Google doesn’t index your internal subdomains (hopefully!).
 
 It’s no wonder that software teams struggle to summon the motivation to produce great docs. 
 They’re hard to write and nobody will see them anyway.

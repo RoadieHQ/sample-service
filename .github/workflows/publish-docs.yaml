@@ -1,0 +1,54 @@
+name: Build and publish docs
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  publish_docs:
+    runs-on: ubuntu-latest
+
+    # The following secrets are required in your CI environment for publishing files to AWS S3.
+    # e.g. You can use GitHub Organization secrets to set them for all existing and new repositories.
+    env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
+      TECHDOCS_DIGITAL_OCEAN_SPACES_BUCKET_NAME: ${{ secrets.TECHDOCS_DIGITAL_OCEAN_SPACES_BUCKET_NAME }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.DIGITAL_OCEAN_SPACES_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.DIGITAL_OCEAN_SPACES_SECRET_KEY }}
+      DIGITAL_OCEAN_SPACES_ENDPOINT: ${{ secrets.DIGITAL_OCEAN_SPACES_ENDPOINT }}
+      ENTITY_NAMESPACE: 'default'
+      ENTITY_KIND: 'Component'
+      ENTITY_NAME: 'sample-service-1'
+      # In a Software template, Scaffolder will replace {{cookiecutter.component_id | jsonify}}
+      # with the correct entity name. This is same as metadata.name in the entity's catalog-info.yaml
+      # ENTITY_NAME: '{{ cookiecutter.component_id | jsonify }}'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+      - uses: actions/setup-python@v2
+
+      - name: Install techdocs-cli
+        run: sudo npm install -g @techdocs/cli
+
+      - name: Print the python version
+        run: python --version
+
+      - name: Install graphviz
+        run: sudo apt install graphviz
+
+      - name: Install mkdocs and mkdocs plugins
+        run: python -m pip install mkdocs-techdocs-core==0.*
+
+      - name: Generate docs site
+        run: techdocs-cli generate --no-docker --verbose
+
+      - name: Publish docs site
+        run:
+          techdocs-cli publish --publisher-type awsS3 --storage-name
+          $TECHDOCS_DIGITAL_OCEAN_SPACES_BUCKET_NAME --entity
+          $ENTITY_NAMESPACE/$ENTITY_KIND/$ENTITY_NAME --awsEndpoint
+          $DIGITAL_OCEAN_SPACES_ENDPOINT

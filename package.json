@@ -35,13 +35,15 @@
     "mocha": "^8.0.1"
   },
   "dependencies": {
-    "@sentry/node": "5.26.0",
+    "@bugsnag/js": "^7.14.1",
+    "@bugsnag/plugin-express": "^7.14.0",
+    "@sentry/node": "5.30.0",
     "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1",
-    "express-winston": "^4.0.5",
-    "lodash": "^4.17.19",
-    "newrelic": "^6.13.2",
-    "rollbar": "^2.18.0",
+    "express-winston": "^4.1.0",
+    "lodash": "^4.17.21",
+    "newrelic": "^7.0.1",
+    "rollbar": "^2.21.1",
     "winston": "^3.3.3"
   }
 }
