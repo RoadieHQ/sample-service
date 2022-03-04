@@ -1,4 +1,4 @@
-apiVersion: backstage.io/v1beta2
+apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
@@ -28,4 +28,4 @@ spec:
       name: Log Message
       action: debug:log
       input:
-        message: "Hello, {{ parameters.name }}"
+        message: "Hello, ${{ parameters.name }}"
