@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pear-service
+  title: Pear service
+  description: Component for Pear service
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+    pagerduty.com/integration-key: 600cb2eee7ab4409d0f8e630d727bdda
+    backstage.io/techdocs-ref: dir:.
+  tags: 
+    - nodejs
+spec:
+  type: service
+  owner: engineering
+  lifecycle: experimental
