@@ -6,7 +6,7 @@ nav:
   - Feature Testing: feature-testing.md
   - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
-  - other: '!include ./another-service/docs/index.md'
+  - other: ./another-service/docs/index.md
 
 plugins:
   - monorepo
