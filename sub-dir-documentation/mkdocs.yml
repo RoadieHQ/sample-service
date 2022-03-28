@@ -2,3 +2,4 @@ site_name: mycomponent
 
 nav:
   - First page: index.md
+  - Second page: ../blob/main/docs/feature-testing.md
