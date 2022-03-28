@@ -6,8 +6,7 @@ nav:
   - Feature Testing: feature-testing.md
   - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
-  - Subdirectory docs:
-    - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
+  - other: '!include ./another-service/docs/index.md'
 
 plugins:
   - monorepo
