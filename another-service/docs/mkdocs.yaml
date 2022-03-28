@@ -3,7 +3,7 @@ site_name: 'sample-service'
 nav:
 - Home: intro.md
 - Local Development: local-development.md
-- test-doc.md
+- test: test-doc.md
 
 plugins:
 - techdocs-core
