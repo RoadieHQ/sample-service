@@ -4,7 +4,6 @@ nav:
   - Home: index.md
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
-  - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
   - Mermaid: mermaid-diagram-test1.md
 
