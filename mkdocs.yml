@@ -6,7 +6,9 @@ nav:
   - Feature Testing: feature-testing.md
   - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
-  - other: dir:../another-service/docs/index.md
+  - Mermaid: mermaid-diagram-test1.md
 
 plugins:
   - monorepo
+markdown_extensions:
+  - markdown_inline_mermaid
