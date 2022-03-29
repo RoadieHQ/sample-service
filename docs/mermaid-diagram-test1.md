@@ -1,5 +1,5 @@
 ```mermaid
-%%{init: { 'theme': 'base', 'themeVariables': { 'darkMode': 'true', 'background': 'FFFFFF' }}}%%
+%%{init: { 'theme': 'base', 'themeVariables': { 'darkMode': 'true', 'background': '00FFFFFF' }}}%%
 graph LR
   A[Start] --> B{Error?};
   B -->|Yes| C[Hmm...];
