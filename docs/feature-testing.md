@@ -65,17 +65,20 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
 This project contains a few lambdas to handle managing installations, github webhook handlers and dishing out tokens to backstage backends.
 
 ```mermaid
- graph LR
-    subgraph roadie-github-app
-        subgraph Webhook Handler
-            github-webhook -->|webhook| webhook-handler[handleWebhook.handler]
-        end
-
-        subgraph Persistence
-            get-app -->|get /roadie/all/by-service/github-app/appId| ssm
-            create-token -->|get /roadie/all/by-service/github-app/appId| ssm
-        end
-        webhook-handler --> github-api[GitHub API]
-    end
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
+        graph TD
+          A[Christmas] -->|Get money| B(Go shopping)
+          B --> C{Let me think}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
 ```
 
