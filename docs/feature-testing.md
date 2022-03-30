@@ -64,8 +64,7 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
 # Mermaid 
 This project contains a few lambdas to handle managing installations, github webhook handlers and dishing out tokens to backstage backends.
 
-```mermaid
-%%{init: {'theme':'base'}}%%
+```mermaid %%{init: {'theme':'base'}}%%
 graph LR
   subgraph roadie-github-app
     subgraph Webhook Handler
