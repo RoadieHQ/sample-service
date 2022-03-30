@@ -59,3 +59,20 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
   Goofy ->  MickeyMouse: calls
   Goofy <-- MickeyMouse: responds
 ::end-uml::
+
+
+# Mermaid 
+This project contains a few lambdas to handle managing installations, github webhook handlers and dishing out tokens to backstage backends.
+
+```mermaid
+%%{init: {'theme':'base'}}%%
+ graph LR
+    subgraph roadie-github-app
+        subgraph Webhook Handler
+            github -->|webhook| webhook-handler[handleWebhook.handler]
+        end
+
+        webhook-handler --> github[GitHub API]
+    end
+```
+
