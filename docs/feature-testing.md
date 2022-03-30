@@ -66,13 +66,12 @@ This project contains a few lambdas to handle managing installations, github web
 
 ```mermaid
 %%{init: {'theme':'base'}}%%
- graph LR
-    subgraph roadie-github-app
-        subgraph Webhook Handler
-            github -->|webhook| webhook-handler[handleWebhook.handler]
-        end
-
-        webhook-handler --> github[GitHub API]
+graph LR
+  subgraph roadie-github-app
+    subgraph Webhook Handler
+      github -->|webhook| webhook-handler[handleWebhook.handler]
     end
+    webhook-handler --> github[GitHub API]
+  end
 ```
 
