@@ -7,6 +7,8 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
+  tags: 
+    - test
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
       title: What is the Sample Service?
