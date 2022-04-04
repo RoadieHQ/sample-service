@@ -13,6 +13,7 @@ metadata:
     aws.com/lambda-region: eu-west-1
     backstage.io/techdocs-ref: url:s3
     buildkite.com/project-slug: 'samroadie/demo-data'
+    qameta.io/allure-project: value    
 spec:
   type: service
   owner: dtuite
