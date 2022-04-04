@@ -8,11 +8,6 @@ metadata:
     Sentry.
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: What is the Sample Service?
-      icon: help
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: Grafana
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
       title: Datadog
       icon: dashboard
   annotations:
