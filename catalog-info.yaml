@@ -13,16 +13,3 @@ spec:
   type: other
   lifecycle: unknown
   owner: 'user:iain@roadie.io'
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: api-spec-in-s3
-  title: Api spec in S3
-  description: Testing api spec in s3 with aws s3 url reader.
-spec:
-  type: openapi
-  lifecycle: production
-  owner: team-alpha
-  definition:
-    $text: https://ibtest-sc5910.s3.eu-west-1.amazonaws.com/api-docs/some_spec.yaml
