@@ -28,6 +28,7 @@ metadata:
     backstage.io/kubernetes-id: sample-service
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
+    qameta.io/allure-project: value
 spec:
   type: service
   owner: engineering
