@@ -11,7 +11,7 @@ metadata:
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
     dev.azure.com/project-repo: roadie-test/test1
     dev.azure.com/project: roadie-test
-    dev.azure.com/build-definition: sblausten.sample-service
+    dev.azure.com/build-definition: 1
 spec:
   type: other
   lifecycle: unknown
