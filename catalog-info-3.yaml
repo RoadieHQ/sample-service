@@ -8,6 +8,7 @@ metadata:
   annotations:
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     'jenkins.io/job-full-name': roadie
+    backstage.io/kubernetes-id: nic-test
 spec:
   type: service
   owner: dtuite
