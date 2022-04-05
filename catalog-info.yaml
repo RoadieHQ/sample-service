@@ -9,7 +9,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
-    dev.azure.com/project-repo: roadie-test/roadie-test
+    dev.azure.com/project-repo: roadie-test/sample-service
 spec:
   type: other
   lifecycle: unknown
