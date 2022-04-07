@@ -6,6 +6,7 @@ nav:
   - Feature Testing: feature-testing.md
   - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
+  - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs:
     - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 
