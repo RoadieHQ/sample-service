@@ -2,8 +2,8 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: hello-world
-  title: Hello World
+  name: hello-world-2
+  title: Hello World 2
   description: scaffolder Hello, World template demo
 spec:
   owner: backstage/techdocs-core
@@ -28,4 +28,4 @@ spec:
       name: Log Message
       action: debug:log
       input:
-        message: "Hello, ${{ parameters.name }}"
+        message: "Hello, ${{ parameters.name }} 2"
