@@ -8,7 +8,7 @@ metadata:
   annotations:
     bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
     bugsnag.com/project-name: Test bugsnag app
-    shortcut.com/project-id: 14
+    shortcut.com/project-id: '14'
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
 spec:
