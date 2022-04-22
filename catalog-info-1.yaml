@@ -8,14 +8,10 @@ metadata:
     Sentry.
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: What is the Sample Service?
-      icon: help
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: Grafana
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
       title: Datadog
       icon: dashboard
   annotations:
+    backstage.io/techdocs-ref: url:https://github.com/xantier/sample-service/tree/main
     github.com/project-slug: RoadieHQ/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
@@ -24,8 +20,11 @@ metadata:
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    backstage.io/kubernetes-id: sample-service
+    travis-ci.com/repo-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
     opsgenie.com/component-selector: sample-service-1
+    qameta.io/allure-project: value
 spec:
   type: service
   owner: sample-team

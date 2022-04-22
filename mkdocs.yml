@@ -10,6 +10,7 @@ nav:
   - Subdirectory docs:
     - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 
+docs_dir: docs
 plugins:
   - monorepo
   
