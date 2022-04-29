@@ -26,5 +26,3 @@ spec:
     - spotify
   dependencyOf:
     - Component:sample-service-1
-  partOf:
-    - Domain:demos
