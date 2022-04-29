@@ -11,7 +11,6 @@ metadata:
       title: Datadog
       icon: dashboard
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/xantier/sample-service/tree/main
     github.com/project-slug: RoadieHQ/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
