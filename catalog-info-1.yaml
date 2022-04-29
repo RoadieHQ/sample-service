@@ -88,37 +88,6 @@ spec:
   owner: sample-team
 
 ---
-apiVersion: scaffolder.backstage.io/v1beta3
-kind: Template
-# some metadata about the template itself
-metadata:
-  name: log-template
-  title: Log something for demo
-  description: All it does is log things. We should really invest in a better demo.
-spec:
-  owner: sample-team
-  type: service
-
-  # these are the steps which are rendered in the frontend with the form input
-  parameters:
-    - title: What is your name?
-      required:
-        - name
-      properties:
-        name:
-          title: Name
-          type: string
-          description: You are human, right?
-          ui:autofocus: true
-
-  steps:
-    - id: proof-of-life
-      name: Log a hello world
-      action: debug:log
-      input:
-        message: "Hello, ${{ parameters.name }}"
-
----
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
