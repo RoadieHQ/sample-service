@@ -79,6 +79,15 @@ spec:
 
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: sample-domain
+  description: Sample domain which has stuff for demoing.
+spec:
+  owner: sample-team
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   title: Sample System
@@ -86,6 +95,7 @@ metadata:
   description: Sample things which are good for demoing.
 spec:
   owner: sample-team
+  domain: sample-domain
 
 ---
 apiVersion: backstage.io/v1alpha1
