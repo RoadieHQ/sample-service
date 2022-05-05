@@ -19,6 +19,7 @@ of required environment variables.
 Then run it locally like this:
 
 ```
+yarn dev
 ```
 
 ## Building, packaging and deployment
