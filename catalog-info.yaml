@@ -22,4 +22,4 @@ metadata:
 spec:
   type: url
   targets:
-    - ./moving-entity.yaml
+    - ./moving-entity2.yaml
