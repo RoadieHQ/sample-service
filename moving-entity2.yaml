@@ -15,7 +15,7 @@ metadata:
     snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
 spec:
   type: service
-  owner: xantier
+  owner: RoadieHQ
   lifecycle: experimental
   implementsApis:
     - sample-service
