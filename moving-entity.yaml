@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: moving-service
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: moving-service
+    backstage.io/techdocs-ref: dir:./
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: jussi
+    snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
+spec:
+  type: service
+  owner: jussi
+  lifecycle: experimental
+  implementsApis:
+    - sample-service
