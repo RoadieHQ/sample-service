@@ -14,3 +14,12 @@ spec:
   type: other
   lifecycle: experimental
   owner: group:engineering
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: test-moving-location
+spec:
+  type: url
+  targets:
+    - ./moving-entity.yaml
