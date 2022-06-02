@@ -13,7 +13,6 @@ metadata:
     backstage.io/techdocs-ref: s3    
 spec:
   type: service
-  owner: dtuite
   lifecycle: experimental
   dependsOn:
     - resource:default/something-that-doesnt-exist  
