@@ -15,5 +15,7 @@ spec:
   type: service
   owner: dtuite
   lifecycle: experimental
+  dependsOn:
+    - resource:default/something-that-doesnt-exist  
   providesApis:
     - not-sample-service
