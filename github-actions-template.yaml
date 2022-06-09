@@ -9,7 +9,7 @@ spec:
   type: service
 
   parameters:
-      - title: "Repo"
+      - title: "Repo URL"
         properties:
           repoUrl:
             type: string
