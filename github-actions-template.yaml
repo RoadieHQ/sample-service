@@ -95,7 +95,7 @@ spec:
       id: trigger-build
       name: Trigger Build
       input:
-        repoUrl: "github.com?repo=test&owner=sblausten"
+        repoUrl: "github.com?repo=sample-service&owner=sblausten"
         workflowId: "node.js.yml"
         branchOrTagName: "main"
 #         token: ${{ secrets.GITHUB_TOKEN }}
