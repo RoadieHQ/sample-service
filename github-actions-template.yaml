@@ -96,7 +96,7 @@ spec:
       name: Trigger Build
       input:
         repoUrl: "github.com?repo=test&owner=sblausten"
-        workflowId: "update-new-repo.yaml"
+        workflowId: "node.js.yml"
         branchOrTagName: "main"
 #         token: ${{ secrets.GITHUB_TOKEN }}
         workflowInputs:
