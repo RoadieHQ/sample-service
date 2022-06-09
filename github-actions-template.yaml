@@ -9,7 +9,7 @@ spec:
   type: service
 
   parameters:
-      - title: "Repo URL"
+      - title: "Repo URL 1"
         properties:
           repoUrl:
             type: string
@@ -93,7 +93,7 @@ spec:
 
     - action: github:actions:dispatch
       id: trigger-build
-      name: Trigger Build
+      name: Trigger Build 1
       input:
         repoUrl: "github.com?repo=sample-service&owner=sblausten"
         workflowId: "node.js.yml"
