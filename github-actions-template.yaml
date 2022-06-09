@@ -41,19 +41,21 @@ spec:
       #       entityTag:
       #         type: array
       #         ui:field: EntityTagsPicker
-      repoUrl:
-        type: string
-        title: Repository/Service Name
-        description: name (in lower-kebab-case) used for the repository and service
-        ui:field: RepoUrlPicker
-        ui:options:
-          requestUserCredentials:
-            secretsKey: USER_OAUTH_TOKEN
-            additionalScopes:
-              github:
-                - workflow
-          allowedHosts:
-            - github.com
+      
+#       repoUrl:
+#         type: string
+#         title: Repository/Service Name
+#         description: name (in lower-kebab-case) used for the repository and service
+#         ui:field: RepoUrlPicker
+#         ui:options:
+#           requestUserCredentials:
+#             secretsKey: USER_OAUTH_TOKEN
+#             additionalScopes:
+#               github:
+#                 - workflow
+#           allowedHosts:
+#             - github.com
+
   #       repoUrl:
   #         type: string
   #         ui:field: RepoUrlPicker
@@ -70,7 +72,36 @@ spec:
   #             type: string
   #           age:
   #             type: number
+  
   steps:
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        sourcePath: new-repo
+        allowedHosts: ['github.com']
+        description: ${{ parameters.description }}
+        repoUrl: ${{ parameters.repoUrl }}
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
+        access: ${{ parameters.repoUrl | replace(r/.*owner=/, "") | replace(r/&repo=.*/, "") }}/${{ parameters.repoOwner }}
+        requireCodeOwnerReviews: false
+        repoVisibility: internal
+        defaultBranch: main
+        deleteBranchOnMerge: true
+        allowMergeCommit: false
+        allowSquashMerge: true
+        allowRebaseMerge: false
+
+    - action: github:actions:dispatch
+      id: trigger-build
+      name: Trigger Build
+      input:
+        repoUrl: "github.com?repo=test&owner=sblausten"
+        workflowId: "update-new-repo.yaml"
+        branchOrTagName: "main"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        workflowInputs:
+          repoName: '${{ parameters.repoUrl | replace(r/.*owner=/, "") | replace(r/&repo=.*/, "") }}/${{ parameters.repoUrl | replace(r/.*repo=/, "") }}'
     #       - id: push
     #         action: publish:github
     #         input:
@@ -92,16 +123,18 @@ spec:
     #         allowMergeCommit: false
     #         allowSquashMerge: true
     #         allowRebaseMerge: false
+    
     #     - id: log-languages
     #       name: Log languages
     #       action: debug:log
     #       input:
     #         message: 'Hello, ${{ parameters.languages[0] }}!'
-    - id: log-name
-      name: Log Message
-      action: debug:log
-      input:
-        message: 'Hello, ${{ parameters.repoUrl }}!'
+    
+#     - id: log-name
+#       name: Log Message
+#       action: debug:log
+#       input:
+#         message: 'Hello, ${{ parameters.repoUrl }}!'
 #     - id: log-age
 #       name: Log Message
 #       action: debug:log
