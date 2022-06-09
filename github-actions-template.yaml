@@ -96,7 +96,7 @@ spec:
         repoUrl: "github.com?repo=sample-service&owner=sblausten"
         workflowId: "node.js.yml"
         branchOrTagName: "main"
-#         token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
         workflowInputs:
           repoName: '${{ parameters.repoUrl | replace(r/.*owner=/, "") | replace(r/&repo=.*/, "") }}/${{ parameters.repoUrl | replace(r/.*repo=/, "") }}'
     #       - id: push
