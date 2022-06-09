@@ -9,10 +9,21 @@ spec:
   type: service
 
   parameters:
-      - title: "Repo URL 1"
+      - title: "Repo URL 2"
         properties:
           repoUrl:
             type: string
+            title: Repository/Service Name
+            description: name (in lower-kebab-case) used for the repository and service
+            ui:field: RepoUrlPicker
+            ui:options:
+              requestUserCredentials:
+                secretsKey: USER_OAUTH_TOKEN
+                additionalScopes:
+                  github:
+                    - workflow
+              allowedHosts:
+                - github.com
       #     - title: "Fill in the Age"
       #       properties:
       #         age:
@@ -41,19 +52,6 @@ spec:
       #         type: array
       #         ui:field: EntityTagsPicker
       
-#       repoUrl:
-#         type: string
-#         title: Repository/Service Name
-#         description: name (in lower-kebab-case) used for the repository and service
-#         ui:field: RepoUrlPicker
-#         ui:options:
-#           requestUserCredentials:
-#             secretsKey: USER_OAUTH_TOKEN
-#             additionalScopes:
-#               github:
-#                 - workflow
-#           allowedHosts:
-#             - github.com
 
   #       repoUrl:
   #         type: string
