@@ -12,7 +12,7 @@ spec:
   owner: Ops
   type: infrastructure
   parameters:
-    - title: Provide information
+    - title: "Provide information"
       required:
         - owner
         - instance_name
@@ -22,7 +22,7 @@ spec:
         - product_line
       properties:
         owner:
-          title: Owner
+          title: "Owner"
           type: string
           description: Owner of the component
           ui:field: OwnerPicker
@@ -30,11 +30,11 @@ spec:
             allowedKinds:
               - Group
         instance_name:
-          title: instance_name
+          title: "instance_name"
           type: string
           description: Unique name of your DocumentDB cluster
         docdb_version:
-          title: Version of DocumentDB
+          title: "Version of DocumentDB"
           type: string
           description: DocumentDB cluster version
           anyOf:
@@ -47,7 +47,7 @@ spec:
               enum:
                 - "4.0.0"
         instance_class:
-          title: Instance class
+          title: "Instance class"
           type: string
           description: Choose an DocumentDB instance class
           anyOf:
@@ -68,7 +68,7 @@ spec:
               enum:
                 - "db.r6g.2xlarge"
         instance_number:
-          title: Number of instances
+          title: "Number of instances"
           type: string
           description: Choose an DocumentDB instance number
           anyOf:
@@ -89,7 +89,7 @@ spec:
               enum:
                 - "4"
         product_line:
-          title: Product line
+          title: "Product line"
           type: string
           description: Choose your product line
           anyOf:
