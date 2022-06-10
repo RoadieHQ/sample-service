@@ -55,7 +55,7 @@ spec:
       id: trigger-build
       name: Trigger Build 1
       input:
-        repoUrl: "github.com?repo=${{ parameters.repo }}&owner=sblausten"
+        repoUrl: "github.com/sblausten/${{ parameters.repo }}"
         workflowId: ${{ parameters.workflow }}
         branchOrTagName: "main"
 
