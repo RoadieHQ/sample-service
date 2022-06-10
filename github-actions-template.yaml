@@ -16,16 +16,8 @@ spec:
             title: Repository/Service Name
             description: name (in lower-kebab-case) used for the repository and service
             ui:field: RepoUrlPicker
-            ui:options:
-              requestUserCredentials:
-                secretsKey: USER_OAUTH_TOKEN
-                additionalScopes:
-                  github:
-                    - workflow
               allowedHosts:
                 - github.com
-      - title: "Workflow Id/name"
-        properties:
           workflow:
             type: string
       #     - properties:
