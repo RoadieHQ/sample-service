@@ -9,7 +9,7 @@ spec:
   type: service
 
   parameters:
-    - title: "Repo"
+    - title: "Repo 2"
       properties:
         repo:
           type: string
@@ -50,12 +50,12 @@ spec:
       id: log-name
       name: Log Message 3
       input:
-        message: ${{ { % raw % } ${{ parameters.repoUrl }} {% endraw %} }}
+        message: { % raw % } ${{ parameters.repoUrl }} {% endraw %}
     - action: github:actions:dispatch
       id: trigger-build
       name: Trigger Build 1
       input:
-        repoUrl: "github.com/sblausten/${{ parameters.repo }}"
+        repoUrl: "github.com?repo=${{ parameters.repo }}&owner=sblausten"
         workflowId: ${{ parameters.workflow }}
         branchOrTagName: "main"
 
