@@ -25,9 +25,9 @@ spec:
               allowedHosts:
                 - github.com
       - title: "Workflow Id/name"
-         properties:
-           workflow:
-             type: string
+        properties:
+          workflow:
+            type: string
       #     - properties:
       #         size:
       #         type: number
