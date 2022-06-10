@@ -24,10 +24,10 @@ spec:
                     - workflow
               allowedHosts:
                 - github.com
-      #     - title: "Fill in the Age"
-      #       properties:
-      #         age:
-      #           type: number
+      - title: "Workflow Id/name"
+         properties:
+           workflow:
+             type: string
       #     - properties:
       #         size:
       #         type: number
@@ -94,7 +94,7 @@ spec:
       name: Trigger Build 1
       input:
         repoUrl: "github.com?repo=sample-service&owner=sblausten"
-        workflowId: "node.js.yml"
+        workflowId: ${{ parameters.workflow }}
         branchOrTagName: "main"
         token: ${{ secrets.USER_OAUTH_TOKEN }}
         workflowInputs:
