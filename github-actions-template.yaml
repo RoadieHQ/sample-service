@@ -126,7 +126,22 @@ spec:
     #       action: debug:log
     #       input:
     #         message: 'Hello, ${{ parameters.languages[0] }}!'
-    
+    - id: log-name
+      name: Log Message 1
+      action: debug:log
+      input:
+        message: "${{ parameters.repoUrl }}"
+    - id: log-name
+      name: Log Message 2
+      action: debug:log
+      input:
+        message: ${{ '${{ parameters.repoUrl }}' }}
+    - id: log-name
+      name: Log Message 3
+      action: debug:log
+      input:
+        message: {% raw %} ${{ parameters.repoUrl }} {% endraw %}
+
 #     - id: log-name
 #       name: Log Message
 #       action: debug:log
