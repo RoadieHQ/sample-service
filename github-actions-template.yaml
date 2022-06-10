@@ -9,41 +9,17 @@ spec:
   type: service
 
   parameters:
-      - title: "Repo URL 3"
-        properties:
-          repoUrl:
-            type: string
-            title: Repository/Service Name
-            description: name (in lower-kebab-case) used for the repository and service
-            ui:field: RepoUrlPicker
-              allowedHosts:
-                - github.com
-          workflow:
-            type: string
-      #     - properties:
-      #         size:
-      #         type: number
-      #         enum: [50, 100, 200]
-      #       name:
-      #         type: string
-      #       entity:
-      #         type: string
-      #         ui:field: EntityPicker
-      #       ownedEntity:
-      #         type: string
-      #         ui:field: OwnedEntityPicker
-      #       entityName:
-      #         type: string
-      #         ui:field: EntityNamePicker
-      #       languages:
-      #         type: array
-      #         items:
-      #           type: string
-      #           enum: ["java", "ruby", "python", "javascript"]
-      #       entityTag:
-      #         type: array
-      #         ui:field: EntityTagsPicker
-      
+    - title: "Repo URL 3"
+      properties:
+        repoUrl:
+          type: string
+          title: Repository/Service Name
+          description: name (in lower-kebab-case) used for the repository and service
+          ui:field: RepoUrlPicker
+            allowedHosts:
+              - github.com
+        workflow:
+          type: string
 
   #       repoUrl:
   #         type: string
@@ -118,64 +94,18 @@ spec:
     #       action: debug:log
     #       input:
     #         message: 'Hello, ${{ parameters.languages[0] }}!'
-    - id: log-name
+    - action: debug:log
+      id: log-name
       name: Log Message 1
-      action: debug:log
       input:
         message: "${{ parameters.repoUrl }}"
-    - id: log-name
+    - action: debug:log
+      id: log-name
       name: Log Message 2
-      action: debug:log
       input:
         message: ${{ '${{ parameters.repoUrl }}' }}
-    - id: log-name
+    - action: debug:log
+      id: log-name
       name: Log Message 3
-      action: debug:log
       input:
         message: {% raw %} ${{ parameters.repoUrl }} {% endraw %}
-
-#     - id: log-name
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.repoUrl }}!'
-#     - id: log-age
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.age }}!'
-#     - id: log-entity
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.entity }}!'
-#     - id: log-entityName
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.entityName}}!'
-#     - id: log-entityTag
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.entityTag }}!'
-#     - id: log-repoUrl
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.repoUrl }}!'
-#     - id: log-owner
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.owner }}!'
-#     - id: log-ownedEntity
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.ownedEntity }}!'
-#     - id: log-person
-#       name: Log Message
-#       action: debug:log
-#       input:
-#         message: 'Hello, ${{ parameters.person }}!'
