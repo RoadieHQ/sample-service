@@ -15,5 +15,4 @@ They’re hard to write and nobody will see them anyway.
 
 Backstage solves this problem by co-locating documentation with the service it is for. Write
 your docs-as-code in whatever format you like ([MkDocs](https://www.mkdocs.org/) is currently
-supported out of the box), publish it whereever you like, and Backstage will display it in context
-where it is easy to find.
+supported out of the box), publish it whereever you like, and Backstage will display it in context where it is easier to find.

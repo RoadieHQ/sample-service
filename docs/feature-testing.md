@@ -59,3 +59,26 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
   Goofy ->  MickeyMouse: calls
   Goofy <-- MickeyMouse: responds
 ::end-uml::
+
+
+# Mermaid 
+This project contains a few lambdas to handle managing installations, github webhook handlers and dishing out tokens to backstage backends.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
+        graph TD
+          A[Christmas] -->|Get money| B(Go shopping)
+          B --> C{Let me think}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
+```
+

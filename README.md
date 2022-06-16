@@ -18,9 +18,8 @@ of required environment variables.
 
 Then run it locally like this:
 
-```shell
-yarn start
-curl :3000/
+```
+yarn dev
 ```
 
 ## Building, packaging and deployment

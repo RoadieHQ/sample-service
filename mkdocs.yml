@@ -5,9 +5,13 @@ nav:
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
   - TestDoc: test-doc.md
-  - Mermaid: mermaid-diagram-test1.md
+  - Embedded Lucid Chart: testing-lucid.md
+  - Subdirectory docs:
+    - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 
+docs_dir: docs
 plugins:
   - monorepo
+
 markdown_extensions:
   - markdown_inline_mermaid
