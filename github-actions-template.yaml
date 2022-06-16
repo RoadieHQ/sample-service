@@ -1,0 +1,99 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: github-actions-template
+  title: Trigger workflow
+  description: Triggers workflow.
+spec:
+  owner: backstage/techdocs-core
+  type: service
+
+  parameters:
+    - title: "Repo 2"
+      properties:
+        repo:
+          type: string
+          title: Repository/Service Name
+          description: name (in lower-kebab-case) used for the repository and service
+        workflow:
+          type: string
+
+  #       repoUrl:
+  #         type: string
+  #         ui:field: RepoUrlPicker
+  #         ui:options:
+  #           allowedHosts:
+  #             - github.com
+  #       owner:
+  #         type: string
+  #         ui:field: OwnerPicker
+  #       person:
+  #         type: object
+  #         properties:
+  #           name:
+  #             type: string
+  #           age:
+  #             type: number
+
+  steps:
+    - action: debug:log
+      id: log-name
+      name: Log Message 1
+      input:
+        message: "${{ parameters.repoUrl }}"
+    - action: debug:log
+      id: log-name
+      name: Log Message 2
+      input:
+        message: ${{ '${{ parameters.repoUrl }}' }}
+    - action: debug:log
+      id: log-name
+      name: Log Message 3
+      input:
+        message: "{ % raw % } ${{ parameters.repoUrl }} {% endraw %}"
+    - action: github:actions:dispatch
+      id: trigger-build
+      name: Trigger Build 1
+      input:
+        repoUrl: "github.com?repo=${{ parameters.repo }}&owner=sblausten"
+        workflowId: ${{ parameters.workflow }}
+        branchOrTagName: "main"
+
+  #       - id: push
+  #         action: publish:github
+  #         input:
+  #           repoUrl: ${{ parameters.repoUrl }}
+    #     - id: publish
+    #       name: Publish
+    #       action: publish:github
+    #       input:
+    #         repoUrl: ${{ parameters.repoUrl }}
+    #         token: ${{ secrets.USER_OAUTH_TOKEN }}
+    #         requiredCodeOwnerReviews: true
+    #         sourcePath: ./new-repo
+    #         allowedHosts: ['github.com']
+    #         description: ${{ parameters.description }}
+    #         access: ${{ parameters.repoUrl | replace(r/.*owner=/, "") | replace(r/&repo=.*/, "") }}/${{ parameters.repoOwner }}
+    #         repoVisibility: internal
+    #         defaultBranch: main
+    #         deleteBranchOnMerge: true
+    #         allowMergeCommit: false
+    #         allowSquashMerge: true
+    #         allowRebaseMerge: false
+    #     - id: publish
+    #       name: Publish
+    #       action: publish:github
+    #       input:
+    #         sourcePath: new-repo
+    #         allowedHosts: ['github.com']
+    #         description: ${{ parameters.description }}
+    #         repoUrl: ${{ parameters.repoUrl }}
+    #         token: ${{ secrets.USER_OAUTH_TOKEN }}
+    #         access: ${{ parameters.repoUrl | replace(r/.*owner=/, "") | replace(r/&repo=.*/, "") }}/${{ parameters.repoOwner }}
+    #         requireCodeOwnerReviews: false
+    #         repoVisibility: internal
+    #         defaultBranch: main
+    #         deleteBranchOnMerge: true
+    #         allowMergeCommit: false
+    #         allowSquashMerge: true
+    #         allowRebaseMerge: false

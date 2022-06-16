@@ -4,7 +4,6 @@ nav:
   - Home: index.md
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
-  - Big ToC: big-table-of-contents.md
   - TestDoc: test-doc.md
   - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs:
@@ -13,6 +12,6 @@ nav:
 docs_dir: docs
 plugins:
   - monorepo
-  
+
 markdown_extensions:
   - markdown_inline_mermaid

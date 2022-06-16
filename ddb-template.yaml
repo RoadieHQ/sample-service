@@ -1,0 +1,169 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-documentdb
+  title: Create DocumentDB instance
+  description: Will create a new DocumentDB instance
+  tags:
+    - aws
+    - database
+    - infrastructure
+spec:
+  owner: Ops
+  type: infrastructure
+  parameters:
+    - title: "Provide information"
+      required:
+        - owner
+        - instance_name
+        - docdb_version
+        - instance_class
+        - instance_number
+        - product_line
+      properties:
+        owner:
+          title: "Owner"
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+        instance_name:
+          title: "instance_name"
+          type: string
+          description: Unique name of your DocumentDB cluster
+        docdb_version:
+          title: "Version of DocumentDB"
+          type: string
+          description: DocumentDB cluster version
+          anyOf:
+            - type: string
+              title: 3.6.0
+              enum:
+                - "3.6.0"
+            - type: string
+              title: 4.0.0
+              enum:
+                - "4.0.0"
+        instance_class:
+          title: "Instance class"
+          type: string
+          description: Choose an DocumentDB instance class
+          anyOf:
+            - type: string
+              title: db.t4.medium(2cpu, 4Gib RAM)
+              enum:
+                - "db.t4.medium"
+            - type: string
+              title: db.r6g.large(2cpu, 16Gib RAM)
+              enum:
+                - "db.r6g.large"
+            - type: string
+              title: db.r6g.xlarge(4cpu, 32Gib RAM)
+              enum:
+                - "db.r6g.xlarge"
+            - type: string
+              title: db.r6g.2xlarge(4cpu, 64Gib RAM)
+              enum:
+                - "db.r6g.2xlarge"
+        instance_number:
+          title: "Number of instances"
+          type: string
+          description: Choose an DocumentDB instance number
+          anyOf:
+            - type: string
+              title: "1"
+              enum:
+                - "1"
+            - type: string
+              title: "2"
+              enum:
+                - "2"
+            - type: string
+              title: "3"
+              enum:
+                - "3"
+            - type: string
+              title: "4"
+              enum:
+                - "4"
+        product_line:
+          title: "Product line"
+          type: string
+          description: Choose your product line
+          anyOf:
+            - type: string
+              title: ugc
+              enum:
+                - "ugc"
+            - type: string
+              title: communication
+              enum:
+                - "communication"
+            - type: string
+              title: platform
+              enum:
+                - "platform"
+            - type: string
+              title: data-group
+              enum:
+                - "data-group"
+            - type: string
+              title: loyalty
+              enum:
+                - "loyalty"
+            - type: string
+              title: infra
+              enum:
+                - "infra"
+            - type: string
+              title: subscriptions
+              enum:
+                - "subscriptions"
+            - type: string
+              title: smsbump
+              enum:
+                - "smsbump"
+            - type: string
+              title: app-infra
+              enum:
+                - "app-infra"
+  steps:
+    - id: template
+      name: Fetch Skeleton + Template
+      action: fetch:template
+      input:
+        url: ./skeleton
+        targetPath: temp
+        copyWithoutRender:
+          - .github/workflows/*
+        values:
+          instance_name: '${{ parameters.instance_name }}'
+          instance_class: '${{ parameters.instance_class }}'
+          instance_number: '${{ parameters.instance_number }}'
+          docdb_version: '${{ parameters.docdb_version }}'
+          product_line: '${{ parameters.product_line }}'
+    - id: "file rename"
+      name: Renamne the configuration
+      action: fs:rename
+      input:
+        files:
+          - from: temp/documentDB-template.tf
+            to: ${{ parameters.instance_name}}.tf
+    - id: publish
+      name: Create a pull request
+      action: publish:github:pull-request
+      input:
+        repoUrl: 'github.com?owner=sblausten&repo=terraform-ddb-test'
+        targetPath: 'terraform/rds'
+        title: "feat(backstage): 'add backstage docdb entities for ${{ parameters.instance_name }}'"
+        branchName: add-docdb-backstage-entities-for-${{ parameters.instance_name }}
+        description: |
+          # Add docdb ackstage entities for: ${{parameters.instance_name}}
+          ${{ parameters.instance_name if parameters.instance_name else "" }}
+
+  output:
+    links:
+      - url: ${{steps.publish.output.remoteUrl}}
+        text: "Pull request"

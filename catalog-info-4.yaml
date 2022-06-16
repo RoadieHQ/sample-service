@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: sample-service-4
   title: Sample Service 4
+  tags:
+    - test
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:

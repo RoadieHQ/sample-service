@@ -1,0 +1,10 @@
+site_name: 'sample-service'
+
+nav:
+- Home: intro.md
+- Local Development: local-development.md
+- test: test-doc.md
+- other: ./../../another-service/docs/test-doc.md
+
+plugins:
+- techdocs-core
