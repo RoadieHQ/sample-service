@@ -11,6 +11,9 @@ metadata:
     shortcut.com/project-id: '14'
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
+  labels:
+    label1: test-label
+    label2: test- label 2
 spec:
   type: service
   owner: irma
