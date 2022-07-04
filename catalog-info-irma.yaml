@@ -13,7 +13,7 @@ metadata:
     github.com/project-slug: roadiehq/sample-service
   labels:
     label1: test-label
-    label2: test- label 2
+    label2: test-label2
 spec:
   type: service
   owner: irma
