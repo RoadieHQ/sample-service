@@ -16,6 +16,9 @@ metadata:
     backstage.io/techdocs-ref: url:s3
     buildkite.com/project-slug: 'samroadie/demo-data'
     qameta.io/allure-project: asdf   
+  labels:
+    label2/label1: test-label3
+    labe2l/label2: test-label4 
 spec:
   type: service
   owner: dtuite
