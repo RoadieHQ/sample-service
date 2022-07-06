@@ -18,7 +18,7 @@ metadata:
     qameta.io/allure-project: asdf   
   labels:
     label2/label1: test-label3
-    labe2l/label2: test-label4 
+    label2/label2: test-label4 
 spec:
   type: service
   owner: dtuite
