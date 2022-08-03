@@ -8,7 +8,6 @@ metadata:
     backstage.io/source-location: url:https://github.com/mcalus3/sample-service/blob/master/backstage5.yaml,
     github.com/project-slug: roadiehq/sample-service
     datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
-    backstage.io/techdocs-ref: https://github.com/RoadieHQ/sample-service/tree/main
     bugsnag.com/project-key: TestOrganisation/1188e5020539166a9928aa8c8ac35606
 spec:
   type: service
