@@ -109,7 +109,7 @@ metadata:
 spec:
   type: team
   profile:
-    displayName: YAML team
+    displayName: YAML team 1
     email: team-alpha@example.com
     picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
   children: []
