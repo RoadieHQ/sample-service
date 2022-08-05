@@ -2,9 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sam-service-1
-  title: Sam Service 1
+  title: Sam Service 1 Test
   description: |
-    A service for testing Backstage functionality. Configured for GitHub Actions and
+    A new service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
