@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sam-service-1
-  title: Sam Service 1 Test
+  title: Sam Service Test
   description: |
     A new service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
