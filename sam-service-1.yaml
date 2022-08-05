@@ -1,0 +1,62 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sam-service-1
+  title: Sam Service 1
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  links:
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    sentry.io/project-slug: sam-service
+    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    backstage.io/techdocs-ref: dir:.
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    backstage.io/kubernetes-id: sam-service
+    qameta.io/allure-project: value
+spec:
+  type: service
+  owner: sample-team
+  lifecycle: experimental
+  system: sample-system
+  providesApis:
+    - sam-api-1
+  dependsOn:
+    - Component:sample-service-2
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Sentry JS
+  name: sam-sentry-js
+  description: A JS client which communicates with the Sentry HTTP API.
+spec:
+  type: library
+  lifecycle: production
+  owner: sample-team
+  system: sample-system
+  subcomponentOf: sam-service-1
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  title: Sam Service API
+  name: sam-api-1
+  description: The Sample Service API allows you to send errors to Rollbar or Sentry.
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: sample-team
+  system: sample-system
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
