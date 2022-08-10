@@ -25,4 +25,4 @@ spec:
   consumesApis:
     - spotify
   dependencyOf:
-    - Component:sample-service-1
+    - Component:doesntexist
