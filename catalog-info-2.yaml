@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service-2
-  title: Sample Service 2
+  name: sample-service-20
+  title: Sample Service 20
   description: |
     A service for testing Backstage functionality. Configured for Circle CI
     and Rollbar.
