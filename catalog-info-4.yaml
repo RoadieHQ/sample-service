@@ -21,7 +21,7 @@ spec:
   owner: dtuite
   lifecycle: experimental
   providesApis:
-    - sample-service
+    - test-api-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
