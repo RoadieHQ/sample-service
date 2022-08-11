@@ -24,7 +24,7 @@ paths:
 
   /debug-sentry:
     post:
-      summary: Send an error to Sentry
+      summary: Send error to Sentry
 
       requestBody:
         description: Optional error text to send to Sentry.
