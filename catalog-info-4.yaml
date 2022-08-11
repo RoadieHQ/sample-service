@@ -6,7 +6,7 @@ metadata:
   tags:
     - test
   description: |
-    A test service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
+    A testing service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:
     jenkins.io/github-folder: 'roadie/sample-service'
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
