@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: sample-service-4
   title: Sample Service 4
+  namespace: test
   tags:
     - test
   description: |
