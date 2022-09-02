@@ -10,3 +10,8 @@ nav:
     - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 
 docs_dir: docs
+plugins:
+  - monorepo
+
+markdown_extensions:
+  - markdown_inline_mermaid
