@@ -1,5 +1,4 @@
 site_name: Root docs
-
 nav:
   - Home: index.md
   - Local development: local-development.md
@@ -7,11 +6,11 @@ nav:
   - TestDoc: test-doc.md
   - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs:
-    - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
-
+      - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 docs_dir: docs
 plugins:
   - monorepo
-
+  - techdocs-core
+  - awesome-pages
 markdown_extensions:
   - markdown_inline_mermaid

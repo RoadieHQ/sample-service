@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: preview-component-15
+  description: |
+    component for testing things and stuff
+spec:
+  # Spec type is always hardcoded to preview-entity in preview mode
+  type: preview-enti
+  owner: group:engineering
+  lifecycle: experimental
+  blah: jhkh
