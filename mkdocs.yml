@@ -11,6 +11,3 @@ docs_dir: docs
 plugins:
   - monorepo
   - techdocs-core
-  - awesome-pages
-markdown_extensions:
-  - markdown_inline_mermaid
