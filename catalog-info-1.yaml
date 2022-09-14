@@ -30,7 +30,7 @@ metadata:
 spec:
   type: service
   owner: sample-team
-  lifecycle: experimental
+  lifecycle: production
   system: sample-system
   providesApis:
     - sample-service
