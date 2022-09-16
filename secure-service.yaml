@@ -9,7 +9,7 @@ metadata:
     snyk.io/org-name: roadie
     snyk.io/project-ids: 4f195df9-5ddf-4a98-8955-bd687d220d0b    
     backstage.io/techdocs-ref: dir:.
-    roadie.io/techinsights-shortcut-id: 9229
+    roadie.io/techinsights-shortcut-id: "9229"
 spec:
   type: service
   owner: user:xantier
