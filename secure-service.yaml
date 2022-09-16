@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: secure-tech-insights-service
+  description: Secure Tech Insights Service
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+    backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
+    backstage.io/techdocs-ref: dir:.
+    roadie.io/techinsights-shortcut-id: 9229
+spec:
+  type: service
