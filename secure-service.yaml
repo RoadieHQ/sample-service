@@ -6,7 +6,8 @@ metadata:
   description: Secure Tech Insights Service
   annotations:
     github.com/project-slug: RoadieHQ/sample-service
-    backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: 4f195df9-5ddf-4a98-8955-bd687d220d0b    
     backstage.io/techdocs-ref: dir:.
     roadie.io/techinsights-shortcut-id: 9229
 spec:
