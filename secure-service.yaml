@@ -12,3 +12,5 @@ metadata:
     roadie.io/techinsights-shortcut-id: 9229
 spec:
   type: service
+  owner: user:xantier
+  lifecycle: production
