@@ -51,7 +51,7 @@ spec:
       id: create-pull-request
       name: Create a pull request
       input:
-        repoUrl: ${{ '${{ parameters.repoUrl }}' }}
+        repoUrl: ${{ parameters.repoUrl }}
         branchName: initial-catalog-info
         title: 'Initial catalog-info file for Roadie Backstage ingestion'
         description: 'This pull request adds a basic catalog-info file so that this component can be represented in the Roadie Backstage catalog'
