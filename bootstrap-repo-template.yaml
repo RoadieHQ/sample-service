@@ -45,7 +45,7 @@ spec:
           apiVersion: backstage.io/v1alpha1
           kind: Component
           metadata:
-            name: test-re
+            name: ${{ parameters.name }}
             annotations: {}
           spec:
             type: service
