@@ -24,6 +24,10 @@ spec:
         repoUrl:
           title: Repository Url
           type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
         owner:
           title: Owner
           type: string
