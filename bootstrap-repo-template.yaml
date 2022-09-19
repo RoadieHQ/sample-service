@@ -22,12 +22,8 @@ spec:
           ui:options:
             rows: 5
         repoUrl:
-          title: Repository Location
+          title: Repository Url
           type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
         owner:
           title: Owner
           type: string
