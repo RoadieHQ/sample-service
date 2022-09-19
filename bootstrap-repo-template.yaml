@@ -1,0 +1,61 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: bootstrap-repo-template
+  title: Bootstrap a repo
+  description: Creates an initial catalog-info file.
+spec:
+  owner: group:engineering
+  type: service
+  parameters:
+    - title: Url of existing repo
+      required:
+        - repoUrl
+        - owner
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+  steps:
+    - action: catalog:write
+      id: create-catalog-info-file
+      name: Create catalog-info file
+      input:
+        entity:
+          apiVersion: backstage.io/v1alpha1
+          kind: Component
+          metadata:
+            name: test-re
+            annotations: {}
+          spec:
+            type: service
+            lifecycle: production
+            owner: ${{ parameters.owner }}
+    - action: publish:github:pull-request
+      id: create-pull-request
+      name: Create a pull request
+      input:
+        repoUrl: ${{ '${{ parameters.repoUrl }}' }}
+        branchName: initial-catalog-info
+        title: 'Initial catalog-info file for Roadie Backstage ingestion'
+        description: 'This pull request adds a basic catalog-info file so that this component can be represented in the Roadie Backstage catalog'
