@@ -2,10 +2,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service
+  name: sample-service-5
   description: A test service
   annotations:
-    github.com/project-slug: RoadieHQ/sample-service
+    github.com/project-slug: sblausten/sample-service
     backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
     backstage.io/techdocs-ref: dir:.
     snyk.io/org-name: roadie
