@@ -56,7 +56,11 @@ To invoke it via the API Gateway trigger,
 curl https://6b2w0lh8p3.execute-api.eu-west-1.amazonaws.com/default/sample-service
 ```
 
-badge
+relative badge
 ![Coverage badge](./docs/assets/coverage.svg)<img src="./docs/assets/coverage.svg">
 
+absolute badge
+![Coverage badge](https://github.com/sblausten/sample-service/blob/main/docs/assets/coverage.svg)<img src="https://github.com/sblausten/sample-service/blob/main/docs/assets/coverage.svg">
 
+absolute raw badge
+![Coverage badge](https://raw.github.com/sblausten/sample-service/main/docs/assets/coverage.svg)<img src="https://raw.github.com/sblausten/sample-service/main/docs/assets/coverage.svg">
