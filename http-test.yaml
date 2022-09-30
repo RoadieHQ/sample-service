@@ -5,6 +5,8 @@ metadata:
   name: http-test
   title: Http test
   description: test
+  tags:
+    - test
 spec:
   owner: user:dtuite
   type: website
