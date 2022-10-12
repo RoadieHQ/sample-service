@@ -8,6 +8,8 @@ nav:
   - Subdirectory docs:
       - mycomponent: '!include ./sub-dir-documentation/mkdocs.yml'
 docs_dir: docs
+markdown_extensions:
+  - markdown_inline_mermaid
 plugins:
   - monorepo
   - techdocs-core

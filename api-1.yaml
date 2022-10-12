@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: test-api-sam-1
+  description: The bk-testproject2 REST API
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: sblausten
+  definition:
+    $text: https://bk-testproject2-wa.azurewebsites.net/swagger/v1/swagger.json
