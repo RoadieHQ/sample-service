@@ -1,0 +1,34 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: chained-tamplate
+  title: Hello World 2
+  description: Says Hello to a specified name.
+spec:
+  owner: backstage/techdocs-core
+  type: service
+
+  parameters:
+    - title: You are about to say hello to your first Backstage Template 2
+      required:
+        - name
+      properties:
+        name:
+          type: string
+
+  steps:
+    - action: http:backstage:request
+      id: http-request
+      name: Create a thing on the acme service
+      input:
+        method: POST
+        path: '/api/scaffolder/v2/tasks'
+        headers:
+          'Content-Type': 'application/json'
+        body:
+          templateRef: 'template:default/hello-world-template'
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: 'Hello 2, ${{ parameters.name }}!'
