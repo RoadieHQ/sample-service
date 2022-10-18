@@ -14,6 +14,7 @@ metadata:
     dev.azure.com/build-definition: sblausten.sample-service
 spec:
   type: other
+  lifecycle: production
   
 ---
 apiVersion: backstage.io/v1alpha1
