@@ -22,6 +22,7 @@ metadata:
   name: test-moving-location
 spec:
   type: url
+  lifecycle: production
   targets:
     - ./moving-entity2.yaml
 
