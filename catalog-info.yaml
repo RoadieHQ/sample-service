@@ -15,6 +15,7 @@ metadata:
 spec:
   type: other
   lifecycle: production
+  owner: sample-team
   
 ---
 apiVersion: backstage.io/v1alpha1
@@ -24,6 +25,7 @@ metadata:
 spec:
   type: url
   lifecycle: production
+  owner: sample-team
   targets:
     - ./moving-entity2.yaml
 
