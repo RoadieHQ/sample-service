@@ -4,9 +4,9 @@ metadata:
   namespace: default
   name: test-user-a
   links:
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: Datadog
-      icon: dashboard  
+    - url: https://roadiehq.slack.com/blahblag
+      title: Slack User
+      icon: chat 
 spec:
   profile:
     displayName: Fname Lname
