@@ -1,1 +1,15 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: test-user-a
+  links:
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard  
+spec:
+  profile:
+    displayName: Fname Lname
+    picture: https://blah.com/fname
+  memberOf:
+    - engineering
