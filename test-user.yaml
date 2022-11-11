@@ -5,7 +5,7 @@ metadata:
   name: test-user-a
   links:
     - url: https://roadiehq.slack.com/blahblag
-      title: Slack User
+      title: User Slack Profile
       icon: chat 
 spec:
   profile:
