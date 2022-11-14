@@ -3,6 +3,8 @@ kind: User
 metadata:
   namespace: default
   name: test-user-a
+  annotations:
+    'github.com/project-readme-path': 'https://github.com/RoadieHQ/sample-service/blob/main/one-service/docs/local-development.md'  
   links:
     - url: https://roadiehq.slack.com/blahblag
       title: User Slack Profile
