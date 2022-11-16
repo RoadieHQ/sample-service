@@ -12,6 +12,20 @@ spec:
   children: []
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: nengineering
+  description: Nengineering team
+spec:
+  type: team
+  profile:
+    displayName: Engineering
+    email: engineering@roadie.io
+    picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
+  children: []
+  members: [user:default/jussi, user:default/xantier]
+---
+apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: Xantier
