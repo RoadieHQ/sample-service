@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name: sample-service
   description: A test service
+  links:
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard
   annotations:
     github.com/project-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
