@@ -61,6 +61,8 @@ metadata:
   name: passengers-api
   description: Lookup information on active passengers. Name, location etc.
   labels:
+    label2: test-label2
+    label1: test-lab1
     label2/label1: test-label3
     label2/label2: test-label4
 spec:
