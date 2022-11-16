@@ -29,7 +29,7 @@ spec:
   lifecycle: production
   system: passengers
   providesApis:
-    - riders-api
+    - passengers-api
   dependsOn:
     - Component:core-auth-module
 ---
@@ -59,6 +59,24 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: riders-api
+  description: Lookup information on active passengers. Name, location etc.
+  labels:
+    label2: test-label2
+    label1: test-lab1
+    label2/label1: test-label3
+    label2/label2: test-label4
+spec:
+  type: openapi
+  lifecycle: production
+  owner: roadie
+  system: passengers
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: passengers-api
   description: Lookup information on active passengers. Name, location etc.
   labels:
     label2: test-label2
@@ -112,4 +130,4 @@ spec:
   lifecycle: production
   system: trips
   consumesApis:
-    - riders-api
+    - passengers-api
