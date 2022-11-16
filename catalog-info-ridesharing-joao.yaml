@@ -29,7 +29,7 @@ spec:
   lifecycle: production
   system: passengers
   providesApis:
-    - passengers-api
+    - riders-api
   dependsOn:
     - Component:core-auth-module
 ---
@@ -58,7 +58,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: passengers-api
+  name: riders-api
   description: Lookup information on active passengers. Name, location etc.
   labels:
     label2: test-label2
@@ -112,4 +112,4 @@ spec:
   lifecycle: production
   system: trips
   consumesApis:
-    - passengers-api
+    - riders-api
