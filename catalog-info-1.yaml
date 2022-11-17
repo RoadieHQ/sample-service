@@ -27,6 +27,7 @@ metadata:
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
     opsgenie.com/component-selector: sample-service-1
     qameta.io/allure-project: value
+    newrelic.com/dashboard-guid: 'dummy-value'
 spec:
   type: service
   owner: sample-team
