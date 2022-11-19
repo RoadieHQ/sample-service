@@ -31,6 +31,7 @@ metadata:
     dev.azure.com/project-repo: roadie-test/sample-service
     dev.azure.com/project: roadie-test
     dev.azure.com/build-definition: sblausten.sample-service
+    sonarqube.org/project-key: RoadieHQ_sample-service
 spec:
   type: service
   owner: sample-team
