@@ -1,0 +1,130 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+annotations:
+  github.com/project-slug: sblausten/sample-service
+  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
