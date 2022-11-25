@@ -3,9 +3,9 @@ kind: Component
 metadata:
   name: generated-component-1
   title: generated-component-1
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -16,9 +16,9 @@ kind: Component
 metadata:
   name: generated-component-2
   title: generated-component-2
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -29,9 +29,9 @@ kind: Component
 metadata:
   name: generated-component-3
   title: generated-component-3
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -42,9 +42,9 @@ kind: Component
 metadata:
   name: generated-component-4
   title: generated-component-4
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -55,9 +55,9 @@ kind: Component
 metadata:
   name: generated-component-5
   title: generated-component-5
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -68,9 +68,9 @@ kind: Component
 metadata:
   name: generated-component-6
   title: generated-component-6
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -81,9 +81,9 @@ kind: Component
 metadata:
   name: generated-component-7
   title: generated-component-7
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -94,9 +94,9 @@ kind: Component
 metadata:
   name: generated-component-8
   title: generated-component-8
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -107,9 +107,9 @@ kind: Component
 metadata:
   name: generated-component-9
   title: generated-component-9
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
@@ -120,10 +120,11 @@ kind: Component
 metadata:
   name: generated-component-10
   title: generated-component-10
-annotations:
-  github.com/project-slug: sblausten/sample-service
-  bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 spec:
   type: service
   owner: sblausten
   lifecycle: experimental
+---
