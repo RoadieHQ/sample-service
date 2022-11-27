@@ -20,5 +20,3 @@ jobs:
         node-version: '16.x'
 
     - uses:  RoadieHQ/backstage-entity-validator@v0.1.0
-      with:
-        path: 'catalog-info.yaml'
