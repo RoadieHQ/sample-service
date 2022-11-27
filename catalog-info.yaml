@@ -21,7 +21,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
     snyk.io/org-name: roadie
-    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    snyk.io/project-ids: 48315c5b-0326-4b24-b818-60999fe7386e
     backstage.io/kubernetes-id: sample-service
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
