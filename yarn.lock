@@ -979,10 +979,10 @@
     pump "^3.0.0"
     stack-generator "^2.0.3"
 
-"@bugsnag/plugin-express@^7.14.0":
-  version "7.14.0"
-  resolved "https://registry.yarnpkg.com/@bugsnag/plugin-express/-/plugin-express-7.14.0.tgz#3559fdb4ffaf13619e3d03d68c0aaf2f8a0cdde5"
-  integrity sha512-W/DCzjqH9jBlL5tR/dL9tsTsBp5EaZCdFW8bvbgmXtHxXBUNTk8IV8R90OhJM/byqXdtJfKknv2Yob4Dh7jvrw==
+"@bugsnag/plugin-express@^7.18.0":
+  version "7.18.0"
+  resolved "https://registry.yarnpkg.com/@bugsnag/plugin-express/-/plugin-express-7.18.0.tgz#aaa6dcb71a7f5c52e9ffe044251ca138a605370d"
+  integrity sha512-Y8ZjX4Z9xQSfAR29yq4OMR/AOWQ1/T5RhWYu88Hk/eBJ3zuszPO/wHeuZbhDW0z1v3JmkcKishkje9prypQs2g==
   dependencies:
     iserror "^0.0.2"
 
