@@ -1,4 +1,6 @@
 site_name: mycomponent
+repo_url: https://github.com/RoadieHQ/sample-service
+edit_uri: edit/main/sub-dir-documentation/docs
 
 plugins:
   - monorepo
