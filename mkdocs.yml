@@ -12,7 +12,7 @@ nav:
 
 docs_dir: docs
 plugins:
-  - monorepo
+  - techdocs-core
 
 markdown_extensions:
   - markdown_inline_mermaid
