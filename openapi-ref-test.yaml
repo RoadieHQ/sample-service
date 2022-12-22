@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: openapi-ref-test
+  description: API entity testing $openapi resolver
+  annotations:
+    openapi/ref-basepath: ./
+spec:
+  type: openapi
+  lifecycle: production
+  owner: vehicle-search-team
+  definition:
+    $openapi: ./paths/api.yaml
