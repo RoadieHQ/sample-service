@@ -39,7 +39,7 @@ spec:
       input:
         url: https://github.com/sblausten/sample-service/
     - id: appendFile
-      name: Append To File
+      name: Append To File Or Create New
       action: roadiehq:utils:fs:append
       input:
         path: ${{ parameters.path }}
@@ -51,9 +51,9 @@ spec:
         repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName:  ${{ parameters.pr_branch }}
         title: Add test content to ${{ parameters.path }}
-        description: Test append file
+        description: Test append or create file
     - id: log-message
-      name: Log Message
+      name: Log PR URL
       action: debug:log
       input:
-        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}, ${{ steps["publish-pr"].output.pullRequestNumber }}!'
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'
