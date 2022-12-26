@@ -10,7 +10,7 @@ spec:
   type: service
 
   parameters:
-    - title: Append To File
+    - title: Append To File 1
       properties:
         repository:
           title: Repository name
