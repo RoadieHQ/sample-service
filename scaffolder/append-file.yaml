@@ -24,7 +24,6 @@ spec:
           title: Path
           type: string
           description: The path to the file
-        $text: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products-field.yaml
         content:
           title: Content
           type: string
@@ -33,6 +32,7 @@ spec:
           title: PR Branch
           type: string
           description: The new branch to make a pr from
+    $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
   steps:
     - id: fetch-repo
       name: Fetch repo
