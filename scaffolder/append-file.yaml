@@ -45,4 +45,9 @@ spec:
         branchName:  ${{ parameters.pr_branch }}
         title: Add test content to ${{ parameters.path }}
         description: Test append file
-        targetPath: sample-service/
+        sourcePath: sample-service
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}, ${{ steps["publish-pr"].output.pullRequestNumber }}!'
