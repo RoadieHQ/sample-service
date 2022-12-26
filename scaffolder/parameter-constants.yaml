@@ -1,0 +1,19 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: global-param-example
+  title: Example of sourcing params from a constant
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    - $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
+
+  steps:
+    - id: log-message
+      name: List selected product
+      action: debug:log
+      input:
+        message: 'Selected product: ${{ parameters.product }}'
