@@ -20,6 +20,10 @@ spec:
           title: Content
           type: string
           description: The content to append to the file
+        pr_branch:
+          title: PR Branch
+          type: string
+          description: The new branch to make a pr from
   steps:
     - id: fetch-repo
       name: Fetch repo
@@ -33,3 +37,12 @@ spec:
       input:
         path: sample-service/${{ parameters.path }}
         content: ${{ parameters.content }}
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=sample-service&owner=sblausten
+        branchName:  ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append file
+        targetPath: sample-service/
