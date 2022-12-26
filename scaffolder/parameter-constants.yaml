@@ -9,7 +9,7 @@ spec:
   type: service
 
   parameters:
-    - $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
+    - $yaml: ./constants/products.yaml
 
   steps:
     - id: log-message

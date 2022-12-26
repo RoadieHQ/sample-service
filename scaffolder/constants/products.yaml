@@ -1,6 +1,6 @@
 title: Select Product
 properties:
-  size:
+  product:
     title: Product
     type: string
     enum: ["Search", "CRM", "Onboarding"]
