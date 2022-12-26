@@ -35,8 +35,6 @@ async function generate() {
         let i = 1;
         while(i <= count) {
             const content = getComponentYaml(i);
-            console.log(`Generated yaml for component ${i}`)
-            console.log(`Appending yaml`)
             await fs.appendFile(fileName, content);
             if(i !== count) await fs.appendFile(fileName, "---\n");
             console.log(`Added yaml to ${fileName} for component ${i}`)
