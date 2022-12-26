@@ -21,9 +21,15 @@ spec:
           type: string
           description: The content to append to the file
   steps:
+    - id: fetch-repo
+      name: Fetch repo
+      action: fetch:plain
+      input:
+        url: https://github.com/sblausten/sample-service/
+        targetPath: sample-service
     - id: appendFile
       name: Append To File
       action: roadiehq:utils:fs:append
       input:
-        path: ${{ parameters.path }}
+        path: sample-service/${{ parameters.path }}
         content: ${{ parameters.content }}
