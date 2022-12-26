@@ -1,0 +1,4 @@
+size:
+  title: Product
+  type: string
+  enum: ["Search", "CRM", "Onboarding"]

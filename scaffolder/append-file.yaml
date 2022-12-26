@@ -24,6 +24,7 @@ spec:
           title: Path
           type: string
           description: The path to the file
+        $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products-field.yaml
         content:
           title: Content
           type: string
