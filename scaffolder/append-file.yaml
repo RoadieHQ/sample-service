@@ -28,11 +28,11 @@ spec:
           title: Content
           type: string
           description: The content to append to the file
-        $yaml: https://github.com/sblausten/sample-service/blob/scaffolder/constants/products.yaml
         pr_branch:
           title: PR Branch
           type: string
           description: The new branch to make a pr from
+    - $yaml: https://github.com/sblausten/sample-service/blob/scaffolder/constants/products.yaml
   steps:
     - id: fetch-repo
       name: Fetch repo
