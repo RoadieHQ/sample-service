@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: append-file-template-1
-  title: Append To File template
+  title: Append To File template 1
   description: Example temaplte to append to a file with on the given path with the given content in the workspace.
 spec:
   owner: roadie
