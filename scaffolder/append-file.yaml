@@ -33,7 +33,6 @@ spec:
           title: PR Branch
           type: string
           description: The new branch to make a pr from
-    - $text: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
   steps:
     - id: fetch-repo
       name: Fetch repo
