@@ -12,6 +12,14 @@ spec:
   parameters:
     - title: Append To File
       properties:
+        repository:
+          title: Repository name
+          type: string
+          description: The name of the repository
+        org:
+          title: Repository Organisation
+          type: string
+          description: The Github org that the repository is in
         path:
           title: Path
           type: string
@@ -30,22 +38,20 @@ spec:
       action: fetch:plain
       input:
         url: https://github.com/sblausten/sample-service/
-        targetPath: sample-service
     - id: appendFile
       name: Append To File
       action: roadiehq:utils:fs:append
       input:
-        path: sample-service/${{ parameters.path }}
+        path: ${{ parameters.path }}
         content: ${{ parameters.content }}
     - id: publish-pr
       name: Publish PR
       action: publish:github:pull-request
       input:
-        repoUrl: github.com?repo=sample-service&owner=sblausten
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName:  ${{ parameters.pr_branch }}
         title: Add test content to ${{ parameters.path }}
         description: Test append file
-        sourcePath: sample-service
     - id: log-message
       name: Log Message
       action: debug:log
