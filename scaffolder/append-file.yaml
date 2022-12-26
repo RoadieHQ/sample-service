@@ -10,7 +10,7 @@ spec:
   type: service
 
   parameters:
-    $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
+    - $yaml: https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/products.yaml
     - title: Append To File 1
       properties:
         repository:

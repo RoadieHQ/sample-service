@@ -1,6 +1,6 @@
-- title: Append To File
-  properties:
-    size:
-      title: Product
-      type: string
-      enum: ["Search", "CRM", "Onboarding"]
+title: Append To File
+properties:
+  size:
+    title: Product
+    type: string
+    enum: ["Search", "CRM", "Onboarding"]
