@@ -35,9 +35,13 @@ spec:
       input:
         data: steps.snyk-issues.output.body
         expression: '$.projects.[name, id]'
+    - id: log-result
+      action: debug:log
+      input:
+        message: 'Available Snyk projects: ${{ steps["parse"].output.result }}'
 
   output:
     path: ${{ steps.parse.output.result }}
-    getResponse: '{{ steps.get-snyk-projects.output.body }}'
-    getCode: '{{ steps.get-snyk-projects.output.code }}'
-    getHeaders: '{{ steps.get-snyk-projects.output.headers }}'
+    getResponse: '{{ steps["get-snyk-projects"].output.body }}'
+    getCode: '{{ steps["get-snyk-projects"].output.code }}'
+    getHeaders: '{{ steps["get-snyk-projects"].output.headers }}'
