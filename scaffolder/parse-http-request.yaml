@@ -33,7 +33,7 @@ spec:
       name: Parse File
       action: roadiehq:utils:jsonata
       input:
-        data: steps.snyk-issues.output.body
+        data: ${{ steps.snyk-issues.output.body }}
         expression: '$.projects.[name, id]'
     - id: log-result
       action: debug:log
