@@ -34,7 +34,7 @@ spec:
       action: roadiehq:utils:jsonata
       input:
         data: steps.snyk-issues.output.body
-        expression: '$ ~> | $ | { "items": [items, "item2"] }|'
+        expression: '$.projects.[name, id]'
 
   output:
     path: ${{ steps.serialize.output.result }}
