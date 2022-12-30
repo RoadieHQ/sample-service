@@ -23,8 +23,8 @@ spec:
           description: The Snyk Project Id
 
   steps:
-    - id: snyk-issues
-      name: Snyk issues
+    - id: get-snyk-projects
+      name: Snyk Projects
       action: http:backstage:request
       input:
         method: 'GET'
@@ -37,7 +37,7 @@ spec:
         expression: '$.projects.[name, id]'
 
   output:
-    path: ${{ steps.serialize.output.result }}
-    getResponse: '{{ steps.backstage_request.output.body }}'
-    getCode: '{{ steps.backstage_request.output.code }}'
-    getHeaders: '{{ steps.backstage_request.output.headers }}'
+    path: ${{ steps.parse.output.result }}
+    getResponse: '{{ steps.get-snyk-projects.output.body }}'
+    getCode: '{{ steps.get-snyk-projects.output.code }}'
+    getHeaders: '{{ steps.get-snyk-projects.output.headers }}'
