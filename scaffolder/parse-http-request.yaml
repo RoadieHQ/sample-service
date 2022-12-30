@@ -1,0 +1,38 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: http-request-parsing
+  title: Http request parsing
+  description: Example template to perform a jsonata expression on input data
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    - id: snyk-project-id
+      title: Snyk Details
+      properties:
+        projectId:
+          title: Project id
+          type: string
+          description: The path you want to get on your backstage instance
+  steps:
+    - id: snyk-issues
+      name: Snyk issues
+      action: http:backstage:request
+      input:
+        method: 'GET'
+        path: '/api/proxy/snyk/org/org/project/${{ parameters.projectId }}/aggregated-issues'
+    - id: parse
+      name: Parse File
+      action: roadiehq:utils:jsonata
+      input:
+        data: steps.snyk-issues.output.body
+        expression: '$ ~> | $ | { "items": [items, "item2"] }|'
+
+  output:
+    path: ${{ steps.serialize.output.result }}
+    getResponse: {{ steps.backstage_request.output.body }}
+    getCode: {{ steps.backstage_request.output.code }}
+    getHeaders: {{ steps.backstage_request.output.headers }}

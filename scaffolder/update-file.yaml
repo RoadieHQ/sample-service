@@ -1,0 +1,59 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: edit-file-template-example
+  title: Edit file template example
+  description: Example template to edit an existing file in a repo.
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    - title: Append To File 1
+      properties:
+        repository:
+          title: Repository name
+          type: string
+          description: The name of the repository
+        org:
+          title: Repository Organisation
+          type: string
+          description: The Github org that the repository is in
+        path:
+          title: Path
+          type: string
+          description: The path to the file
+        content:
+          title: Content
+          type: string
+          description: The content to append to the file
+        pr_branch:
+          title: PR Branch
+          type: string
+          description: The new branch to make a pr from
+  steps:
+    - id: fetch-repo
+      name: Fetch repo
+      action: fetch:plain
+      input:
+        url: https://github.com/sblausten/sample-service/
+    - id: appendFile
+      name: Append To File Or Create New
+      action: roadiehq:utils:fs:append
+      input:
+        path: ${{ parameters.path }}
+        content: ${{ parameters.content }}
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName:  ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append or create file
+    - id: log-message
+      name: Log PR URL
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'
