@@ -33,6 +33,6 @@ spec:
 
   output:
     path: ${{ steps.serialize.output.result }}
-    getResponse: {{ steps.backstage_request.output.body }}
-    getCode: {{ steps.backstage_request.output.code }}
-    getHeaders: {{ steps.backstage_request.output.headers }}
+    getResponse: '{{ steps.backstage_request.output.body }}'
+    getCode: '{{ steps.backstage_request.output.code }}'
+    getHeaders: '{{ steps.backstage_request.output.headers }}'
