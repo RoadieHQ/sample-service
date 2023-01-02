@@ -45,7 +45,7 @@ spec:
       name: Fetch repo
       action: fetch:plain
       input:
-        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
+        url: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
     - id: merge
       name: Merge json
       action: roadiehq:utils:json:merge
