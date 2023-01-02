@@ -54,21 +54,12 @@ spec:
       action: fetch:plain
       input:
         url: https://github.com/sblausten/sample-service/
-    - id: serialize
-      name: serialize
-      action: roadiehq:utils:serialize:yaml
-      input:
-        data:
-          apiVersion: backstage.io/v1alpha1
-          kind: Component
-          metadata:
-            name: ${{ paramerters.name }}
     - id: append-file
       name: Append To File Or Create New
       action: roadiehq:utils:fs:append
       input:
         path: ${{ parameters.path }}
-        content: ${{ steps.serialize.output.serialized }}
+        content: ${{ parameters.content }}
     - id: publish-pr
       name: Publish PR
       action: publish:github:pull-request
