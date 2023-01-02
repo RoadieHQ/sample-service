@@ -29,6 +29,7 @@ spec:
           type: string
           description: The path of the file where you want to append or create this content in the repo
     - title: Entity Metadata
+      properties:
         name:
           title: Entity name
           type: string
