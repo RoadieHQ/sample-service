@@ -93,7 +93,7 @@ spec:
       name: Fetch repo
       action: fetch:plain
       input:
-        url: https://github.com/sblausten/sample-service/
+        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
     - id: serialize
       name: serialize
       action: roadiehq:utils:serialize:yaml

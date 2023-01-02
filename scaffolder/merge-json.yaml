@@ -1,0 +1,50 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-file-template
+  title: Create File template
+  description: Example template to create a file with on the given path with the given content in the workspace.
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    properties:
+      - title: PR Data
+        properties:
+          repository:
+            title: Repository name
+            type: string
+            description: The name of the repository
+          org:
+            title: Repository Organisation
+            type: string
+            description: The Github org that the repository is in
+      - title: Merge in Json
+        properties:
+          path:
+            title: Path
+            type: string
+            description: The path to the desired new file
+          content:
+            title: Json
+            type: string
+            description: Json to merge in
+            ui:widget: textarea
+            ui:options:
+              rows: 10
+            ui:placeholder: |
+              {"hello": "world"}
+  steps:
+    - id: fetch-repo
+      name: Fetch repo
+      action: fetch:plain
+      input:
+        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
+    - id: writeFile
+      name: Create File
+      action: roadiehq:utils:fs:write
+      input:
+        path: ${{ parameters.path }}
+        content: ${{ parameters.content }}

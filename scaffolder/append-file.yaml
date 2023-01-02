@@ -39,7 +39,7 @@ spec:
       name: Fetch repo
       action: fetch:plain
       input:
-        url: https://github.com/sblausten/sample-service/
+        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
     - id: append-file
       name: Append To File Or Create New
       action: roadiehq:utils:fs:append
