@@ -2,9 +2,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: create-file-template
-  title: Create File template
-  description: Example template to create a file with on the given path with the given content in the workspace.
+  name: merge-json-template
+  title: Merge in Json
+  description: Merge in some json to an existing file and open a pull request for it.
 spec:
   owner: roadie
   type: service
@@ -21,6 +21,10 @@ spec:
             title: Repository Organisation
             type: string
             description: The Github org that the repository is in
+          pr_branch:
+            title: PR Branch
+            type: string
+            description: The new branch to make a pr from
       - title: Merge in Json
         properties:
           path:
@@ -42,9 +46,22 @@ spec:
       action: fetch:plain
       input:
         url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
-    - id: writeFile
-      name: Create File
-      action: roadiehq:utils:fs:write
+    - id: merge
+      name: Merge json
+      action: roadiehq:utils:json:merge
       input:
         path: ${{ parameters.path }}
         content: ${{ parameters.content }}
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName: ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append or create file
+    - id: log-message
+      name: Log PR URL
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'
