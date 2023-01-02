@@ -1,0 +1,33 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: serialize
+  title: serialize
+  description: Example template to serialize data to the YAML format
+spec:
+  owner: roadie
+  type: service
+
+  parameters: []
+  steps:
+    - id: serialize
+      name: serialize
+      action: roadiehq:utils:serialize:yaml
+      input:
+        data:
+          hello: world
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName: ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append or create file
+    - id: log-message
+      name: Log PR URL
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'
+  output:
+    path: ${{ steps.serialize.output.serialized }}

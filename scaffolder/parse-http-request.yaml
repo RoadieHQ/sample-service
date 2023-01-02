@@ -30,7 +30,7 @@ spec:
         method: 'GET'
         path: '/api/proxy/snyk/org/${{ parameters.orgName }}/projects'
     - id: parse
-      name: Parse File
+      name: Jsonata parse
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.snyk-issues.output.body }}

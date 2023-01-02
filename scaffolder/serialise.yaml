@@ -1,0 +1,21 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: serialize
+  title: serialize
+  description: Example template to serialize data to the YAML format
+spec:
+  owner: roadie
+  type: service
+
+  parameters: []
+  steps:
+    - id: serialize
+      name: serialize
+      action: roadiehq:utils:serialize:yaml
+      input:
+        data:
+          hello: world
+  output:
+    path: ${{ steps.serialize.output.serialized }}

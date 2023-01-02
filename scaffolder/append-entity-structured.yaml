@@ -1,0 +1,132 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: append-file-template-example
+  title: Append To File template example
+  description: Example temaplte to append to a file with on the given path with the given content in the workspace.
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    - title: PR Data
+      properties:
+        repository:
+          title: Repository name
+          type: string
+          description: The name of the repository
+        org:
+          title: Repository Organisation
+          type: string
+          description: The Github org that the repository is in
+        pr_branch:
+          title: PR Branch
+          type: string
+          description: The new branch to make a pr from
+        path:
+          title: Path
+          type: string
+          description: The path of the file where you want to append or create this content in the repo
+    - title: Entity Metadata
+        name:
+          title: Entity name
+          type: string
+          description: Key name of your entity
+        title:
+          title: Entity Title
+          type: string
+          description: Title of your entity
+        description:
+          title: Entity Description
+          type: string
+          description: Description of your entity
+        annotations:
+          title: Entity Annotations
+          type: object
+          description: Annotations for your entity
+          properties:
+            backstage.io/techdocs-ref:
+              title: Simple text input
+              type: string
+              default: dir:.
+        tags:
+          title: Select tags
+          type: array
+          items:
+            type: string
+            enum:
+              - node
+              - ruby
+              - java
+          uniqueItems: true
+          ui:widget: checkboxes
+        type:
+          title: Entity Type
+          type: string
+          description: Type of your entity
+          default: service
+            enum:
+              - service
+              - website
+              - library
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+        lifecycle:
+          title: Lifecycle
+          type: string
+          description: State of your entity
+          default: experimental
+            enum:
+              - experimental
+              - production
+              - deprecated
+
+  steps:
+    - id: fetch-repo
+      name: Fetch repo
+      action: fetch:plain
+      input:
+        url: https://github.com/sblausten/sample-service/
+    - id: serialize
+      name: serialize
+      action: roadiehq:utils:serialize:yaml
+      input:
+        data:
+          apiVersion: backstage.io/v1alpha1
+          kind: Component
+          metadata:
+            name: ${{ parameters.name }}
+            title: ${{ parameters.title }}
+            description: ${{ parameters.description }}
+            annotations: ${{ parameters.annotations }}
+            tags: ${{ parameters.tags }}
+          spec:
+            type: ${{ parameters.type }}
+            owner: ${{ parameters.owner }}
+            lifecycle: ${{ parameters.lifecycle }}
+    - id: append-file
+      name: Append To File Or Create New
+      action: roadiehq:utils:fs:append
+      input:
+        path: ${{ parameters.path }}
+        content: ${{ steps.serialize.output.serialized }}
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName:  ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append or create file
+    - id: log-message
+      name: Log PR URL
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'

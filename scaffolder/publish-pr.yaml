@@ -1,0 +1,35 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: append-file-template-example
+  title: Append To File template example
+  description: Append to a file with on the given path with the given content in the workspace.
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    properties:
+      repository:
+        title: Repository name
+        type: string
+        description: The name of the repository
+      org:
+        title: Repository Organisation
+        type: string
+        description: The Github org that the repository is in
+      pr_branch:
+        title: PR Branch
+        type: string
+        description: The new branch to make a pr from
+
+  steps:
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName:  ${{ parameters.pr_branch }}
+        title: Add test content to ${{ parameters.path }}
+        description: Test append or create file
