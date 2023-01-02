@@ -67,10 +67,10 @@ spec:
           type: string
           description: Type of your entity
           default: service
-            enum:
-              - service
-              - website
-              - library
+          enum:
+            - service
+            - website
+            - library
         owner:
           title: Owner
           type: string
@@ -84,10 +84,10 @@ spec:
           type: string
           description: State of your entity
           default: experimental
-            enum:
-              - experimental
-              - production
-              - deprecated
+          enum:
+            - experimental
+            - production
+            - deprecated
 
   steps:
     - id: fetch-repo
