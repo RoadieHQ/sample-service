@@ -11,35 +11,31 @@ spec:
 
   parameters:
     properties:
-      - title: PR Data
-        properties:
-          repository:
-            title: Repository name
-            type: string
-            description: The name of the repository
-          org:
-            title: Repository Organisation
-            type: string
-            description: The Github org that the repository is in
-          pr_branch:
-            title: PR Branch
-            type: string
-            description: The new branch to make a pr from
-      - title: Merge in Json
-        properties:
-          path:
-            title: Path
-            type: string
-            description: The path to the desired new file
-          content:
-            title: Json
-            type: string
-            description: Json to merge in
-            ui:widget: textarea
-            ui:options:
-              rows: 10
-            ui:placeholder: |
-              {"hello": "world"}
+      repository:
+        title: Repository name
+        type: string
+        description: The name of the repository
+      org:
+        title: Repository Organisation
+        type: string
+        description: The Github org that the repository is in
+      pr_branch:
+        title: PR Branch
+        type: string
+        description: The new branch to make a pr from
+      path:
+        title: Path
+        type: string
+        description: The path to the desired new file
+      content:
+        title: Json
+        type: string
+        description: Json to merge in
+        ui:widget: textarea
+        ui:options:
+          rows: 10
+        ui:placeholder: |
+          {"hello": "world"}
   steps:
     - id: log-message
       name: Log PR URL
