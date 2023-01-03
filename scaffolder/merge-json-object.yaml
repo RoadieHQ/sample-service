@@ -40,7 +40,7 @@ spec:
         url: 'https://github.com/${{ parameters.org }}/${{ parameters.repository }}'
     - id: merge
       name: Merge JSON
-      action: roadiehq:utils:json:merge
+      action: json:merge
       input:
         path: ${{ parameters.path }}
         content:
