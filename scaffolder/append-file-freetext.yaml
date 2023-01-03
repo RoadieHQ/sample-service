@@ -25,6 +25,7 @@ spec:
           type: string
           description: The new branch to make a pr from
     - title: Append content
+      properties:
         path:
           title: Path
           type: string
