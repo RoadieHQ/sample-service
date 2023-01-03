@@ -2,9 +2,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: merge-json-template
-  title: Merge in Json
-  description: Merge in some json to an existing file and open a pull request for it.
+  name: merge-json-object-template
+  title: Add Node Engine constraints to package.json
+  description: Merge in some JSON to an existing file and open a pull request for it.
 spec:
   owner: roadie
   type: service
@@ -27,35 +27,33 @@ spec:
         title: Path
         type: string
         description: The path to the desired new file
-      content:
-        title: Json
+      version:
+        title: Node Engine Version
         type: string
-        description: Json to merge in
-        ui:widget: textarea
-        ui:options:
-          rows: 10
-        ui:placeholder: |
-          {"hello": "world"}
+        description: Add an engine version constraint to the package.json
+
   steps:
     - id: fetch-repo
       name: Fetch repo
       action: fetch:plain
       input:
-        url: "https://github.com/${{ parameters.org }}/${{ parameters.repository }}"
+        url: 'https://github.com/${{ parameters.org }}/${{ parameters.repository }}'
     - id: merge
-      name: Merge json
-      action: json:merge
+      name: Merge JSON
+      action: roadiehq:utils:json:merge
       input:
         path: ${{ parameters.path }}
-        content: ${{ parameters.content }}
+        content:
+          engines:
+            node: ${{ parameters.version }}
     - id: publish-pr
       name: Publish PR
       action: publish:github:pull-request
       input:
         repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName: ${{ parameters.pr_branch }}
-        title: Merge json into ${{ parameters.path }}
-        description: This PR was created by a Roadie Backstage scaffolder task
+        title: Specify Node Engine Versions ${{ parameters.path }}
+        description: This PR was created by a Backstage scaffolder task
     - id: log-message
       name: Log PR URL
       action: debug:log
