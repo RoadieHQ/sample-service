@@ -60,7 +60,7 @@ spec:
         repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName: ${{ parameters.pr_branch }}
         title: Merge json into ${{ parameters.path }}
-        description: Test append or create file
+        description: This PR was created by a Roadie Backstage scaffolder task
     - id: log-message
       name: Log PR URL
       action: debug:log
