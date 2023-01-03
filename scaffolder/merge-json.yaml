@@ -41,7 +41,7 @@ spec:
       name: Log PR URL
       action: debug:log
       input:
-        message: "Fetching repo froom https://github.com/${{ parameters.org }}/${{ parameters.repository }}"
+        message: "Fetching repo from https://github.com/${{ parameters.org }}/${{ parameters.repository }}"
     - id: fetch-repo
       name: Fetch repo
       action: fetch:plain
