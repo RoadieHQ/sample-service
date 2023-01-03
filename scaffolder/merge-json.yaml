@@ -45,7 +45,7 @@ spec:
       name: Fetch repo
       action: fetch:plain
       input:
-        url: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
     - id: merge
       name: Merge json
       action: roadiehq:utils:json:merge
@@ -58,7 +58,7 @@ spec:
       input:
         repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName: ${{ parameters.pr_branch }}
-        title: Add test content to ${{ parameters.path }}
+        title: Merge json into ${{ parameters.path }}
         description: Test append or create file
     - id: log-message
       name: Log PR URL
