@@ -2,7 +2,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service-2
-  title: Sample Service 2
   description: |
     A service for testing Backstage functionality. Configured for Circle CI
     and Rollbar.
@@ -16,9 +15,9 @@ metadata:
     bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
 
 spec:
-  type: service
-  owner: dtuite
-  lifecycle: experimental
+  type: library
+  owner: User:dtuite
+  lifecycle: incorrectvalue
   system: sample-system
   providesApis:
     - sample-service

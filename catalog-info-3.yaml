@@ -3,15 +3,13 @@ kind: Component
 metadata:
   name: sample-service-3
   title: Sample Service 3
-  description: |
-    A service for testing Backstage functionality. Configured for Travis CI.
   annotations:
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     'jenkins.io/job-full-name': roadie
     backstage.io/kubernetes-id: sample-service
 spec:
-  type: service
-  owner: dtuite
-  lifecycle: experimental
+  type: documentation
+  owner: User:dtuite
+  lifecycle: deprecated
   providesApis:
     - sample-service

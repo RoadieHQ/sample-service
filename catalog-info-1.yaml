@@ -19,7 +19,7 @@ metadata:
     dev.azure.com/build-definition: sblausten.sample-service
 spec:
   type: other
-  lifecycle: production
+  lifecycle: experimental
   owner: sample-team
   
 ---
