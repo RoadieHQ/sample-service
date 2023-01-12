@@ -21,7 +21,7 @@ metadata:
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     backstage.io/techdocs-ref: dir:.
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
-    pagerduty.com/servide-id: PVTJXPY
+    pagerduty.com/service-id: PVTJXPY
     snyk.io/org-name: roadie
     snyk.io/project-ids: 48315c5b-0326-4b24-b818-60999fe7386e
     backstage.io/kubernetes-id: sample-service
