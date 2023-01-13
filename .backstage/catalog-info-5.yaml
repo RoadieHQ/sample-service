@@ -13,7 +13,7 @@ metadata:
     aws.com/lambda-region: eu-west-1
     datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
     backstage.io/techdocs-ref: dir:.
-    pagerduty.com/service-id: PVTJXPY
+    pagerduty.com/service-id: P2RXCGR
     jira/project-key: TEST
     jira/component: COMP
     snyk.io/org-name: roadie
