@@ -6,7 +6,7 @@ metadata:
   description: |
     A service for testing Backstage functionality! Configured for GitHub Actions, Sentry, AWS Lambda, Datadog and mis-configured techdocs.
   annotations:
-    last-security-review: 2022-112222-23
+    last-security-review: 2022-11-23
     github.com/project-slug: xantier/sample-service
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
