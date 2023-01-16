@@ -34,9 +34,9 @@ metadata:
   title: Backstage Admins
   description: The Backstage Admins
 spec:
-  type: sub-department
+  type: team
   profile:
-    displayName: roadie-backstage-admin
+    displayName: Admin group
     email: rroadie-backstage-admin@example.com
     picture: https://avatars.dicebear.com/api/identicon/backstage@example.com.svg?background=%23fff&margin=25
   children: []
