@@ -11,13 +11,12 @@ const getComponentYaml = (i) => {
             name: `generated-component-${number}`,
             title: `generated-component-${number}`,
             annotations: {
-                "github.com/project-slug": "sblausten/sample-service",
-                "bugsnag.com/project-key": "RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd"
+                "github.com/project-slug": "RoadieHQ/sample-service"
             },
         },
         spec: {
             type: "service",
-            owner: "sblausten",
+            owner: "RoadieHQ",
             lifecycle: "experimental"
         }
     });
