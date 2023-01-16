@@ -25,19 +25,3 @@ spec:
   system: sample-system
   providesApis:
     - test-service
-   
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: roadie-backstage-admin
-  title: Backstage Admins
-  description: The Backstage Admins
-spec:
-  type: team
-  profile:
-    displayName: Admin group
-    email: rroadie-backstage-admin@example.com
-    picture: https://avatars.dicebear.com/api/identicon/backstage@example.com.svg?background=%23fff&margin=25
-  children: []
-  members: [default/Irma12]
