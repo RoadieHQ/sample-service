@@ -25,19 +25,7 @@ spec:
   system: sample-system
   providesApis:
     - test-service
-    
---- 
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: roadie-backstage-admin
-  description: Backstage administrators
-spec:
-  type: team
-  profile:
-    displayName: Backstage Admins
-    email: info@roadie.io
-  children: []
+   
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
