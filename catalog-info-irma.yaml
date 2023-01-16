@@ -40,15 +40,6 @@ spec:
   children: []
 ---
 apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: admin-username
-spec:
-  profile:
-    displayName: 'Admin User'
-    email: admin@company.com
-  memberOf: [roadie-backstage-admin]
-apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: roadie-backstage-admin
