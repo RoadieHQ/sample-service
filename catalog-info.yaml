@@ -7,7 +7,7 @@ metadata:
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
   labels:
-    tier: 3
+    tier: "3"
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
       title: Datadog
