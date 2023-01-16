@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: roadie-read-only-user
+  name: roadie-tech-insights-user
   title: Backstage Read Only TI
   description: Read only access to TI
 spec:
