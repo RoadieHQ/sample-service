@@ -24,7 +24,6 @@ metadata:
     prometheus.io/rule: memUsage|component,node_memory_Active_bytes|instance,sum by (instance) (node_cpu_seconds_total)|instance
     prometheus.io/alert: 'Excessive Memory Usage'
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
-    splunk.com/on-call-team: Example
     splunk.com/on-call-routing-key: test-routing-key
     tech-insights/scorecard: SampleScorecard
 spec:
