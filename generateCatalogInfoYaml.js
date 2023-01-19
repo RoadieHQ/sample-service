@@ -13,6 +13,7 @@ const getComponentYaml = (i) => {
             annotations: {
                 "github.com/project-slug": "RoadieHQ/sample-service"
             },
+            tags: ['test', `generated${i}`]
         },
         spec: {
             type: "service",

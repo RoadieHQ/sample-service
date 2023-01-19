@@ -127,3 +127,152 @@ spec:
   type: service
   owner: sblausten
   lifecycle: experimental
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-1
+  title: generated-component-1
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated1
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-2
+  title: generated-component-2
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated2
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-3
+  title: generated-component-3
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated3
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-4
+  title: generated-component-4
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated4
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-5
+  title: generated-component-5
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated5
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-6
+  title: generated-component-6
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated6
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-7
+  title: generated-component-7
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated7
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-8
+  title: generated-component-8
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated8
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-9
+  title: generated-component-9
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated9
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: generated-component-10
+  title: generated-component-10
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test
+    - generated10
+spec:
+  type: service
+  owner: RoadieHQ
+  lifecycle: experimental
