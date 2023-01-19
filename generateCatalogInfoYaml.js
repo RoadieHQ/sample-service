@@ -8,7 +8,7 @@ const getComponentYaml = (i) => {
         apiVersion: "backstage.io/v1alpha1",
         kind: "Component",
         metadata: {
-            name: `generated-component-${number}`,
+            name: `generated-new-component-${number}`,
             title: `generated-component-${number}`,
             annotations: {
                 "github.com/project-slug": "RoadieHQ/sample-service"
