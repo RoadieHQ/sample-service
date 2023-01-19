@@ -7,7 +7,6 @@ metadata:
     github.com/project-slug: RoadieHQ/sample-service
   tags:
     - test
-    - generated1
 spec:
   type: service
   owner: RoadieHQ
