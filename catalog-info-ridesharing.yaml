@@ -25,7 +25,7 @@ metadata:
     backstage.io/kubernetes-id: sample-service
 spec:
   type: service
-  owner: roadie
+  owner: marketing
   lifecycle: production
   system: passengers
   providesApis:
@@ -41,7 +41,7 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: roadie
+  owner: marketing
   dependencyOf:
     - Component:passenger-backend
 ---
@@ -53,7 +53,7 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: roadie
+  owner: marketing
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -63,7 +63,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: roadie
+  owner: marketing
   system: passengers
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
@@ -74,7 +74,7 @@ metadata:
   name: passengers
   description: Passenger management and tracking.
 spec:
-  owner: roadie
+  owner: marketing
   domain: ride-sharing
 ---
 apiVersion: backstage.io/v1alpha1
@@ -83,7 +83,7 @@ metadata:
   name: ride-sharing
   description: Moving people easier and faster.
 spec:
-  owner: roadie
+  owner: marketing
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -91,7 +91,7 @@ metadata:
   name: trips
   description: Trip management and reporting.
 spec:
-  owner: roadie
+  owner: marketing
   domain: ride-sharing
 ---
 apiVersion: backstage.io/v1alpha1
@@ -103,7 +103,7 @@ metadata:
     github.com/project-slug: RoadieHQ/sample-service
 spec:
   type: service
-  owner: roadie
+  owner: marketing
   lifecycle: production
   system: trips
   consumesApis:

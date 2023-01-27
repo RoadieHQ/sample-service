@@ -12,5 +12,5 @@ metadata:
     - nodejs
 spec:
   type: service
-  owner: engineering
+  owner: marketing
   lifecycle: experimental

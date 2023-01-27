@@ -16,7 +16,7 @@ metadata:
     lighthouse.com/website-url: https://api.development.env.tryflux.com/lighthouse-audit
 spec:
   type: service
-  owner: engineering
+  owner: marketing
   lifecycle: experimental
   providesApis:
     - sample-service
