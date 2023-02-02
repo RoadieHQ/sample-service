@@ -36,14 +36,14 @@ spec:
                 - workflow
           allowedHosts:
             - github.com
-    path:
-      title: Path
-      type: string
-      description: The path to the file you want to append this content to in the scaffolder workspace
-    content:
-      title: Text area input
-      type: string
-      description: Add your new entity
+      path:
+        title: Path
+        type: string
+        description: The path to the file you want to append this content to in the scaffolder workspace
+      content:
+        title: Text area input
+        type: string
+        description: Add your new entity
 
   steps:
     - id: fetch-repo
