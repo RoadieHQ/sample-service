@@ -11,18 +11,6 @@ spec:
 
   parameters:
     properties:
-      repository:
-        title: Repository name
-        type: string
-        description: The name of the repository
-      org:
-        title: Repository Organisation
-        type: string
-        description: The Github org that the repository is in
-      pr_branch:
-        title: PR Branch
-        type: string
-        description: The new branch to make a pr from
       repoUrl:
         title: Repository Location
         type: string
@@ -36,6 +24,10 @@ spec:
                 - workflow
           allowedHosts:
             - github.com
+      pr_branch:
+        title: PR Branch
+        type: string
+        description: The new branch to make a pr from
       path:
         title: Path
         type: string
@@ -50,7 +42,7 @@ spec:
       name: Fetch repo
       action: fetch:plain
       input:
-        url: https://github.com/${{ parameters.org }}/${{ parameters.repository }}
+        url: ${{ parameters.repoUrl }}
     - id: append-file
       name: Append To File Or Create New
       action: roadiehq:utils:fs:append
@@ -61,7 +53,7 @@ spec:
       name: Publish PR
       action: publish:github:pull-request
       input:
-        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        repoUrl: ${{ parameters.repoUrl }}
         branchName:  ${{ parameters.pr_branch }}
         title: Add test content to ${{ parameters.path }}
         description: Test append or create file
