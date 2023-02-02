@@ -1,0 +1,88 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-shared-gha-repo
+  title: Created Shared Github CI Repo
+  description: Created Github repository for shared Github Actions and Reusable Workflows
+  tags:
+    - ci
+    - github
+    - gha
+spec:
+  owner: Ivys
+  type: infrastructure
+  parameters:
+    - title: Input parameters
+      required:
+        - project_name
+        - description
+        - product_line
+        - owner
+      properties:
+        project_name:
+          title: Project name
+          type: string
+          pattern: "^[a-z-]{3,}$"
+          description: Name of the project (will also be used for k8s and repo name)
+        description:
+          title: Project description
+          type: string
+          description: Description of the project to be included in the repo readme
+            file
+        product_line:
+          title: Product line
+          type: string
+          description: The product line this service will be part of
+          enum:
+            - communication
+            - infra
+            - platform
+            - loyalty
+            - subscriptions
+            - ugc
+            - data
+            - smsbump
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+  steps:
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: "./template"
+        values:
+          project_name: "${{ parameters.project_name }}"
+          description: "${{ parameters.description }}"
+          product_line: "${{ parameters.product_line }}"
+          owner: "${{ parameters.owner }}"
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts:
+          - github.com
+        access: "${{ parameters.owner }}"
+        description: "${{ parameters.description }}"
+        repoUrl: github.com?owner=RoadieHQ&repo=${{ parameters.project_name }}
+        defaultBranch: main
+        repoVisibility: private
+        requireCodeOwnerReviews: true
+        deleteBranchOnMerge: true
+        allowMergeCommit: true
+        allowSquashMerge: true
+        allowRebaseMerge: false
+        topics:
+          - k8s
+          - team-${{ parameters.owner }}
+          - "${{ parameters.product_line }}"
+  output:
+    links:
+      - url: "${{ steps.publish.output.remoteUrl }}"
+        text: The created ${{ parameters.project_name }} repository on github
