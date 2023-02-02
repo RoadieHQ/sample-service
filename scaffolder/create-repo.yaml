@@ -15,10 +15,8 @@ spec:
   parameters:
     - title: Input parameters
       required:
-        - project_name
-        - description
-        - product_line
         - owner
+        - repoUrl
       properties:
         repoUrl:
           title: Repository Location
