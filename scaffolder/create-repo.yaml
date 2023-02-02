@@ -49,7 +49,6 @@ spec:
       input:
         allowedHosts:
           - github.com
-        access: "${{ parameters.owner }}"
         repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
         repoVisibility: private
@@ -58,6 +57,9 @@ spec:
         allowMergeCommit: true
         allowSquashMerge: true
         allowRebaseMerge: false
+        contributors:
+          - RoadieHQ/engineering
+          - RoadieHQ/roadie-backstage-admin
     - id: log-message
       name: Created Repo Log
       action: debug:log
