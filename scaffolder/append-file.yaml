@@ -24,6 +24,19 @@ spec:
           title: PR Branch
           type: string
           description: The new branch to make a pr from
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            # Here's the option you can pass to the RepoUrlPicker
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+              additionalScopes:
+                github:
+                  - workflow
+            allowedHosts:
+              - github.com
     - title: Append content
         path:
           title: Path
@@ -54,6 +67,7 @@ spec:
         branchName:  ${{ parameters.pr_branch }}
         title: Add test content to ${{ parameters.path }}
         description: Test append or create file
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
     - id: log-message
       name: Log PR URL
       action: debug:log
