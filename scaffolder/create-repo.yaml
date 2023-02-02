@@ -58,8 +58,10 @@ spec:
         allowSquashMerge: true
         allowRebaseMerge: false
         contributors:
-          - RoadieHQ/engineering
-          - RoadieHQ/roadie-backstage-admin
+          - team: roadiehq/engineering
+            access: admin
+          - team: roadiehq/roadie-backstage-admin
+            access: admin
     - id: log-message
       name: Created Repo Log
       action: debug:log
