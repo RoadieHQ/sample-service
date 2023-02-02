@@ -20,6 +20,19 @@ spec:
         - product_line
         - owner
       properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            # Here's the option you can pass to the RepoUrlPicker
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+              additionalScopes:
+                github:
+                  - workflow
+            allowedHosts:
+              - github.com
         project_name:
           title: Project name
           type: string
@@ -78,6 +91,7 @@ spec:
         allowMergeCommit: true
         allowSquashMerge: true
         allowRebaseMerge: false
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
         topics:
           - k8s
           - team-${{ parameters.owner }}
