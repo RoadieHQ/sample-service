@@ -58,7 +58,6 @@ spec:
         allowMergeCommit: true
         allowSquashMerge: true
         allowRebaseMerge: false
-        token: ${{ secrets.USER_OAUTH_TOKEN }}
     - id: log-message
       name: Created Repo Log
       action: debug:log
