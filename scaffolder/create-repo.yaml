@@ -35,10 +35,6 @@ spec:
           title: Owner
           type: string
           description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
   steps:
     - id: fetch-base
       name: Fetch Base
