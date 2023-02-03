@@ -1,10 +1,14 @@
 ![alt-text](docs/assets/headline.png "CC BY-NC-SA 4.0")
 
+[![Tag Releases](https://github.com/YotpoLtd/ci-utils/actions/workflows/tag-release.yaml/badge.svg?branch=master)](https://github.com/YotpoLtd/ci-utils/actions/workflows/tag-release.yaml)
+
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
 - [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
 - [Read me](README.md) - Read me document
 - [Link to sybling](./LINK_ME.md) - Link to a markdown file outside the techdocs repo
+
+
 
 # Sample Service
 
