@@ -6,8 +6,8 @@ metadata:
   annotations:
     github.com/project-slug: sblausten/sample-service
   labels:
-    - test1: label1
-    - test2: label2
+    test1: label1
+    test2: label2
 spec:
   type: service
   owner: sblausten
