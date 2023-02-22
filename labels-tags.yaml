@@ -5,7 +5,7 @@ metadata:
   title: test-labels-1
   annotations:
     github.com/project-slug: sblausten/sample-service
-    backstage:io/view-url: javascript:alert(/xss1@/+document.domain)
+    backstage.io/view-url: javascript:alert(/xss1@/+document.domain)
   labels:
     test1: label1
     test2: label2
