@@ -27,6 +27,8 @@ metadata:
     splunk.com/on-call-team: Example
     tech-insights/scorecard: SampleScorecard
     harness.io/project-url: https://app.harness.io/ng/#/account/d5af5z8-RkS5-ehQRNVk9w/home/orgs/default/projects/default_project/details
+  labels: 
+    label2/label1: test-label
 spec:
   type: service
   owner: Xantier
