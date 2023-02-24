@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: brian-service-1
+  title: Brian Service
+  tags:
+    - test
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
+  annotations:
+    jenkins.io/github-folder: 'roadie/sample-service'
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: sample-service
+    aws.com/lambda-function-name: HelloWorld
+    aws.com/lambda-region: eu-west-1
+    backstage.io/techdocs-ref: url:s3
+    buildkite.com/project-slug: 'samroadie/demo-data'
+    qameta.io/allure-project: asdf   
+  labels:
+    label2/label1: test-label3
+    label2/label2: test-label4 
+spec:
+  type: service
+  owner: dtuite
+  lifecycle: experimental
+  providesApis:
+    - sample-service
