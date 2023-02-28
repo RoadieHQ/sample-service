@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test-name-change-1
-  title: Name change test 1
+  name: test-name-change-2
+  title: Duplicate test
   annotations:
     github.com/project-slug: sblausten/sample-service
   tags:
