@@ -11,3 +11,17 @@ spec:
   type: service
   owner: sblausten
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-name-change
+  title: Duplicate test
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+  tags:
+    - test1
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
