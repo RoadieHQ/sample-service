@@ -2,11 +2,11 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: test-name-change-2
-  title: Name change test 2
+  title: Name change test
   annotations:
     github.com/project-slug: sblausten/sample-service
   tags:
-    - test2
+    - test
 spec:
   type: service
   owner: sblausten
