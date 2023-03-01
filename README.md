@@ -4,7 +4,7 @@
 - [Features testing](docs/feature-testing.md) - Features testing
 - [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
 - [Read me](README.md) - Read me document
-- [Link to sybling](./LINK_ME.md) - Link to a markdown file outside the techdocs repo
+- [Link to sibling](./LINK_ME.md) - Link to a markdown file outside the techdocs repo
 
 # Sample Service
 
