@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: conflict-test-component-swap-2
-  title: Conflict test component swap 2
+  name: conflict-test-component-swap-1
+  title: Conflict test component swap 1
   annotations:
     github.com/project-slug: sblausten/sample-service
 spec:
