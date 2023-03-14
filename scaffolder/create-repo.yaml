@@ -60,8 +60,8 @@ spec:
         contributors:
         - team: RoadieHQ/engineering
           access: admin
-        - team: RoadieHQ/roadie-backstage-admin
-          access: admin
+        - team: roadie-backstage-admin
+          access: write
     - id: log-message
       name: Created Repo Log
       action: debug:log
