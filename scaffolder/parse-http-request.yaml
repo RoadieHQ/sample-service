@@ -2,9 +2,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: http-request-parsing
-  title: Http request parsing
-  description: Example template to perform a jsonata expression on input data
+  name: http-request-snyk
+  title: Http request to snyk project
+  description: Example template to perform a http request via proxy
 spec:
   owner: roadie
   type: service
