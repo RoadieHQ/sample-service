@@ -51,7 +51,7 @@ spec:
         requireCodeOwnerReviews: true
         collaborators:
           - team: engineering
-            access: maintain
+            access: admin
           - team: roadie-backstage-admin
             access: pull
           - team: roadie-tech-insights-user
