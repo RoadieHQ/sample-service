@@ -2,15 +2,11 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: create-shared-gha-repo
-  title: Created Shared Github CI Repo
-  description: Created Github repository for shared Github Actions and Reusable Workflows
-  tags:
-    - ci
-    - github
-    - gha
+  name: create-repo-1
+  title: Created Github Repo
+  description: Create Github repository
 spec:
-  owner: Ivys
+  owner: sblausten
   type: infrastructure
   parameters:
     - title: Input parameters
@@ -53,10 +49,6 @@ spec:
         defaultBranch: main
         repoVisibility: private
         requireCodeOwnerReviews: true
-        deleteBranchOnMerge: true
-        allowMergeCommit: true
-        allowSquashMerge: true
-        allowRebaseMerge: false
         contributors:
         - team: RoadieHQ/engineering
           access: admin
