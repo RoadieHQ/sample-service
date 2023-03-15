@@ -53,7 +53,7 @@ spec:
           - team: RoadieHQ/engineering
             access: admin
           - team: roadie-backstage-admin
-            access: write
+            access: admin
     - id: log-message
       name: Created Repo Log
       action: debug:log
