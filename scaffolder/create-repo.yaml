@@ -50,10 +50,14 @@ spec:
         repoVisibility: private
         requireCodeOwnerReviews: true
         collaborators:
-          - team: RoadieHQ/engineering
-            access: admin
+          - team: engineering
+            access: maintain
           - team: roadie-backstage-admin
-            access: admin
+            access: pull
+          - team: roadie-tech-insights-user
+            access: triage
+          - team: Roadie
+            access: push
     - id: log-message
       name: Created Repo Log
       action: debug:log
