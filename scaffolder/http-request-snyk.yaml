@@ -28,17 +28,11 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/api/proxy/snyk/orgs/${{ parameters.orgName }}/projects'
-    - id: parse
-      name: Jsonata parse
-      action: roadiehq:utils:jsonata
-      input:
-        data: ${{ steps.snyk-issues.output.body }}
-        expression: '$.projects.[name, id]'
+        path: '/api/proxy/snyk/orgs/${{ parameters.orgName }}/projects/${{ parameters.projectId }}'
     - id: log-result
       action: debug:log
       input:
-        message: 'Available Snyk projects: ${{ steps["parse"].output.result }}'
+        message: 'Available Snyk projects: ${{ steps["get-snyk-projects"].output.result }}'
 
   output:
     path: ${{ steps.parse.output.result }}
