@@ -58,7 +58,7 @@ spec:
       name: Created Repo Log
       action: debug:log
       input:
-        message: 'RemoteURL: ${{ steps["publish"].output.remoteUrl }}'
+        message: 'RemoteURL 1: ${{ steps["publish"].output.remoteUrl }}'
   output:
     links:
       - url: "${{ steps.publish.output.remoteUrl }}"
