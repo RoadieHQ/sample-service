@@ -28,7 +28,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/api/proxy/snyk/orgs/${{ parameters.orgName }}/projects/${{ parameters.projectId }}'
+        path: '/api/proxy/snyk/org/${{ parameters.orgName }}/projects/${{ parameters.projectId }}'
     - id: log-result
       action: debug:log
       input:

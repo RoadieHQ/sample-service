@@ -28,7 +28,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/api/proxy/snyk/orgs/${{ parameters.orgName }}/projects'
+        path: '/api/proxy/snyk/org/${{ parameters.orgName }}/projects'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
