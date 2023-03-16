@@ -5,7 +5,7 @@ metadata:
   name: sonarqube-test-1
   annotations:
     github.com/project-slug: sblausten/sample-service
-    sonarqube:org/project-key: sam-sample-repo
+    sonarqube.org/project-key: sam-sample-repo
 spec:
   type: service
   owner: sblausten
