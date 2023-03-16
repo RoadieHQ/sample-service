@@ -15,7 +15,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/aws-news-feed'
+        path: '/proxy/aws-news-feed'
     - id: log-result
       action: debug:log
       input:
