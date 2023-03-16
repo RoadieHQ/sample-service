@@ -1,0 +1,28 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: http-request-no-auth
+  title: Http request No Auth
+  description: Example template
+spec:
+  owner: roadie
+  type: service
+
+  steps:
+    - id: get-aws-news
+      name: AWS News Feed
+      action: http:backstage:request
+      input:
+        method: 'GET'
+        path: '/api/proxy/aws-news-feed'
+    - id: log-result
+      action: debug:log
+      input:
+        message: 'Available Snyk projects: ${{ steps["get-aws-news"].output.result }}'
+
+  output:
+    path: ${{ steps.parse.output.result }}
+    getResponse: '{{ steps["get-aws-news"].output.body }}'
+    getCode: '{{ steps["get-aws-news"].output.code }}'
+    getHeaders: '{{ steps["get-aws-news"].output.headers }}'
