@@ -5,7 +5,7 @@ metadata:
   title: Sample Service
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
-    Sentry.
+    Sentry. 
   labels:
     tier: "3"
   links:
