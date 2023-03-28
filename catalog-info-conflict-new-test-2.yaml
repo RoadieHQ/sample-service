@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: conflict-test-1
+  name: conflict-test-2
   title: Test Dupe 2
 spec:
   type: service
