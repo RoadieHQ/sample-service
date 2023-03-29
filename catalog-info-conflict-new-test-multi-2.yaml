@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: conflict-test-multi-2
+  title: Test Multi 2 moved
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
