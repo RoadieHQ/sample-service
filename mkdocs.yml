@@ -12,8 +12,8 @@ nav:
 
 docs_dir: docs
 plugins:
-  - techdocs-core
   - termynal
+  - techdocs-core
 
 markdown_extensions:
   - markdown_inline_mermaid
