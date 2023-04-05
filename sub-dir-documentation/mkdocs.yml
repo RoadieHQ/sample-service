@@ -3,6 +3,7 @@ site_description: 'My Component'
 
 plugins:
   - monorepo
+  - termynal
 
 nav:
   - First page: index.md
