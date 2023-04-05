@@ -12,7 +12,6 @@ nav:
 
 docs_dir: docs
 plugins:
-  - termynal
   - techdocs-core
 
 markdown_extensions:
