@@ -5,7 +5,7 @@ metadata:
   name: k8s-test-1
   annotations:
     github.com/project-slug: sblausten/sample-service
-    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend'
+    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend,pod-template-hash=7c8cf694cc'
 spec:
   type: service
   owner: sblausten
