@@ -5,10 +5,6 @@ metadata:
   title: generated-component-tags-single
   annotations:
     github.com/project-slug: roadiehq/sample-service
-  tags:
-  tags:
-    - test
-    - generated
 spec:
   type: service
   owner: owner:RoadieHQ/engineering
