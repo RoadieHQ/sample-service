@@ -67,7 +67,7 @@ spec:
       input:
         repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
         branchName:  ${{ parameters.pr_branch }}
-        title: 'Add test content to ${{ parameters.owner | replace(\"group:.*/\", \"\") }}'
+        title: "Add test content to ${{ parameters.owner | replace(\"group:.*/\", \"\") }}"
         description: Test append or create file
     - id: log-message
       name: Log PR URL
