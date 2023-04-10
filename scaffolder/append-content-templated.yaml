@@ -58,6 +58,7 @@ spec:
           test name: ${{ parameters.name }}
           test owner: ${{ parameters.owner | replace("group:roadiehq", "") }}
           test owner: ${{ parameters.owner | replace("group", "poop") }}
+          test owner: ${{ parameters.owner | replace("group:", "poop:") }}
           test owner: ${{ parameters.owner | replace(\"group:.*/\", \"\") }}
 
     - id: publish-pr
