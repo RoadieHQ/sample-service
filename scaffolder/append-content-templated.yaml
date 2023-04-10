@@ -55,7 +55,7 @@ spec:
       input:
         path: ${{ parameters.path }}
         content: |
-          # comment
+
           test name: ${{ parameters.name }}
           test owner ${{ parameters.owner }}
 
