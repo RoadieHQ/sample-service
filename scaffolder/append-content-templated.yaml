@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: append-templated-content-example
-  title: Append Content example
+  title: Append Content example 1
   description: Example temaplate to append content
 spec:
   owner: roadie
