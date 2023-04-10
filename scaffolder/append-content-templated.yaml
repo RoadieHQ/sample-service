@@ -57,8 +57,6 @@ spec:
         content: |
           test name: ${{ parameters.name }}
           test owner ${{ parameters.owner }}
-
-          test parsed owner ${{ parameters.owner | replace(\"group:.*/\", \"\") }}
     - id: publish-pr
       name: Publish PR
       action: publish:github:pull-request
