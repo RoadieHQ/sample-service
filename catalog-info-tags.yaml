@@ -10,7 +10,7 @@ metadata:
     - generated
 spec:
   type: service
-  owner: sblausten
+  owner: owner:sblausten
   lifecycle: experimental
 ---
 apiVersion: backstage.io/v1alpha1

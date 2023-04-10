@@ -4,11 +4,12 @@ metadata:
   name: tags-test-single
   title: generated-component-tags-single
   annotations:
-    github.com/project-slug: sblausten/sample-service
+    github.com/project-slug: roadiehq/sample-service
+  tags:
   tags:
     - test
     - generated
 spec:
   type: service
-  owner: sblausten
+  owner: owner:RoadieHQ/engineering
   lifecycle: experimental
