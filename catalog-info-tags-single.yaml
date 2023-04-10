@@ -7,5 +7,5 @@ metadata:
     github.com/project-slug: roadiehq/sample-service
 spec:
   type: service
-  owner: owner:RoadieHQ/engineering
+  owner: group:RoadieHQ/engineering
   lifecycle: experimental
