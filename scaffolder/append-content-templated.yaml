@@ -56,7 +56,7 @@ spec:
         path: ${{ parameters.path }}
         content: |
           test name: ${{ parameters.name }}
-          test owner: ${{ parameters.owner | capitalize }}
+          test owner: ${{ parameters.owner " replace("owner", "proprietor") }}
 
     - id: publish-pr
       name: Publish PR
