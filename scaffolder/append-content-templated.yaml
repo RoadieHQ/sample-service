@@ -54,12 +54,11 @@ spec:
       action: roadiehq:utils:fs:append
       input:
         path: ${{ parameters.path }}
-        content: |
-          test name: ${{ parameters.name }}
+        content: " test name: ${{ parameters.name }}
           test owner: ${{ parameters.owner | replace(\"group:roadiehq/\", \"\") }}
-          test owner: ${{ parameters.owner | replace("group:roadiehq", "") }}
-          test owner2: ${{ parameters.owner | replace("group", "poop") }}
-    #          test owner: ${{ parameters.owner | replace("group:", "poop:") }}
+          test owner: ${{ parameters.owner | replace(\"group:.*/\", \"\") }}
+
+          test owner2: ${{ parameters.owner | replace(\"group\", \"poop\") }}"
 
     - id: publish-pr
       name: Publish PR
@@ -73,4 +72,4 @@ spec:
       name: Log PR URL
       action: debug:log
       input:
-        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }} owner - ${{ parameters.owner | replace(\"group:.*/\", \"\") }}'
+        message: "RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }} owner - ${{ parameters.owner | replace(\"group:.*/\", \"\") }}"
