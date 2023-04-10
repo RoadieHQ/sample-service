@@ -55,11 +55,10 @@ spec:
       input:
         path: ${{ parameters.path }}
         content: |
-          "
           # test
           test name: ${{ parameters.name }}
 
-          test owner ${{ parameters.owner }}"
+          ${{ parameters.owner | replace(\"group:.*/\", \"\") }}
 
     - id: publish-pr
       name: Publish PR
