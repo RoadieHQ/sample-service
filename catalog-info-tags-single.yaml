@@ -2,10 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: tags-test-single
-  title: generated-component-tags-single
+  title: generated-component-tags-single1
   annotations:
     github.com/project-slug: roadiehq/sample-service
 spec:
   type: service
-  owner: group:RoadieHQ/engineering
+  owner: RoadieHQ/engineering
   lifecycle: experimental
