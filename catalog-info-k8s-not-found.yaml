@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: k8s-test-1
+  name: k8s-test-na
   annotations:
     github.com/project-slug: sblausten/sample-service
     'backstage.io/kubernetes-label-selector': 'app=notfound'
