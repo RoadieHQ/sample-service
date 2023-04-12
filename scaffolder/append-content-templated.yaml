@@ -54,10 +54,10 @@ spec:
       action: roadiehq:utils:fs:append
       input:
         path: ${{ parameters.path }}
-        content: "test name: ${{ parameters.name }}
-          test owner1: ${{ parameters.owner | replace(\"group:roadiehq/\", \"\") }}
-          test owner2: ${{ parameters.owner | replace(\"group:.*/\", \"\") }}
-          test owner3: ${{ parameters.owner | replace(\"group\", \"poop\") }}"
+        content: "test name: ${{ parameters.name }}\n
+          test owner1: ${{ parameters.owner | replace(\"group:roadiehq/\", \"\") }}\n
+          test owner2: ${{ parameters.owner | replace(\"group:.*/\", \"\") }}\n
+          test owner3: ${{ parameters.owner | replace(\"group\", \"poop\") }}\n"
 
     - id: publish-pr
       name: Publish PR
