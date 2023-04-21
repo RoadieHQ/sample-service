@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: description-test
+  description: "something long something long catalog-info-k8s-not-found.yaml something long something long catalog-info-k8s-not-found.yaml something long something long catalog-info-k8s-not-found.yaml something long something long catalog-info-k8s-not-found.yaml."
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
