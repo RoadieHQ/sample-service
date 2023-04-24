@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-with-docs
+  title: Service With Docs
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  owner: sample-team
+  lifecycle: experimental
+  system: sample-system
