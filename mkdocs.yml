@@ -2,7 +2,6 @@ site_name: Root docs
 docs_dir: docs
 markdown_extensions:
   - markdown_inline_mermaid
-  - pymdownx.superfences
 plugins:
   - monorepo
   - techdocs-core
