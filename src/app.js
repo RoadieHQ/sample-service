@@ -7,15 +7,18 @@ const expressWinston = require('express-winston');
 const newrelic = require('newrelic');
 const Bugsnag = require('@bugsnag/js');
 const BugsnagPluginExpress = require('@bugsnag/plugin-express');
+const connectDatadog = require('connect-datadog')({
+  'response_code':true,
+  'tags': ['app:my_app'],
+});
 
 const app = express();
 
 Sentry.init({ dsn: process.env.SENTRY_INGESTION_URL });
-Bugsnag.getPlugin('express')
 Bugsnag.start({
   apiKey: process.env.BUGSNAG_ACCESS_TOKEN,
   plugins: [BugsnagPluginExpress]
-})
+});
 
 const logger = expressWinston.logger({
   level: 'info',
@@ -32,6 +35,7 @@ app.use(logger);
 app.use(bugsnagMiddleware.requestHandler);
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
+app.use(connectDatadog);
 
 // TODO This is a test todo to see what happens.
 const rollbar = new Rollbar({
@@ -75,15 +79,6 @@ app.post('/debug-bugsnag', function mainHandler(req, res) {
 
   res.json({
     message: `Error sent to Bugsnag: "${errorMsg}"`,
-  });
-});
-
-app.post('/debug-rollbar', function mainHandler(req, res) {
-  const errorMsg = get(req, 'body.errorMessage', 'My first Rollbar error!');
-  rollbar.error(errorMsg);
-
-  res.json({
-    message: `Error sent to Rollbar: "${errorMsg}"`,
   });
 });
 
