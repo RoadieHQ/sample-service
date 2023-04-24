@@ -32,6 +32,7 @@ metadata:
     qameta.io/allure-project: value
     newrelic.com/dashboard-guid: 'MzcwMjEwN3xWSVp8REFTSEJPQVJEfGRhOjkwMDk4'
     sonarqube.org/project-key: RoadieHQ_sample-service
+    datadog.eu/tag-name: sample-service
 spec:
   type: service
   owner: sample-team
