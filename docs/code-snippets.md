@@ -1,6 +1,6 @@
 # Code snippet formatting
 
-```shell:no-line-numbers
+``` shell linenums="0"
 Some shell commands
 123
 ```
