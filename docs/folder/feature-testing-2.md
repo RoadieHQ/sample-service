@@ -84,10 +84,15 @@ This project contains a few lambdas to handle managing installations, github web
 
 # Images
 
+<details>
+  <summary>Example Diagram</summary>
 ## LOCAL PNG
 ![png](../assets/headline.png)
+</details><br>
 
 ## LOCAL SVG
+<details>
 ![svg](../assets/coverage.svg)
+</details>
 
 
