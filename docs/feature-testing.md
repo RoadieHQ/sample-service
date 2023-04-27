@@ -82,3 +82,14 @@ This project contains a few lambdas to handle managing installations, github web
           end
 ```
 
+# Images
+
+## LOCAL PNG
+![png](./assets/headline.png)
+
+## LOCAL SVG
+![svg](./assets/coverage.svg)
+
+## CROSS DIR PNG
+![png](../site/assets/inages/favicon.png)
+
