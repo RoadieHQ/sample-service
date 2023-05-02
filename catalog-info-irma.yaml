@@ -12,9 +12,9 @@ metadata:
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
     snyk.io/org-name: roadie
-    snyk.io/project-ids: 4f195df9-5ddf-4a98-8955-bd687d220d0b    
     backstage.io/techdocs-ref: dir:.
     roadie.io/techinsights-shortcut-id: "9229"
+    datadog.eu/tag-name: sample-service
   labels:
     label1: test-label
     label2/label2: test-label2
