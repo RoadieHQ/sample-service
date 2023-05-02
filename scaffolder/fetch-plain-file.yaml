@@ -1,0 +1,15 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: fetch:plain:file-test
+spec:
+  owner: roadie
+  type: service
+  steps:
+    - id: fetch-gitignore
+        name: Fetch gitignore
+        action: fetch:plain:file
+        input:
+          url: "https://github.com/AcmeInc/test123/blob/main/.gitignore"
+          targetPath: '.gitignore'
