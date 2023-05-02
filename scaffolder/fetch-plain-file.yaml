@@ -8,8 +8,8 @@ spec:
   type: service
   steps:
     - id: fetch-gitignore
-        name: Fetch gitignore
-        action: fetch:plain:file
-        input:
-          url: "https://github.com/AcmeInc/test123/blob/main/.gitignore"
-          targetPath: '.gitignore'
+      name: Fetch gitignore
+      action: fetch:plain:file
+      input:
+        url: "https://github.com/AcmeInc/test123/blob/main/.gitignore"
+        targetPath: '.gitignore'
