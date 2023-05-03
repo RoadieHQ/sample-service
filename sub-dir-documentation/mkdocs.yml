@@ -7,4 +7,3 @@ plugins:
 nav:
   - First page: index.md
   - Second page: other/other.md
-  - Sub subdirectory docs: "!include ./sub-sub-dir-documentation/mkdocs.yml"
