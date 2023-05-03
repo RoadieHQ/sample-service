@@ -1,0 +1,8 @@
+site_name: mysubcomponent
+site_description: 'My Sub Component'
+
+plugins:
+  - monorepo
+
+nav:
+  - First page: index.md
