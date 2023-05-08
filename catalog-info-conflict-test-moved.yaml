@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: conflict-test-1
-  title: Conflict test API 1
+  title: Conflict test API 2 updated
   annotations:
     github.com/project-slug: sblausten/sample-service
   tags:
