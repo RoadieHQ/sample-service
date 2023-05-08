@@ -7,7 +7,7 @@ metadata:
     A service for testing Backstage functionality! Configured for GitHub Actions, Sentry, AWS Lambda, Datadog and mis-configured techdocs.
   annotations:
     last-security-review: 2022-11-23
-    github.com/project-slug: xantier/sample-service
+    github.com/project-slug: RoadieHQ/sample-service
     sentry.io/project-slug: sample-service
     aws.com/lambda-function-name: HelloWorld
     aws.com/lambda-region: eu-west-1
