@@ -26,7 +26,7 @@ metadata:
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
     splunk.com/on-call-team: Example
     tech-insights/scorecard: SampleScorecard
-    tech-insights/docker-file-location: https://github.com/RoadieHQ/sample-service/tree/main/contrib/build/
+    tech-insights/docker-file-location: contrib/build/
     harness.io/project-url: https://app.harness.io/ng/#/account/d5af5z8-RkS5-ehQRNVk9w/home/orgs/default/projects/default_project/details
   labels: 
     label2/label1: test-label
