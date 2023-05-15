@@ -54,8 +54,8 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedOwners:
-              - gp-nova
-              - globalization-partners
+              - RoadieHQ
+              - sblausten
             allowedHosts:
               - github.com
   steps:
@@ -82,7 +82,7 @@ spec:
             - ${{ parameters.boundedContext | default('unknown') }}
             - ${{ parameters.domain | default('unknown') }}
             - ${{ parameters.valueStream | default('unknown') }}
-          owner: ${{ parameters.owner|replace('group:','')|replace('default', 'globalization-partners')}}
+          owner: ${{ parameters.owner|replace('group:','')|replace('default', 'RoadieHQ')}}
     - id: publish
       name: Publish
       action: publish:github
@@ -102,7 +102,7 @@ spec:
           [
             {
               access: "maintain",
-              team: '${{ parameters.owner|replace("gp-nova/","")|replace("default", "")|replace("group:","")}}',
+              team: '${{ parameters.owner|replace("RoadieHQ/","")|replace("default", "")|replace("group:","")}}',
             },
             {
               access: "admin",
