@@ -1,0 +1,114 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: gp-empty-repo
+  title: GP - Github Repository (v1.0.4)
+  description: Create a Github Repository
+  tags:
+    - github
+
+spec:
+  owner: gp-nova/dev-enablement
+  type: service
+
+  parameters:
+    - title: Tell us about your project?
+      required:
+        - projectName
+        - description
+        - owner
+      properties:
+        projectName:
+          title: Project Name
+          type: string
+          description: >-
+            What is the name of your project? Used as title for documentation, lowercase with spaces replaced with dashes used for the package and component name where relevant.
+        description:
+          title: Description
+          type: string
+          description: Help others understand what this project is about
+        valueStream:
+          title: Value Stream
+          type: string
+          description: What is your value stream? (if known)
+        domain:
+          title: Domain
+          type: string
+          description: What is your domain? (if known)
+        boundedContext:
+          title: Bounded Context
+          type: string
+          description: What is your bounded context? (if known)
+        owner:
+          title: Owner
+          type: string
+          description: Which team owns this component
+          ui:field: OwnerPicker
+    - title: Choose a location
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedOwners:
+              - gp-nova
+              - globalization-partners
+            allowedHosts:
+              - github.com
+  steps:
+    - id: template
+      name: Fetch Skeleton + Template
+      action: fetch:template
+      input:
+        url: ./skeleton
+        copyWithoutRender:
+          - .github/workflows/*
+        values:
+          projectName: ${{ parameters.projectName }}
+          componentName: ${{ parameters.projectName | lower | replace(' ', '-')}}
+          templateName: empty-repo
+          templateVersion: v1.0.4
+          generatedTimestamp: ${{ '' | now // 1000 }}
+          ssoUser: ${{ user.entity.metadata.name }}
+          description: ${{ parameters.description }}
+          destination: ${{ parseRepoUrl parameters.repoUrl }}
+          repoName: ${{ (parameters.repoUrl | parseRepoUrl)["repo"] }}
+          ownerName: ${{ (parameters.repoUrl | parseRepoUrl)["owner"] }}
+          repoUrl: ${{parameters.repoUrl}}
+          boundedContextInfo:
+            - ${{ parameters.boundedContext | default('unknown') }}
+            - ${{ parameters.domain | default('unknown') }}
+            - ${{ parameters.valueStream | default('unknown') }}
+          owner: ${{ parameters.owner|replace('group:','')|replace('default', 'globalization-partners')}}
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ["github.com"]
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+        deleteOnMerge: true
+        requireCodeOwnerReviews: true
+        allowMergeCommit: false
+        allowSquashMerge: true
+        allowRebaseMerge: false
+        squashMergeCommitTitle: PR_TITLE
+        squashMergeCommitMessage: PR_BODY
+        allowAutoMerge: true
+        collaborators:
+          [
+            {
+              access: "maintain",
+              team: '${{ parameters.owner|replace("gp-nova/","")|replace("default", "")|replace("group:","")}}',
+            },
+            {
+              access: "admin",
+              user: "${{ user.entity.metadata.name }}",
+            },
+          ]
+
+  output:
+    remoteUrl: ${{ steps.publish.output.remoteUrl }}
