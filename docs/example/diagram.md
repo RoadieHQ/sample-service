@@ -4,7 +4,6 @@
 ```plantuml format="png"
 @startuml PhysicalDiagram
 
-!include ./images/snyk.puml
 !include <kubernetes/k8s-sprites-unlabeled-25pct>
 !theme carbon-gray
 
