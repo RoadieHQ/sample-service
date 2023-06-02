@@ -8,4 +8,4 @@ spec:
   lifecycle: production
   owner: user:guest
   definition:
-    $openapi: broker://jussi-test/my-api-spec.json
+    $openapi: broker://jussi-test/anything/my-api-spec.json
