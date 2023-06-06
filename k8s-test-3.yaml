@@ -7,7 +7,7 @@ metadata:
   annotations:
     github.com/project-slug: sblausten/sample-service
     backstage.io/kubernetes-label-selector: 'app=backstage'
-    backstage.io/kubernetes-namespace: 'roadie'
+#    backstage.io/kubernetes-namespace: 'roadie'
     backstage.io/techdocs-ref: dir:.
 spec:
   type: other
