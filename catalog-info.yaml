@@ -3,7 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service-5
-  description: A test service 5
+  description: A test service 5 bump
   annotations:
     github.com/project-slug: sblausten/sample-service
 #    backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
