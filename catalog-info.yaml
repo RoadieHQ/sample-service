@@ -7,6 +7,7 @@ metadata:
   annotations:
     github.com/project-slug: sblausten/sample-service
     backstage.io/kubernetes-label-selector: 'app=backstage,component=frontend'
+    backstage.io/kubernetes-namespace: 'roadie'
     backstage.io/techdocs-ref: dir:.
     snyk.io/org-name: roadie
     snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
