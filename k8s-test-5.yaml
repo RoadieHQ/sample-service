@@ -2,12 +2,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: k8s-test-4
+  name: k8s-test-5
   description: A test service
   annotations:
     github.com/project-slug: sblausten/sample-service
-    backstage.io/kubernetes-label-selector: 'app=backstage'
-    backstage.io/kubernetes-namespace: 'roadie'
+    backstage.io/kubernetes-id: 'backstage-backend'
+    backstage.io/kubernetes-namespace: 'sam-test-roadie4'
     backstage.io/techdocs-ref: dir:.
 spec:
   type: other
