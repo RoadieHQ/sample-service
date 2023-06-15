@@ -3,7 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: k8s-test-6
-  description: A test service 6
+  description: A test service 6 update
   annotations:
     github.com/project-slug: sblausten/sample-service
     backstage.io/kubernetes-label-selector: 'app=backstage'
@@ -12,4 +12,4 @@ metadata:
 spec:
   type: other
   lifecycle: production
-  owner: sample-team
+  owner: sblausten
