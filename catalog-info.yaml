@@ -33,7 +33,7 @@ metadata:
     newrelic.com/dashboard-guid: 'MzcwMjEwN3xWSVp8REFTSEJPQVJEfGRhOjkwMDk4'
     sonarqube.org/project-key: RoadieHQ_sample-service
     datadoghq.com/tag-name: sample-service
-    datadoghq.com/slo_tag: sample-service
+    datadoghq.com/slo_tag: service:sample-service
     datadoghq.com/monitor_tags: sample-service
 spec:
   type: service
