@@ -1,0 +1,18 @@
+name: sample-service
+id: ari:cloud:compass:f43f45fb-cba3-4a9c-9900-252ea8fbebcb:component/7453460e-3c07-4170-af5c-503f8199e6fd/178e1a61-1d0a-44f1-9b5c-0bf3a0737b54
+description: A sample service for testing build tools, testing Backstage etc.
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/RoadieHQ/sample-service
+relationships:
+  DEPENDS_ON: []
+labels:
+  - backstage
+  - language:javascript
+  - source:github
+customFields: null
