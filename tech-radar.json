@@ -1,0 +1,184 @@
+{
+  "rings": [
+    {
+      "id": "use",
+      "name": "USE",
+      "color": "#93c47d"
+    },
+    {
+      "id": "trial",
+      "name": "TRIAL",
+      "color": "#93d2c2"
+    },
+    {
+      "id": "assess",
+      "name": "ASSESS",
+      "color": "#fbdb84"
+    },
+    {
+      "id": "hold",
+      "name": "HOLD",
+      "color": "#efafa9"
+    }
+  ],
+  "quadrants": [
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure"
+    },
+    {
+      "id": "frameworks",
+      "name": "Frameworks"
+    },
+    {
+      "id": "languages",
+      "name": "Languages"
+    },
+    {
+      "id": "process",
+      "name": "Process"
+    }
+  ],
+  "entries": [
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        }
+      ],
+      "url": "#",
+      "key": "javascript",
+      "id": "javascript",
+      "title": "JavaScript",
+      "quadrant": "languages"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        }
+      ],
+      "url": "#",
+      "key": "typescript",
+      "id": "typescript",
+      "title": "TypeScript",
+      "quadrant": "languages"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "webpack",
+      "id": "webpack",
+      "title": "Webpack",
+      "quadrant": "frameworks"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "react",
+      "id": "react",
+      "title": "React",
+      "quadrant": "frameworks"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "code-reviews",
+      "id": "code-reviews",
+      "title": "Code Reviews",
+      "quadrant": "process"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "docs-like-code",
+      "id": "docs-like-code",
+      "title": "Docs-like-code",
+      "quadrant": "process"
+    },
+    {
+      "timeline": [
+        {
+          "ringId": "hold",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "force-push",
+      "id": "force-push",
+      "title": "Force push to master",
+      "quadrant": "process"
+    },
+    {
+      "timeline": [
+        {
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "github-actions",
+      "id": "github-actions",
+      "title": "GitHub Actions",
+      "quadrant": "infrastructure"
+    },
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2021-02-09T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "backstage",
+      "id": "backstage",
+      "title": "Backstage",
+      "quadrant": "infrastructure"
+    },
+        {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2021-02-09T00:00:00.000Z"
+        }
+      ],
+      "url": "#",
+      "key": "roadie",
+      "id": "roadie",
+      "title": "Roadie",
+      "quadrant": "infrastructure"
+    }
+  ]
+}
