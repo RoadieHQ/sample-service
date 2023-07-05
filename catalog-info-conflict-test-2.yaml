@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: conflict-test-component-4
-  title: Conflict test component 4 dupe2
+  name: conflict-test-component-1
+  title: Conflict test component old 4 now 1
   annotations:
     github.com/project-slug: sblausten/sample-service
 spec:
