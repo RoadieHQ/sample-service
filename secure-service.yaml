@@ -8,7 +8,7 @@ metadata:
     snyk.io/org-name: roadie
     snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0 
     snyk.io/project-ids: 4f195df9-5ddf-4a98-8955-bd687d220d0b    
-    snyk.io/target-id: RoadieHQ/roadie
+    snyk.io/target-id: c17361d1-6370-4e2f-93bf-6d5e2802f383
     github.com/project-slug: RoadieHQ/roadie
     backstage.io/techdocs-ref: dir:./docs
     roadie.io/techinsights-shortcut-id: "9229"
