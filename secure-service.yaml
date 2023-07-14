@@ -5,7 +5,6 @@ metadata:
   name: secure-tech-insights-service
   description: Secure Tech Insights Service
   annotations:
-    github.com/project-slug: RoadieHQ/sample-service
     snyk.io/org-name: roadie
     snyk.io/project-ids: 4f195df9-5ddf-4a98-8955-bd687d220d0b    
     snyk.io/target-id: RoadieHQ/roadie
