@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-service
+  name: sample-service-techdocs-test
   description: A service for testing TechDocs.
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
