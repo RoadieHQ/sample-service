@@ -4,7 +4,7 @@ metadata:
   name: sample-service-techdocs-test
   description: A service for testing TechDocs.
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
+    backstage.io/techdocs-ref: dir:./
 spec:
   type: service
   owner: guest
