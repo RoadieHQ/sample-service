@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: new-conflict-test-component-1
+  title: New conflict test component 1 duplicate
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
