@@ -7,7 +7,7 @@ metadata:
     github.com/project-slug: sblausten/sample-service
 #    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend,pod-template-hash=7c8cf694cc'
     'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend'
-#    backstage.io/techdocs-ref: dir:./
+    backstage.io/techdocs-ref: dir:./
 spec:
   type: service
   owner: sblausten
