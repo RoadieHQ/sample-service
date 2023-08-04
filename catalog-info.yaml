@@ -23,7 +23,7 @@ metadata:
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     backstage.io/techdocs-ref: dir:.
     pagerduty.com/service-id: PZDAG59
-    snyk.io/org-name: roadie
+    snyk.io/org-id: roadie
     backstage.io/kubernetes-id: sample-service
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
