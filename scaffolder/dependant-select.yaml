@@ -23,7 +23,7 @@ spec:
         ui:options:
           title: My Dropdown title
           description: My custom description for the component
-          selectValues: ${{ parameters.orgNames }}
+          paramKey: orgNames
 
 
   steps:
