@@ -1,0 +1,36 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: test-dep-select-1
+  title: Test dependant Select
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    properties:
+      orgNames:
+        title: Orgs
+        type: array
+        items:
+          type: string
+      names:
+        title: Dependant Select
+        type: string
+        description: My custom name for the component
+        ui:field: SelectFieldFromPrevious
+        ui:options:
+          title: My Dropdown title
+          description: My custom description for the component
+          selectValues: ${{ parameters.orgNames }}
+
+
+  steps:
+    - id: log-result
+      action: debug:log
+      input:
+        message: 'Available Snyk orgs: ${{ parameters.names }}'
+
+  output:
+    getResponse: '{{ parameters.names }}'
