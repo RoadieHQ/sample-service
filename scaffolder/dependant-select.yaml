@@ -10,11 +10,26 @@ spec:
 
   parameters:
     properties:
-      orgNames:
+      selectParam:
+        type: string
+        enum: [ 'manualList', 'apiGeneratedList' ]
+      manualList:
         title: Orgs
         type: array
         items:
           type: string
+      apiGeneratedList:
+        type: string
+        ui:field: SelectFieldFromApi
+        ui:options:
+          title: My Dropdown title
+          description: My custom description for the component
+          path: 'catalog/entity-facets'
+          params:
+            facet: 'kind'
+          arraySelector: 'facets.kind'
+          valueSelector: 'count'
+          labelSelector: 'value'
       names:
         title: Dependant Select
         type: string
@@ -23,8 +38,8 @@ spec:
         ui:options:
           title: My Dropdown title
           description: My custom description for the component
-          paramKey: orgNames
-
+          paramKey: apiGeneratedList
+          hideEmpty: true
 
   steps:
     - id: log-result
