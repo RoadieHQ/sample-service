@@ -28,8 +28,6 @@ spec:
           params:
             facet: 'kind'
           arraySelector: 'facets.kind'
-          valueSelector: 'value'
-          labelSelector: 'value'
       names:
         title: Dependant Select
         type: string
