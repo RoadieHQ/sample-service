@@ -44,4 +44,4 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Available Snyk projects: ${{ parameters.custom }}'
+        message: "Available Snyk projects: ${{ parameters.custom }}"
