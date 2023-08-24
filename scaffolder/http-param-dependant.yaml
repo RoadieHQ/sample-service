@@ -34,6 +34,13 @@ spec:
 
               # The Path on the Backstage API and the parameters to fetch the data for the dropdown
               path: 'catalog/entity-facets'
+
+              # (Optional) This selects the field in the array to use for the value of each select item. If its not specified
+              # it will use the value of the item directly.
+              valueSelector: 'count'
+              # (Optional) This selects the field in the array to use for the label of each select item.
+              labelSelector: 'value'
+
               # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
               previousFieldParamRequestKey: 'facet'
               # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
