@@ -47,6 +47,8 @@ spec:
               previousFieldParamValueLookupKey: 'objectFacet.kind'
               # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
               previousFieldArraySelectorLookupKey: 'objectFacet.arraySelector'
+              previousFieldValueSelectorLookupKey: 'objectFacet.valueSelector'
+              previousFieldLabelSelectorLookupKey: 'objectFacet.labelSelector'
   steps:
     - id: log-result
       action: debug:log
