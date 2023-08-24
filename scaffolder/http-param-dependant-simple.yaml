@@ -48,7 +48,7 @@ spec:
               # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
               previousFieldParamRequestKey: 'facet'
               # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
-              previousFieldParamValueLookupKey: 'objectFacet.kind'
+              previousFieldParamValueLookupKey: 'facetValue'
               # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
   steps:
     - id: log-result
