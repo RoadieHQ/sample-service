@@ -2,8 +2,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: http-param-new
-  title: Http param test
+  name: http-param-new-simple
+  title: Http param test simple
 spec:
   owner: roadie
   type: service
