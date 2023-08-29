@@ -5,6 +5,7 @@ metadata:
   title: Duplicate test 3
   annotations:
     github.com/project-slug: sblausten/sample-service
+    backstage.io/techdocs-ref: dir:.
   tags:
     - test1
 spec:

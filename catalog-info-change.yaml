@@ -5,6 +5,8 @@ metadata:
   title: Name change test
   annotations:
     github.com/project-slug: sblausten/sample-service
+    backstage.io/techdocs-ref: dir:.
+    roadie.io/techdocs-builder: 'ci'
   tags:
     - test
 spec:
