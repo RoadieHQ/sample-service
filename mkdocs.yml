@@ -9,6 +9,7 @@ nav:
   - TestDoc: test-doc.md
   - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs: "!include ./sub-dir-documentation/mkdocs.yml"
+  - Runbook: runbook.md
 
 docs_dir: docs
 plugins:
