@@ -8,8 +8,9 @@ spec:
   owner: roadie
   type: service
   parameters:
-    definitions:
-      facetMap:
+    properties:
+      objectFacet:
+        title: 'Facet Mapping'
         enumNames:
           - 'Kind'
           - 'API Version'
@@ -18,13 +19,6 @@ spec:
             jsonata: 'facets.kind.value'
           - facet: 'apiVersion'
             jsonata: 'facets.apiVersion.value'
-    properties:
-      facetValue:
-        type: string
-        enum: ['kind', 'apiVersion']
-      objectFacet:
-        title: 'Facet Mapping'
-        $ref: "#/definitions/facetMap"
           #            enum: [
 #              {
 #                facet": "kind",
