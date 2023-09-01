@@ -11,9 +11,9 @@ spec:
     definitions:
       facetMap:
         enum:
-          - facet: 'kind',
+          - facet: 'kind'
             jsonata: 'facets.kind.value'
-          - facet: 'apiVersion',
+          - facet: 'apiVersion'
             jsonata: 'facets.apiVersion.value'
     properties:
       - title: Custom
@@ -22,9 +22,9 @@ spec:
             type: string
             enum: ['kind', 'apiVersion']
           objectFacet:
-#            type: object
+            #            type: object
             $ref: "#/definitions/facetMap"
-#            enum: [
+          #            enum: [
 #              {
 #                facet": "kind",
 #                "jsonata": 'facets.kind.value',
