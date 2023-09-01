@@ -22,7 +22,7 @@ spec:
             type: string
             enum: ['kind', 'apiVersion']
           objectFacet:
-            #            type: object
+            type: object
             $ref: "#/definitions/facetMap"
           #            enum: [
 #              {
