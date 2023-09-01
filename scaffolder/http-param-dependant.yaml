@@ -11,13 +11,26 @@ spec:
     properties:
       - title: Custom
         properties:
-          facetValue:
-            type: string
-            enum: ['kind', 'apiVersion']
-#          objectFacet:
-#            type: object
+#          facetValue:
+#            type: string
+#            enum: ['kind', 'apiVersion']
+          objectFacet:
+            type: object
+            enum: [
+              {
+                "facet": "kind",
+                "jsonata": 'facets.kind.value',
+              },
+              {
+                "facet": "api",
+                "jsonata": 'facets.apiVersion.value',
+              },
+            ]
 #            properties:
 #              kind:
+#                type: string
+#                enum: [ 'kind', 'apiVersion' ]
+#              jsonataExpression:
 #                type: string
 #                enum: [ 'kind', 'apiVersion' ]
 #              arraySelector:
@@ -43,9 +56,9 @@ spec:
 
               # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
               previousFieldParamRequestKey: 'facet'
-              jsonataExpression: 'facets.kind.value'
+              previousFieldParamValueLookupKey: 'objectFacet'
+#              jsonataExpression: 'facets.kind.value'
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
-              previousFieldParamValueLookupKey: 'facetValue'
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
 #              previousFieldArraySelectorLookupKey: 'objectFacet.arraySelector'
 #              previousFieldValueSelectorLookupKey: 'objectFacet.valueSelector'
