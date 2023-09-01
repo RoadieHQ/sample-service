@@ -20,6 +20,7 @@ spec:
             jsonata: 'facets.apiVersion.value'
     properties:
       - title: Custom
+        "type": "object",
         properties:
           facetValue:
             type: string
