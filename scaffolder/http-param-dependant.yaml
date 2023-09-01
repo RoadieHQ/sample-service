@@ -48,7 +48,7 @@ spec:
             ui:field: SelectFieldFromApi
 
             ui:options:
-              title: My Dropdown title
+              title: Dependant select
               description: My custom description for the component
 
               # The Path on the Backstage API and the parameters to fetch the data for the dropdown
