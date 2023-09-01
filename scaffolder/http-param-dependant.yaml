@@ -56,7 +56,8 @@ spec:
 
               # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
               previousFieldParamRequestKey: 'facet'
-              previousFieldParamValueLookupKey: 'objectFacet'
+              previousFieldParamValueLookupKey: 'objectFacet.facet'
+              previousFieldJsonataLookupKey: 'objectFacet.jsonata'
 #              jsonataExpression: 'facets.kind.value'
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
