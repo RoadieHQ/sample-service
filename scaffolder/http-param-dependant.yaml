@@ -19,23 +19,6 @@ spec:
             jsonata: 'facets.kind.value'
           - facet: 'apiVersion'
             jsonata: 'facets.apiVersion.value'
-          #            enum: [
-#              {
-#                facet": "kind",
-#                "jsonata": 'facets.kind.value',
-#              },
-#              {
-#                "facet": "api",
-#                "jsonata": 'facets.apiVersion.value',
-#              },
-#            ]
-#            properties:
-#              kind:
-#                type: string
-#                enum: [ 'kind', 'apiVersion' ]
-#              jsonataExpression:
-#                type: string
-#                enum: [ 'kind', 'apiVersion' ]
 #              arraySelector:
 #                type: string
 #                enum: [ 'facets.kind', 'facets.apiVersion' ]
@@ -45,7 +28,7 @@ spec:
 #              labelSelector:
 #                type: string
 #                enum: [ 'value' ]
-      custom:
+      facets:
         type: string
         # Use `SelectFieldFromApi` to configure the select field for the entry.
         ui:field: SelectFieldFromApi
@@ -66,6 +49,21 @@ spec:
 #              previousFieldArraySelectorLookupKey: 'objectFacet.arraySelector'
 #              previousFieldValueSelectorLookupKey: 'objectFacet.valueSelector'
 #              previousFieldLabelSelectorLookupKey: 'objectFacet.labelSelector'
+    entities:
+      type: string
+      # Use `SelectFieldFromApi` to configure the select field for the entry.
+      ui:field: SelectFieldFromApi
+      ui:options:
+        title: 2nd Dependant select
+        description: My custom description for the component
+
+        # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+        path: '/entities'
+
+        # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
+        previousFieldParamRequestKey: 'filter'
+        previousFieldParamValueLookupKey: 'facets'
+        jsonataExpression: 'metadata.name'
   steps:
     - id: log-result
       action: debug:log
