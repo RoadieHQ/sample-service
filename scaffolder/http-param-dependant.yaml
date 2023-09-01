@@ -19,15 +19,12 @@ spec:
           - facet: 'apiVersion'
             jsonata: 'facets.apiVersion.value'
     properties:
-      - title: Custom
-        type: 'object'
-        properties:
-          facetValue:
-            type: string
-            enum: ['kind', 'apiVersion']
-          objectFacet:
-            type: array
-            $ref: "#/definitions/facetMap"
+      facetValue:
+        type: string
+        enum: ['kind', 'apiVersion']
+      objectFacet:
+        type: object
+        $ref: "#/definitions/facetMap"
           #            enum: [
 #              {
 #                facet": "kind",
@@ -54,22 +51,21 @@ spec:
 #              labelSelector:
 #                type: string
 #                enum: [ 'value' ]
-          custom:
-            type: string
-            # Use `SelectFieldFromApi` to configure the select field for the entry.
-            ui:field: SelectFieldFromApi
+      custom:
+        type: string
+        # Use `SelectFieldFromApi` to configure the select field for the entry.
+        ui:field: SelectFieldFromApi
+        ui:options:
+          title: Dependant select
+          description: My custom description for the component
 
-            ui:options:
-              title: Dependant select
-              description: My custom description for the component
+          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+          path: 'catalog/entity-facets'
 
-              # The Path on the Backstage API and the parameters to fetch the data for the dropdown
-              path: 'catalog/entity-facets'
-
-              # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
-              previousFieldParamRequestKey: 'facet'
-              previousFieldParamValueLookupKey: 'objectFacet.facet'
-              previousFieldJsonataLookupKey: 'objectFacet.jsonata'
+          # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
+          previousFieldParamRequestKey: 'facet'
+          previousFieldParamValueLookupKey: 'objectFacet.facet'
+          previousFieldJsonataLookupKey: 'objectFacet.jsonata'
 #              jsonataExpression: 'facets.kind.value'
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
