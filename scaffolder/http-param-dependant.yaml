@@ -11,8 +11,8 @@ spec:
     definitions:
       facetMap:
         enumNames:
-          - "Kind"
-          - "API Version"
+          - 'Kind'
+          - 'API Version'
         enum:
           - facet: 'kind'
             jsonata: 'facets.kind.value'
@@ -20,7 +20,7 @@ spec:
             jsonata: 'facets.apiVersion.value'
     properties:
       - title: Custom
-        "type": "object",
+        type: 'object'
         properties:
           facetValue:
             type: string
