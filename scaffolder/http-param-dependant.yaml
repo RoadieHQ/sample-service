@@ -10,6 +10,9 @@ spec:
   parameters:
     definitions:
       facetMap:
+        enumNames:
+          - "Kind"
+          - "API Version"
         enum:
           - facet: 'kind'
             jsonata: 'facets.kind.value'
@@ -22,7 +25,7 @@ spec:
             type: string
             enum: ['kind', 'apiVersion']
           objectFacet:
-            type: object
+            type: array
             $ref: "#/definitions/facetMap"
           #            enum: [
 #              {
