@@ -1,0 +1,30 @@
+# Tribe and Squad identification
+tribe: sdfsf
+squad: sdfsdf
+
+security_tools:
+
+  # Secrets Detection
+  secrets_detection:
+    enabled: 1
+    secrets_scanning: 0
+    pr_based:
+      enabled: 0
+
+  # Static Application Security Testing (SAST)
+  sast:
+    enabled: 1
+    tools:
+      codeQL:
+        enabled: 1
+        config_file_path: .github/workflows/codeql.yml
+      veracode:
+        enabled: 0
+      sonarcloud:
+        enabled: 0
+      sobelow:
+        enabled: 0
+      credo:
+        enabled: 0
+      klocwork:
+        enabled: 0
