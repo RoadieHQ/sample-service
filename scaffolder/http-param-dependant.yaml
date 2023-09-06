@@ -28,10 +28,11 @@ spec:
         ui:field: SelectFieldFromApi
         ui:options:
           title: Dependant select
-          previousFieldParamRequestLookupKey: "objectFacet.paramKey"
-          previousFieldPathLookupKey: "objectFacet.path"
-          previousFieldParamValueLookupKey: 'objectFacet.facet'
-          previousFieldJsonataLookupKey: 'objectFacet.jsonata'
+          dynamicParams:
+            previousFieldParamRequestLookupKey: "objectFacet.paramKey"
+            previousFieldPathLookupKey: "objectFacet.path"
+            previousFieldParamValueLookupKey: 'objectFacet.facet'
+            previousFieldJsonataLookupKey: 'objectFacet.jsonata'
 #      objectFilter:
 #        title: 'Entity Annotation Filter Mapping'
 #        enumNames:
