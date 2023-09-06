@@ -11,7 +11,6 @@ spec:
     properties:
       objectFacet:
         title: 'Facet Mapping'
-        type: object
         enumNames:
           - "Kind"
           - "Name"
