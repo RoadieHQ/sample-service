@@ -31,6 +31,8 @@ spec:
 
               # The Path on the Backstage API and the parameters to fetch the data for the dropdown
               path: 'catalog/entity-facets'
+              params:
+                - facet: "kind"
 
               # This selects the array element from the API fetch response. It finds the array with the name kind
               # under the facets object
