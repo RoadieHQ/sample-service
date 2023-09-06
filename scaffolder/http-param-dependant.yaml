@@ -13,12 +13,12 @@ spec:
         title: 'Facet Mapping'
         enumNames:
           - 'Kind'
-          - 'API Version'
+          - 'Entity name'
         enum:
           - facet: 'kind'
             jsonata: 'facets.kind.value'
           - facet: 'metadata.name'
-            jsonata: 'facets.["metadata.name"].value'
+            jsonata: 'facets.metadata.name.value'
 #              arraySelector:
 #                type: string
 #                enum: [ 'facets.kind', 'facets.apiVersion' ]
