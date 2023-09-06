@@ -12,8 +12,8 @@ spec:
       objectFacet:
         title: 'Facet Mapping'
         enumNames:
-          - 'Kind'
-          - 'Entity name'
+          - "Kind"
+          - "Entity name"
         enum:
           - facet: 'kind'
             jsonata: 'facets.kind.value'
