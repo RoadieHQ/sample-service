@@ -19,6 +19,25 @@ spec:
             jsonata: 'facets.kind.value'
           - facet: 'metadata.name'
             jsonata: 'facets.`metadata.name`.value'
+      entities:
+        type: string
+        ui:field: SelectFieldFromApi
+        ui:options:
+          title: Dependant select
+          path: 'catalog/entity-facets'
+          previousFieldParamRequestKey: "facet"
+          previousFieldParamValueLookupKey: 'objectFacet.facet'
+          previousFieldJsonataLookupKey: 'objectFacet.jsonata'
+#      objectFilter:
+#        title: 'Entity Annotation Filter Mapping'
+#        enumNames:
+#          - 'backstage.io/kubernetes-label-selector'
+#          - 'backstage.io/techdocs-ref'
+#        enum:
+#          - filter: 'metadata.annotations.backstage.io/kubernetes-label-selector'
+#            jsonata: 'metadata.relations.target'
+#          - filter: 'metadata.annotations.backstage.io/kubernetes-id'
+#            jsonata: 'metadata.relations.target'
 #              arraySelector:
 #                type: string
 #                enum: [ 'facets.kind', 'facets.apiVersion' ]
@@ -28,40 +47,51 @@ spec:
 #              labelSelector:
 #                type: string
 #                enum: [ 'value' ]
-      facets:
-        type: string
-        # Use `SelectFieldFromApi` to configure the select field for the entry.
-        ui:field: SelectFieldFromApi
-        ui:options:
-          title: Dependant select
-          description: My custom description for the component
-
-          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
-          path: 'catalog/entity-facets'
-
-          # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
-          previousFieldParamRequestKey: 'facet'
-          previousFieldParamValueLookupKey: 'objectFacet.facet'
-          previousFieldJsonataLookupKey: 'objectFacet.jsonata'
-#              jsonataExpression: 'facets.kind.value'
+#      groupName:
+#        type: string
+#        # Use `SelectFieldFromApi` to configure the select field for the entry.
+#        ui:field: SelectFieldFromApi
+#        ui:options:
+#          title: Non dependant select
+#          description: Gets all groups
+#          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+#          path: 'catalog/entities'
+#          params:
+#            - filter: "kind=group"
+#            - fields: "metadata.namespace,metadata.name"
+#          arraySelector: 'metadata.name'
+#      ownedEntities:
+#        type: string
+#        # Use `SelectFieldFromApi` to configure the select field for the entry.
+#        ui:field: SelectFieldFromApi
+#        ui:options:
+#          title: Dependant select
+#          description: My custom description for the component
+#
+#          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+#          path: 'catalog/entities'
+#          # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
+#          previousFieldParamRequestKey: "filter=relations.memberof=group:default/"
+#          previousFieldParamValueLookupKey: 'groupName'
+#          jsonataExpression: 'facets.kind.value'
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
 #              # (Optional) This is the key of a previous property who's selected value will be used as an additional query parameter value on the request
 #              previousFieldArraySelectorLookupKey: 'objectFacet.arraySelector'
 #              previousFieldValueSelectorLookupKey: 'objectFacet.valueSelector'
 #              previousFieldLabelSelectorLookupKey: 'objectFacet.labelSelector'
-      entities:
-        type: string
-        # Use `SelectFieldFromApi` to configure the select field for the entry.
-        ui:field: SelectFieldFromApi
-        ui:options:
-          title: 2nd Dependant select
-          description: My custom description for the component
-          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
-          path: 'catalog/entities'
-          # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
-          previousFieldParamRequestKey: "filter=kind"
-          previousFieldParamValueLookupKey: 'facets'
-          jsonataExpression: 'metadata.name'
+#      entities:
+#        type: string
+#        # Use `SelectFieldFromApi` to configure the select field for the entry.
+#        ui:field: SelectFieldFromApi
+#        ui:options:
+#          title: Get Owners
+#          description: My custom description for the component
+#          # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+#          path: 'catalog/entities'
+#          # (Optional) This is the key of an additional dynamic query parameter that can be added to the request
+#          previousFieldParamRequestKey: "filter=kind"
+#          previousFieldParamValueLookupKey: 'relations'
+#          jsonataExpression: 'metadata.name'
   steps:
     - id: log-result
       action: debug:log
