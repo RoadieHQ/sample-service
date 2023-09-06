@@ -17,8 +17,8 @@ spec:
         enum:
           - facet: 'kind'
             jsonata: 'facets.kind.value'
-          - facet: 'apiVersion'
-            jsonata: 'facets.apiVersion.value'
+          - facet: 'metadata.name'
+            jsonata: 'facets.["metadata.name"].value'
 #              arraySelector:
 #                type: string
 #                enum: [ 'facets.kind', 'facets.apiVersion' ]
