@@ -15,17 +15,21 @@ spec:
           - "Kind"
           - "Entity name"
         enum:
-          - facet: 'kind'
+          - paramValue: 'kind'
+            paramKey: 'facet'
+            path: 'catalog/entity-facets'
             jsonata: 'facets.kind.value'
-          - facet: 'metadata.name'
-            jsonata: 'facets.`metadata.name`.value'
+          - paramValue: "kind=group"
+            paramKey: 'filter'
+            path: 'catalog/entities'
+            jsonata: 'metadata.name'
       entities:
         type: string
         ui:field: SelectFieldFromApi
         ui:options:
           title: Dependant select
-          path: 'catalog/entity-facets'
-          previousFieldParamRequestKey: "facet"
+          previousFieldParamRequestLookupKey: "objectFacet.paramKey"
+          previousFieldPathLookupKey: "objectFacet.path"
           previousFieldParamValueLookupKey: 'objectFacet.facet'
           previousFieldJsonataLookupKey: 'objectFacet.jsonata'
 #      objectFilter:
