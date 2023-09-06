@@ -11,9 +11,10 @@ spec:
     properties:
       objectFacet:
         title: 'Facet Mapping'
+        type: object
         enumNames:
           - "Kind"
-          - "Entity name"
+          - "Name"
         enum:
           - paramValue: 'kind'
             paramKey: 'facet'
@@ -30,7 +31,7 @@ spec:
           title: Dependant select
           dynamicParams:
             paramKeyLocation: "objectFacet.paramKey"
-            paramValueLocation: 'objectFacet.paramValue'
+            paramValueLocation: "objectFacet.paramValue"
             pathLocation: "objectFacet.path"
             jsonataLocation: 'objectFacet.jsonata'
 #      objectFilter:
