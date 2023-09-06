@@ -19,8 +19,8 @@ spec:
             paramKey: 'facet'
             path: 'catalog/entity-facets'
             jsonata: 'facets.kind.value'
-          - paramValue: "kind=group"
-            paramKey: 'filter'
+          - paramValue: "group"
+            paramKey: "filter=kind"
             path: 'catalog/entities'
             jsonata: 'metadata.name'
       entities:
