@@ -1,0 +1,75 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: k8s-test-gke
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+#    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend,pod-template-hash=7c8cf694cc'
+    'backstage.io/kubernetes-label-selector': 'pod-template-hash=6dc845c45d,k8s-app=glbc'
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-techdocs-test
+  description: A service for testing TechDocs.
+  annotations:
+    backstage.io/techdocs-ref: dir:./
+spec:
+  type: service
+  owner: guest
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: links-labels
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    backstage.io/techdocs-ref: dir:./
+  links:
+    - url: https://www.google.com
+      title: Google
+      icon: help
+    - url: https://www.graphana.com
+      title: Grafana
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard
+  labels:
+    test1: label1
+    test2: label2
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sonarqube-test-1
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    sonarqube.org/project-key: sam-sample-repo
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: k8s-test-1
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    #    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend,pod-template-hash=7c8cf694cc'
+    'backstage.io/kubernetes-label-selector': 'app=backstage,component=frontend'
+    backstage.io/techdocs-ref: dir:./
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
