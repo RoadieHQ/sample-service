@@ -29,10 +29,10 @@ spec:
         ui:options:
           title: Dependant select
           dynamicParams:
-            previousFieldParamRequestLookupKey: "objectFacet.paramKey"
-            previousFieldPathLookupKey: "objectFacet.path"
-            previousFieldParamValueLookupKey: 'objectFacet.facet'
-            previousFieldJsonataLookupKey: 'objectFacet.jsonata'
+            paramKeyLocation: "objectFacet.paramKey"
+            paramValueLocation: 'objectFacet.paramValue'
+            pathLocation: "objectFacet.path"
+            jsonataLocation: 'objectFacet.jsonata'
 #      objectFilter:
 #        title: 'Entity Annotation Filter Mapping'
 #        enumNames:
