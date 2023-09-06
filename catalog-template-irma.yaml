@@ -1,0 +1,11 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: Template-testing
+  title: Http testing for post/get
+  description: Testing get functionality with get
+ annotations:
+    roadie.io/certified: "true"
+spec:
+  owner: roadie
+  type: service
