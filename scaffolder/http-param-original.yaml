@@ -43,6 +43,20 @@ spec:
               valueSelector: 'count'
               # (Optional) This selects the field in the array to use for the label of each select item.
               labelSelector: 'value'
+          custom-basic:
+            type: string
+            # Use `SelectFieldFromApi` to configure the select field for the entry.
+            ui:field: SelectFieldFromApi
+            ui:options:
+              title: My Dropdown title 2
+              description: My custom description for the component
+
+              # The Path on the Backstage API and the parameters to fetch the data for the dropdown
+              path: 'catalog/entities'
+
+              # This selects the array element from the API fetch response. It finds the array with the name kind
+              # under the facets object
+              arraySelector: 'metadata.name'
   steps:
     - id: log-result
       action: debug:log
