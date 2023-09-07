@@ -1,11 +1,14 @@
-apiVersion: scaffolder.backstage.io/v1beta3
-kind: Template
+apiVersion: backstage.io/v1alpha1
+kind: Group
 metadata:
-  name: Template-testing
-  title: Http testing for post/get
-  description: Testing get functionality with get
- annotations:
-    roadie.io/certified: "true"
+  name: roadie-backstage-admin
+  description: Administrators of Roadie
 spec:
-  owner: roadie
-  type: service
+  type: team
+  profile:
+    displayName: Admins
+    email: admins@roadie.io
+    picture: https://avatars.dicebear.com/api/identicon/roadie-backstage-admin.svg
+  children: []
+  members:
+    - user:default/Irma12
