@@ -35,3 +35,8 @@ spec:
               filter: "kind={{ parameters.kind }}"
             valueSelector: "metadata.name"
             labelSelector: "metadata.description"
+  steps:
+    - id: log-result
+      action: debug:log
+      input:
+        message: "Available Snyk projects: ${{ parameters.custom }}"
