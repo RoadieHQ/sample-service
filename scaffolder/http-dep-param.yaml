@@ -1,0 +1,37 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: http-param-new-simple
+  title: Http param test simple
+spec:
+  owner: roadie
+  type: service
+  parameters:
+    - title: Select an Entity kind
+      required:
+        - kind
+      properties:
+        kind:
+          title: Kind
+          type: string
+          enum:
+            - template
+            - location
+          default: template
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+    - title: Select the specific entity you want
+      properties:
+        obj:
+          title: custom
+          type: string
+          description: Entity Selector
+          ui:field: SelectFieldFromApi
+          ui:options:
+            path: "catalog/entities"
+            params:
+              filter: "kind={{ parameters.kind }}"
+            valueSelector: "metadata.name"
+            labelSelector: "metadata.description"

@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: conflict-test-3
-  title: Test Rename 3
+  title: Test 3
 spec:
   type: service
   owner: sblausten
