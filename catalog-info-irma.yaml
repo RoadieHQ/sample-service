@@ -11,6 +11,14 @@ metadata:
     shortcut.com/project-id: '14'
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
+    snyk.io/org-name: roadie
+    backstage.io/techdocs-ref: dir:.
+    roadie.io/techinsights-shortcut-id: "9229"
+    datadog.eu/tag-name: sample-service
+    pagerduty.com/service-id: P2RXCGR
+  labels:
+    label1: test-label
+    label2/label2: test-label2
 spec:
   type: service
   owner: irma

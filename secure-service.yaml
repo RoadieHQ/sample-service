@@ -1,0 +1,16 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: secure-tech-insights-service
+  description: Secure Tech Insights Service
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+    snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0
+    snyk.io/target-id: 05e88a22-902e-4457-99be-df43035c3a31
+    backstage.io/techdocs-ref: dir:./docs
+    roadie.io/techinsights-shortcut-id: "9229"
+spec:
+  type: service
+  owner: user:xantier
+  lifecycle: production

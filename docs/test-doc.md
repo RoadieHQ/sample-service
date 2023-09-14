@@ -17,3 +17,12 @@ const EmailCaptureForm = ({
              fullWidth
              color="primary"
 ```
+
+
+
+<!-- termynal -->
+```console
+$ show progress
+---> 100%
+Done!
+```

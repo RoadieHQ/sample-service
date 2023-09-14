@@ -1,5 +1,9 @@
 site_name: mycomponent
+site_description: 'My Component'
+
+plugins:
+  - monorepo
 
 nav:
   - First page: index.md
-  - Second page: ../blob/main/docs/feature-testing.md
+  - Second page: other/other.md

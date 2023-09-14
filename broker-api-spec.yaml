@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-spec-via-broker
+  description: API spec pointing to a broker connection
+spec:
+  type: openapi
+  lifecycle: production
+  owner: user:guest
+  definition:
+    $openapi: broker://jussi-test/anything/my-api-spec.json

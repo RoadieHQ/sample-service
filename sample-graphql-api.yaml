@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sample-graphql-api
+spec:
+  type: graphql
+  lifecycle: production
+  owner: group:default/engineering
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/src/random-schema.graphql

@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: roadiehq-discovery
+  description: Add discovery for RoadieHQ
+spec:
+  type: github-discovery
+  target: https://github.com/RoadieHQ/ibtest01/blob/-/catalog-info.yaml

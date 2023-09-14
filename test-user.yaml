@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: test-user-a
+  annotations:
+    github.com/project-slug: 'RoadieHQ/sample-service'
+    github.com/project-readme-path: 'one-service/docs/local-development.md'  
+  links:
+    - url: https://roadiehq.slack.com/blahblag
+      title: User Slack Profile
+      icon: chat 
+spec:
+  profile:
+    displayName: Fname Lname
+    picture: https://blah.com/fname
+  memberOf:
+    - engineering

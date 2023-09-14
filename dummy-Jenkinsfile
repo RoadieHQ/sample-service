@@ -13,15 +13,14 @@ pipeline {
             echo 'Testing..'
           },
           "Integration Test": {
-            echo 'Integration Test...'
-            
+            echo 'Integration Test testing 1234567...'
           }
         )
       }
     }
     stage('Deploy') {
       steps {
-        echo 'Deploying....'
+        echo 'Deploying 123....'
       }
     }
   }

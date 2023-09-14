@@ -31,6 +31,7 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "@roadiehq/backstage-entity-validator": "^0.3.10",
     "eslint": "^7.5.0",
     "mocha": "^8.0.1"
   },
@@ -39,7 +40,7 @@
     "@bugsnag/plugin-express": "^7.14.0",
     "@sentry/node": "5.30.0",
     "aws-serverless-express": "^3.3.8",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-winston": "^4.1.0",
     "lodash": "^4.17.21",
     "newrelic": "^7.0.1",
