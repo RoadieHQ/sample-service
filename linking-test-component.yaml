@@ -2,12 +2,12 @@
 apiVersion: backstage.io/v1beta1
 kind: Component
 metadata:
-  name: preview-component
+  name: linking-test-component
   description: |
-    component for testing things and stuff
+    component for testing catalog internal linkins
 spec:
   # Spec type is always hardcoded to preview-entity in preview mode
-  type: preview-entity
-  owner: group:engineering
+  type: website
+  owner: group:roadiehq/sample-team
   lifecycle: experimental
 
