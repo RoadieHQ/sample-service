@@ -1,0 +1,13 @@
+# Edit the below catalog file template and click save to import a test version of it on Roadie
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: preview-component
+  description: |
+    component for testing things and stuff
+spec:
+  # Spec type is always hardcoded to preview-entity in preview mode
+  type: preview-entity
+  owner: group:engineering
+  lifecycle: experimental
+
