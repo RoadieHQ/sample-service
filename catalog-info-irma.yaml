@@ -21,7 +21,7 @@ metadata:
     label2/label2: test-label2
 spec:
   type: service
-  owner: irma
+  owner: irma-test-group
   lifecycle: experimental
   system: sample-system
   providesApis:
