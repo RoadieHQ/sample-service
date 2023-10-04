@@ -1,0 +1,76 @@
+{
+  "title": "Sample",
+  "quadrants": [
+    {
+      "id": "Languages",
+      "name": "Languages"
+    },
+    {
+      "id": "Process",
+      "name": "Process"
+    },
+    {
+      "id": "Tools",
+      "name": "Tools"
+    },
+    {
+      "id": "infrastructure",
+      "name": "infrastructure"
+    }
+  ],
+  "rings": [
+    {
+      "id": "adopt",
+      "name": "ADOPT",
+      "color": "#93c47d"
+    },
+    {
+      "id": "trial",
+      "name": "TRIAL",
+      "color": "#93d2c2"
+    },
+    {
+      "id": "assess",
+      "name": "ASSESS",
+      "color": "#fbdb84"
+    },
+    {
+      "id": "hold",
+      "name": "HOLD",
+      "color": "#efafa9"
+    }
+  ],
+  "entries": [
+    {
+      "id": "typescript",
+      "title": "Typescript",
+      "description": "Typescript",
+      "url": "https://www.typescriptlang.org/",
+      "quadrant": "Languages",
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "adopt",
+          "date": "2022-02-08",
+          "description": "Long description for adopt"
+        }
+      ]
+    },
+    {
+      "id": "CS-tool",
+      "title": "CS-tool",
+      "description": "CS-tool",
+      "key": "CS-tool",
+      "url": "https://www.CS-tool.org/",
+      "quadrant": "Tools",
+      "timeline": [
+        {
+         "moved": 0,
+          "ringId": "adopt",
+          "date": "2022-02-08",
+          "description": "Long description for adopt"
+        }
+      ]
+    }
+  ]
+}
