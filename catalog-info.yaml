@@ -121,6 +121,7 @@ metadata:
   name: sample-system
   description: Sample things which are good for demoing.
 spec:
+  type: sample
   owner: team-alpha
   domain: sample-domain
 
