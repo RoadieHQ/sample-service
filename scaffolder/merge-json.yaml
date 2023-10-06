@@ -11,6 +11,13 @@ spec:
 
   parameters:
     properties:
+      csharpkeywords:
+        type: boolean
+        title: I have verified that I do not use any C# reserved keywords in the Service Name
+        description: When naming your service, make sure you do not use any reserved keywords found on the [following page](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/)
+        default: false
+        enum:
+          - true
       repository:
         title: Repository name
         type: string
