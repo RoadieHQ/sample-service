@@ -32,7 +32,7 @@ metadata:
     label2/label1: test-label
 spec:
   type: service
-  owner: Xantier
+  owner: user:Xantier
   lifecycle: experimental
   providesApis:
     - sample-service
