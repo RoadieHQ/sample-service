@@ -16,7 +16,7 @@ metadata:
     pagerduty.com/service-id: PVTJXPY
     jira/project-key: TEST
     jira/component: COMP
-    snyk.io/org-name: roadie
+    snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     buildkite.com/project-slug: roadie/test-pipe
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
