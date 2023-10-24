@@ -13,7 +13,7 @@ metadata:
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
     snyk.io/org-name: xantier
     snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
-    roadie.io/tech-insights/repository-location: https://brians-catalog-items.s3.eu-west-1.amazonaws.com/
+    roadie.io/tech-insights/repository-location: s3:https://brians-catalog-items.s3.eu-west-1.amazonaws.com/
 spec:
   type: service
   owner: RoadieHQ
