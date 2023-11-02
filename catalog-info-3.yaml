@@ -9,6 +9,8 @@ metadata:
     travis-ci.com/repo-slug: RoadieHQ/sample-service
     'jenkins.io/job-full-name': roadie
     backstage.io/kubernetes-id: sample-service
+  tags:
+    - sblausten
 spec:
   type: service
   owner: dtuite
