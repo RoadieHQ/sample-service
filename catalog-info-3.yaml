@@ -11,6 +11,8 @@ metadata:
     backstage.io/kubernetes-id: sample-service
   tags:
     - sblausten
+  labels:
+    githubOrg: sblausten
 spec:
   type: service
   owner: dtuite
