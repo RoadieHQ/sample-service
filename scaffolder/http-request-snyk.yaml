@@ -29,6 +29,7 @@ spec:
       input:
         method: 'GET'
         path: '/proxy/snyk/org/${{ parameters.orgName }}/projects/${{ parameters.projectId }}'
+      continueOnBadResponse: true
     - id: log-result
       action: debug:log
       input:
