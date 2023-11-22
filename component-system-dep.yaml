@@ -11,7 +11,7 @@ spec:
   lifecycle: production
   owner: sblausten
   consumesApi:
-    - system:sample-system-2
+    - 'system:sample-system-2'
   dependsOn:
-    - system:sample-system-2
-    - system:sample-system-3
+    - 'system:sample-system-2'
+    - 'system:sample-system-3'
