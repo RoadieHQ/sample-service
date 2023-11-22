@@ -1,0 +1,14 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-system-dep-1
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: production
+  owner: sblausten
+  consumesApi: system:sample-system-2
+  dependsOn: system:sample-system-3

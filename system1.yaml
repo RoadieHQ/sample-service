@@ -5,6 +5,7 @@ metadata:
   name: sample-system-1
 spec:
   owner: sblausten
+  hasPart: system:sample-system-2
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -12,7 +13,7 @@ metadata:
   name: sample-system-2
 spec:
   owner: sblausten
-  partOf: system:default/sample-system-1
+  partOf: system:sample-system-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -20,19 +21,5 @@ metadata:
   name: sample-system-3
 spec:
   owner: sblausten
-  partOf: system:default/sample-system-1
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: test-system-dep-1
-  annotations:
-    github.com/project-slug: sblausten/sample-service
-    backstage.io/techdocs-ref: dir:.
-spec:
-  type: website
-  lifecycle: production
-  owner: sblausten
-  consumesApi: system:default/sample-system-2
-  dependsOn: system:default/sample-system-3
+  partOf: system:sample-system-1
 ---
