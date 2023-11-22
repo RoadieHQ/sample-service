@@ -1,0 +1,23 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sample-system-1
+spec:
+  owner: sblausten
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sample-system-2
+spec:
+  owner: sblausten
+  dependsOn: system:default/sample-system-1
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sample-system-3
+spec:
+  owner: sblausten
+  dependsOn: system:default/sample-system-1
