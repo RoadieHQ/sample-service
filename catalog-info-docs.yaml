@@ -10,6 +10,7 @@ metadata:
     github.com/project-slug: sblausten/sample-service
     # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     backstage.io/techdocs-ref: dir:.
+    backstage.io/code-coverage: enabled
 spec:
   type: service
   owner: sample-team
