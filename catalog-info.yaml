@@ -34,7 +34,7 @@ metadata:
     datadoghq.com/tag-name: sample-service
     datadoghq.com/slo_tag: service:sample-service
     datadoghq.com/monitor_tags: sample-service
-    backstage:io/code-coverage: enabled
+    backstage.io/code-coverage: enabled
 spec:
   type: service
   owner: group:roadiehq/engineering
