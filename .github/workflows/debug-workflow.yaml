@@ -32,7 +32,3 @@ jobs:
       shell: bash
       run: |
         echo "${{ inputs.debugMsg }}"
-
-    - uses:  RoadieHQ/backstage-entity-validator@v0.1.0
-      with:
-        path: 'catalog-info-1.yaml'
