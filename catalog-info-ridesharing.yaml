@@ -1,0 +1,110 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: passenger-backend
+  description: |
+    Lookup information on active passengers. Name, location etc.
+  links:
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: What is the Passenger Backend?
+      icon: help
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Grafana
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: sample-service
+    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    backstage.io/kubernetes-id: sample-service
+spec:
+  type: service
+  owner: roadie
+  lifecycle: production
+  system: passengers
+  providesApis:
+    - passengers-api
+  dependsOn:
+    - Component:core-auth-module
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-queueing-library
+  description: Push jobs onto a globally available shared queue.
+spec:
+  type: library
+  lifecycle: production
+  owner: roadie
+  dependencyOf:
+    - Component:passenger-backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-auth-module
+  description: Authenticate incoming requests.
+spec:
+  type: library
+  lifecycle: production
+  owner: roadie
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: passengers-api
+  description: Lookup information on active passengers. Name, location etc.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: roadie
+  system: passengers
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: passengers
+  description: Passenger management and tracking.
+spec:
+  owner: roadie
+  domain: ride-sharing
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: ride-sharing
+  description: Moving people easier and faster.
+spec:
+  owner: roadie
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: trips
+  description: Trip management and reporting.
+spec:
+  owner: roadie
+  domain: ride-sharing
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: trips-counter
+  description: Count the number of trips by geographic region, passenger etc.
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+spec:
+  type: service
+  owner: roadie
+  lifecycle: production
+  system: trips
+  consumesApis:
+    - passengers-api

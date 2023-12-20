@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: roadie-backstage-admin
+  description: Administrators of Roadie
+spec:
+  type: team
+  profile:
+    displayName: Admins
+    email: admins@roadie.io
+    picture: https://avatars.dicebear.com/api/identicon/roadie-backstage-admin.svg
+  children: []
+  members:
+    - user:default/Irma12
