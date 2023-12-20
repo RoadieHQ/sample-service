@@ -78,6 +78,23 @@ spec:
 
 ---
 apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  title: Sample OpenApi Ref API
+  name: open-api-ref-sample
+  description: Sample catalog file referencing Petstore openapi spec
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:roadiehq/engineering
+  system: sample-system
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: sample-s3-bucket
