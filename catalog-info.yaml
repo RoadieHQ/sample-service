@@ -44,3 +44,65 @@ spec:
   dependsOn:
     - Component:sample-service-2
     - Resource:sample-s3-bucket
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Sentry JS
+  name: sentry-js
+  description: A JS client which communicates with the Sentry HTTP API.
+spec:
+  type: library
+  lifecycle: production
+  owner: group:roadiehq/marketing
+  system: sample-system
+  subcomponentOf: sample-service
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  title: Sample Service API
+  name: sample-service
+  description: The Sample Service API allows you to send errors to Rollbar or Sentry.
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:roadiehq/engineering
+  system: sample-system
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sample-s3-bucket
+  description: The s3 bucket with the sample data in it. Doesn't really exist.
+spec:
+  type: s3-bucket
+  owner: team-alpha
+  system: sample-system
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: sample-domain
+  description: Sample domain which has stuff for demoing.
+spec:
+  owner: group:roadiehq/engineering
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  title: Sample System
+  name: sample-system
+  description: Sample things which are good for demoing.
+spec:
+  owner: group:roadiehq/engineering
+  domain: sample-domain
