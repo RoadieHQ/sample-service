@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ib-test
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: sample-service
+    backstage.io/techdocs-ref: dir:./
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: dtuite
+    snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
+    lighthouse.com/website-url: https://api.development.env.tryflux.com/lighthouse-audit
+spec:
+  type: service
+  owner: engineering
+  lifecycle: experimental
+  providesApis:
+    - sample-service

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-test-orphan-docs
+  title: Sample Service Test Orphan Docs
+  description: |
+    A service for testing docs places on an orphan branch to avoid polluting a repo when docs duplicate native docs.
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/orphan-branch-docs
+    qameta.io/allure-project: asdf
+spec:
+  type: service
+  owner: dtuite
+  lifecycle: experimental

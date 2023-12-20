@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-service-5test
+  title: Sample Service 5test
+  description: |
+    A service for testing Backstage functionality! Configured for GitHub Actions, Sentry, AWS Lambda, Datadog and mis-configured techdocs.
+  annotations:
+    last-security-review: 2022-11-23
+    github.com/project-slug: RoadieHQ/sample-service
+    sentry.io/project-slug: sample-service
+    aws.com/lambda-function-name: HelloWorld
+    aws.com/lambda-region: eu-west-1
+    datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/x5lc2ayfxeebsas1-6ad7c05c9211d7f93167b5101805f089
+    backstage.io/techdocs-ref: dir:.
+    pagerduty.com/service-id: PVTJXPY
+    jira/project-key: TEST
+    jira/component: COMP
+    snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0
+    travis-ci.com/repo-slug: RoadieHQ/sample-service
+    buildkite.com/project-slug: roadie/test-pipe
+    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    argocd/app-name: control-app
+    prometheus.io/rule: memUsage|component,node_memory_Active_bytes|instance,sum by (instance) (node_cpu_seconds_total)|instance
+    prometheus.io/alert: 'Excessive Memory Usage'
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    splunk.com/on-call-team: Example
+    tech-insights/scorecard: SampleScorecard
+    tech-insights/docker-file-location: contrib/build/
+    harness.io/project-url: https://app.harness.io/ng/#/account/d5af5z8-RkS5-ehQRNVk9w/home/orgs/default/projects/default_project/details
+  labels: 
+    label2/label1: test-label
+spec:
+  type: service
+  owner: user:Xantier
+  lifecycle: experimental
+  providesApis:
+    - sample-service
