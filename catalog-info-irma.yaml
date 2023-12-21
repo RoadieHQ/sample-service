@@ -15,6 +15,7 @@ metadata:
     roadie.io/techinsights-shortcut-id: "9229"
     datadog.eu/tag-name: sample-service
     pagerduty.com/service-id: P2RXCGR
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
   labels:
     label1: test-label
     label2/label2: test-label2
