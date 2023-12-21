@@ -10,8 +10,7 @@ metadata:
     bugsnag.com/project-name: Test bugsnag app
     shortcut.com/project-id: '14'
     github.com/public-repository: Public
-    github.com/project-slug: roadiehq/sample-service
-    snyk.io/org-name: roadie
+    github.com/project-slug: RoadieHQ/sample-service
     backstage.io/techdocs-ref: dir:.
     roadie.io/techinsights-shortcut-id: "9229"
     datadog.eu/tag-name: sample-service
