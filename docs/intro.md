@@ -1,7 +1,5 @@
 # Docs for sample-service-1
 
-
-
 Anyone who has spent more than a month working in a decently sized software engineering department
 can tell you the pain of finding documentation. Everyone wishes that great docs for internal
 services were the norm but few people are willing to spend the time it takes to make fantastic
@@ -20,7 +18,7 @@ your docs-as-code in whatever format you like ([MkDocs](https://www.mkdocs.org/)
 supported out of the box), publish it where-ever you like, and Backstage will display it in context
 where it is easy to find.
 
-Test change 1
+Test change 2
 
 <details>
   <summary>Click me</summary>
