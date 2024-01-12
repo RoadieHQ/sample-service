@@ -20,7 +20,7 @@ metadata:
     label2/label2: test-label2
 spec:
   type: service
-  owner: irma-test-group
+  owner: group:roadiehq/engineering
   lifecycle: experimental
   system: sample-system
   providesApis:
