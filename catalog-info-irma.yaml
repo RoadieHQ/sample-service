@@ -14,6 +14,7 @@ metadata:
     roadie.io/techinsights-shortcut-id: "9229"
     datadog.eu/tag-name: sample-service
     pagerduty.com/service-id: P2RXCGR
+    github.com/project-slug: RoadieHQ/sample-service
   labels:
     label1: test-label
     label2/label2: test-label2
