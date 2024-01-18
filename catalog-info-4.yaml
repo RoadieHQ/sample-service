@@ -16,7 +16,6 @@ metadata:
     backstage.io/techdocs-ref: url:s3
     buildkite.com/project-slug: 'samroadie/demo-data'
     qameta.io/allure-project: asdf 
-    github.com/project-slug: RoadieHQ/sample-service
   labels:
     label2/label1: test-label3
     label2/label2: test-label4 
