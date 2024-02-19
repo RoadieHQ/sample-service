@@ -2,4 +2,4 @@ site_name: sub-dir-documentation
 repo_url: https://github.com/sblausten/sample-service
 nav:
   - First page: index.md
-  - Second page: ../blob/main/docs/feature-testing.md
+  - Second page: ../blob/master/docs/feature-testing.md
