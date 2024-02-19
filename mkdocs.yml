@@ -1,7 +1,7 @@
 site_name: Root docs
 docs_dir: docs
 
-repo_url: https://github.com/sblausten/sample-service
+#repo_url: https://github.com/sblausten/sample-service
 nav:
   - "Docs": "index.md"
   - "Subdir 1": "!include ./sub-dir-documentation/mkdocs.yml"
