@@ -1,4 +1,4 @@
-site_name: mycomponent
+site_name: sub-dir-documentation
 
 nav:
   - First page: index.md
