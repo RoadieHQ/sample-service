@@ -9,4 +9,4 @@ nav:
 markdown_extensions:
   - markdown_inline_mermaid
 plugins:
-  - techdocs-core
+  - monorepo
