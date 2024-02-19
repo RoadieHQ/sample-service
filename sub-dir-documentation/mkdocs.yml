@@ -1,5 +1,5 @@
 site_name: sub-dir-documentation
-edit_uri: https://github.com/sblausten/sample-service/edit/main/sub-dir-documentation/
+edit_uri: https://github.com/sblausten/sample-service/edit/main/sub-dir-documentation/docs/
 nav:
   - First page: index.md
   - Second page: ../blob/master/docs/feature-testing.md
