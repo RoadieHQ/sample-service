@@ -2,4 +2,4 @@ site_name: sub-dir-documentation
 
 nav:
   - First page: index.md
-  - Second page: ../blob/master/docs/feature-testing.md
+  - Second page: ../blob/main/docs/feature-testing.md
