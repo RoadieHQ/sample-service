@@ -4,8 +4,8 @@ docs_dir: docs
 repo_url: https://github.com/sblausten/sample-service
 nav:
   - "Docs": "index.md"
-  - "Subdir 1": "!include ./sub-dir-documentation/mkdocs.yml"
-  - "Subdir 2": "!include ./sub-dir-documentation-2/mkdocs.yml"
+  - "Subdir 1": "!include sub-dir-documentation/mkdocs.yml"
+  - "Subdir 2": "!include sub-dir-documentation-2/mkdocs.yml"
 markdown_extensions:
   - markdown_inline_mermaid
 plugins:
