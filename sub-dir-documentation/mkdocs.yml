@@ -1,5 +1,5 @@
 site_name: mycomponent
-
+repo_url: https://github.com/sblausten/sample-service/blob/main/sub-dir-documentation
 nav:
   - First page: index.md
   - Second page: ../blob/main/docs/feature-testing.md
