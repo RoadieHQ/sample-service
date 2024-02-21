@@ -10,6 +10,7 @@ metadata:
     backstage.io/kubernetes-namespace: 'roadie'
     backstage.io/techdocs-ref: dir:.
     pulumi:com/project-slug: roadie-entry/alicloud-typescript/dev
+    pulumi:com/orga-slug: roadie-entry
 spec:
   type: other
   lifecycle: production
