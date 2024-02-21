@@ -1,7 +1,7 @@
 site_name: Root docs
 docs_dir: docs
-
 markdown_extensions:
   - markdown_inline_mermaid
 plugins:
   - monorepo
+  - techdocs-core
