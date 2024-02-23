@@ -35,6 +35,7 @@ metadata:
     datadoghq.com/slo_tag: service:sample-service
     datadoghq.com/monitor_tags: sample-service
     backstage.io/code-coverage: enabled
+    endoflife.date/products: nodejs
 spec:
   type: service
   owner: group:roadiehq/engineering
