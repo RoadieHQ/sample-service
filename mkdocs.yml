@@ -16,5 +16,5 @@ plugins:
   - techdocs-core
 
 markdown_extensions:
-  - mkdocs_graphviz
+  - mdx_inline_graphviz
 
