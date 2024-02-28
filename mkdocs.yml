@@ -15,3 +15,6 @@ docs_dir: docs
 plugins:
   - techdocs-core
 
+markdown_extensions:
+  - mkdocs_graphviz
+
