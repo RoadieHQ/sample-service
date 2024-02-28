@@ -14,5 +14,4 @@ nav:
 docs_dir: docs
 plugins:
   - techdocs-core
-  - kroki
 
