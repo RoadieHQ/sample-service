@@ -16,5 +16,7 @@ plugins:
   - techdocs-core
 
 markdown_extensions:
-  - inline_graphviz
+  - mkdocs_graphviz
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
