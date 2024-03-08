@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>examples.k8spatterns.io</groupId>
+  <artifactId>random-generator-parent</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>Random Generator :: Parent</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <image.repo>k8spatterns</image.repo>
+    <image.tag>${project.version}</image.tag>
+    <image.tag.extension/>
+    <docker.name>${image.repo}/random-generator:${image.tag}${image.tag.extension}</docker.name>
+    <docker.verbose>true</docker.verbose>
+    <version.docker-maven-plugin>0.42.0</version.docker-maven-plugin>
+  </properties>
+
+  <modules>
+    <module>spring</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <compilerArgument>-Xlint:deprecation</compilerArgument>
+          <showWarnings>true</showWarnings>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>v2</id>
+      <properties>
+        <image.tag>2.0</image.tag>
+      </properties>
+    </profile>
+  </profiles>
+</project>
