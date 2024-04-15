@@ -10,4 +10,4 @@ An Excel sheet:
 
 A docx:
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe src="https://onedrive.live.com/embed?resid=3807318B095F1819%2132925&amp;authkey=!AE0k7p1UJ6xWepg&amp;em=2" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe></div>
+<iframe src="https://onedrive.live.com/embed?resid=3807318B095F1819%2132925&amp;authkey=!AE0k7p1UJ6xWepg&amp;em=2" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
