@@ -2,7 +2,7 @@
 
 Some Lucid chart:
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/236b1b6e-4d9d-4015-a3a2-e3b43abd0a5c" id="B7~soPs0jGMA"></iframe></div>
+<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/236b1b6e-4d9d-4015-a3a2-e3b43abd0a5c" id="B7~soPs0jGMA"></iframe>
 
 An Excel sheet:
 
