@@ -1,7 +1,5 @@
 ---
-title: Code snippets 🤫
----
-icon: material/code
+title: 🤫 Code snippets 
 ---
 
 ``` shell linenums="0"
