@@ -1,3 +1,7 @@
+---
+icon: material/emoticon-happy
+---
+
 # I-frame test :smiley:
 
 Some Lucid chart:
