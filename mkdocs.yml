@@ -1,5 +1,7 @@
 site_name: Root docs
 docs_dir: docs
+extra_css:
+  - /assets/style.css
 markdown_extensions:
   - markdown_inline_mermaid
 plugins:
