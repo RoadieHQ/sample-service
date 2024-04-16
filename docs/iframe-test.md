@@ -1,4 +1,4 @@
-# I-frame test
+# I-frame test :smiley:
 
 Some Lucid chart:
 

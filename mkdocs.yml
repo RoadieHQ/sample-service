@@ -6,3 +6,4 @@ plugins:
   - monorepo
   - techdocs-core
   - glightbox
+  - typeset
