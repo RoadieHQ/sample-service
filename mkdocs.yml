@@ -1,6 +1,11 @@
 site_name: Root docs
 docs_dir: docs
-extra_css:
+
+nav:
+  - First page: index.md
+  - 😇 Emoji test: code-snippets.md
+mkdocs:
+  yml:extra_css:
   - assets/style.css
 markdown_extensions:
   - markdown_inline_mermaid
