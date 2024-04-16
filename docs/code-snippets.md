@@ -1,4 +1,8 @@
-# Code snippet formatting
+---
+title: Code snippets 
+---
+icon: material/code
+---
 
 ``` shell linenums="0"
 Some shell commands
