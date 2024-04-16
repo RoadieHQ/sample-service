@@ -1,5 +1,5 @@
 ---
-title: Code snippets 
+title: Code snippets 🤫
 ---
 icon: material/code
 ---
