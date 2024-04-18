@@ -15,6 +15,7 @@ nav:
 docs_dir: docs
 plugins:
   - techdocs-core
+  - glightbox
 
 markdown_extensions:
   - mkdocs_graphviz
