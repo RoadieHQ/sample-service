@@ -4,12 +4,5 @@ docs_dir: docs
 nav:
   - First page: index.md
   - 😇 Emoji test: code-snippets.md
-mkdocs:
-  yml:extra_css:
-  - assets/style.css
-markdown_extensions:
-  - markdown_inline_mermaid
 plugins:
-  - monorepo
   - techdocs-core
-  - glightbox
