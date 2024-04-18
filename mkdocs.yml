@@ -1,8 +1,5 @@
 site_name: Root docs
 docs_dir: docs
 
-nav:
-  - First page: index.md
-  - 😇 Emoji test: code-snippets.md
 plugins:
   - techdocs-core
