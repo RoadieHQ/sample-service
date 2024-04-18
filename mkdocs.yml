@@ -1,5 +1,2 @@
 site_name: Root docs
 docs_dir: docs
-
-plugins:
-  - techdocs-core
