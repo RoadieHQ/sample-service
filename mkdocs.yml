@@ -11,6 +11,7 @@ nav:
   - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs: "!include ./sub-dir-documentation/mkdocs.yml"
   - Runbook: runbook.md
+  - Images: images.md  
 
 docs_dir: docs
 plugins:
