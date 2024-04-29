@@ -20,5 +20,6 @@ nav:
 markdown_extensions:
   - markdown_inline_mermaid
   - mkdocs_graphviz
+  - toc
 plugins:
   - techdocs-core
