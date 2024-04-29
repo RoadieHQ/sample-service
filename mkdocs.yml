@@ -1,32 +1,24 @@
 site_name: Root docs new
 docs_dir: docs
-theme:
-  name: material
-  features:
-    - navigation.sections
-    - navigation.indexes
-
 nav:
-  - "Docs": "index.md"
-  - "Subdir 1": "feature-testing.md"
+  - Docs: index.md
+  - Subdir 1: feature-testing.md
   - AutoIndex:
       - folder/index.md
       - Test 2: folder/feature-testing-2.md
-  - "Subdir 2": "feature-testing.md"
-  - "Subdir 3": "feature-testing.md"
-  - "Subdir 4": "feature-testing.md"
-  - "Subdir 5": "feature-testing.md"
-  - "Subdir 6": "feature-testing.md"
-  - "Subdir 7": "feature-testing.md"
-  - "Subdir 8": "feature-testing.md"
-  - "Subdir 9": "test-doc.md"
-  - "Subdir 10 long one yes very very": "code-snippets.md"
-  - "Subdir 11": "intro.md"
-  - "Subdir 12": "plantuml-test.md"
-
+  - Subdir 2: feature-testing.md
+  - Subdir 3: feature-testing.md
+  - Subdir 4: feature-testing.md
+  - Subdir 5: feature-testing.md
+  - Subdir 6: feature-testing.md
+  - Subdir 7: feature-testing.md
+  - Subdir 8: feature-testing.md
+  - Subdir 9: test-doc.md
+  - Subdir 10 long one yes very very: code-snippets.md
+  - Subdir 11: intro.md
+  - Subdir 12: plantuml-test.md
 markdown_extensions:
   - toc
-
 plugins:
   - section-index
-
+  - techdocs-core
