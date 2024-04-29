@@ -19,6 +19,6 @@ nav:
   - Subdir 12: plantuml-test.md
 markdown_extensions:
   - markdown_inline_mermaid
-  - inline_graphviz
+  - mkdocs_graphviz
 plugins:
   - techdocs-core
