@@ -2,6 +2,8 @@
 
 Here is a markdown table:
 
+TEST LINK - [index-page](https://github.com/sblausten/sample-service/blob/main/docs/folder/index.md)
+
 | Hello       | there     | Tilte  |   |   |
 |-------------|-----------|--------|---|---|
 | Value one   | Value two | `code` |   |   |
