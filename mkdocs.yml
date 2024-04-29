@@ -1,6 +1,7 @@
 site_name: Root docs new
 docs_dir: docs
 theme:
+  name: material
   features:
     - navigation.sections
     - navigation.indexes
