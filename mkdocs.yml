@@ -2,7 +2,7 @@ site_name: Root docs new
 docs_dir: docs
 nav:
   - Docs: index.md
-  - Subdir 1: feature-testing.md
+  - Subdir 1: mermaid-diagram-test1.md
   - AutoIndex:
       - folder/index.md
       - Test 2: folder/feature-testing-2.md
@@ -18,7 +18,7 @@ nav:
   - Subdir 11: intro.md
   - Subdir 12: plantuml-test.md
 markdown_extensions:
-  - toc
+  - markdown_inline_mermaid
+  - inline_graphviz
 plugins:
-  - section-index
   - techdocs-core

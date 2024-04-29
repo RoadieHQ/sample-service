@@ -6,6 +6,11 @@ graph LR
     C --> D
 ```
 
+```mermaid
+graph TD
+A[Client] --> B[Load Balancer]
+```
+
 [comment]: <> (```mermaid)
 
 [comment]: <> (%%{init: {'theme': 'forest'}}%%)
