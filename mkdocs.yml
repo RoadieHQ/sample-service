@@ -29,6 +29,6 @@ nav:
   - "Subdir 24": "feature-testing.md"
   - "Subdir 25": "feature-testing.md"
 
-markdown_extensions:
+plugins:
   - techdocs-core
 
