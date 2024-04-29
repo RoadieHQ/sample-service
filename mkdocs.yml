@@ -6,7 +6,7 @@ nav:
   - "Subdir 1": "feature-testing.md"
   - AutoIndex:
       - folder/index.md
-      - folder/feature-testing-2.md
+      - Test 2: folder/feature-testing-2.md
   - "Subdir 2": "feature-testing.md"
   - "Subdir 3": "feature-testing.md"
   - "Subdir 4": "feature-testing.md"
