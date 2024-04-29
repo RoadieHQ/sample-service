@@ -30,5 +30,5 @@ nav:
   - "Subdir 25": "feature-testing.md"
 
 markdown_extensions:
-  - toc
+  - techdocs-core
 
