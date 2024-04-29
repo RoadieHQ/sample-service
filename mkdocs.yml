@@ -1,5 +1,9 @@
 site_name: Root docs new
 docs_dir: docs
+theme:
+  features:
+    - navigation.sections
+    - navigation.indexes
 
 nav:
   - "Docs": "index.md"
@@ -19,7 +23,10 @@ nav:
   - "Subdir 11": "intro.md"
   - "Subdir 12": "plantuml-test.md"
 
+markdown_extensions:
+  - toc
+
 plugins:
-  - techdocs-core
+#  - techdocs-core
   - section-index
 
