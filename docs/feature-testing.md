@@ -1,4 +1,5 @@
-# 🤫 This doc is for testing styling problems
+
+# This doc is for testing styling problems
 
 Here is a markdown table:
 
@@ -20,7 +21,7 @@ const func = () => {
 
 Headings
 
-# Heading one
+## Heading one
 
 ## Heading 2
 
