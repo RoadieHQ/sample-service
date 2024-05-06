@@ -8,5 +8,3 @@ nav:
   - Subdir 2: feature-testing.md
 plugins:
   - techdocs-core
-markdown_extensions:
-  - markdown_inline_mermaid
