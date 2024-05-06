@@ -7,4 +7,6 @@ nav:
       - Test 2: folder/feature-testing-2.md
   - Subdir 2: feature-testing.md
 plugins:
-  - section-index
+  - techdocs-core
+markdown_extensions:
+  - markdown_inline_mermaid
