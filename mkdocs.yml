@@ -6,5 +6,9 @@ nav:
       - folder/index.md
       - Test 2: folder/feature-testing-2.md
   - Subdir 2: feature-testing.md
+
+theme:
+  features:
+    - navigation.instant
 plugins:
   - techdocs-core
