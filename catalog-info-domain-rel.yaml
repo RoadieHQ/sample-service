@@ -1,0 +1,32 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: test-domain-1
+spec:
+  owner: sblausten
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-domain-dep-1
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+spec:
+  type: website
+  lifecycle: production
+  owner: sblausten
+  partOf:
+    domain:default/test-domain-1
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-domain-dep-2
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+spec:
+  type: website
+  lifecycle: production
+  owner: sblausten
+  domain: test-domain-1
