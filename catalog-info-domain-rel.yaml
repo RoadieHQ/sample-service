@@ -5,6 +5,8 @@ metadata:
   name: test-domain-1
 spec:
   owner: sblausten
+  hasPart:
+    - component:default/test-domain-dep-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -17,7 +19,7 @@ spec:
   lifecycle: production
   owner: sblausten
   partOf:
-    domain:default/test-domain-1
+    - domain:default/test-domain-1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
