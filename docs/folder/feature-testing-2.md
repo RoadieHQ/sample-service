@@ -59,17 +59,23 @@ where the docs are generated. [MkDocs will use it automatically](https://github.
     }
 %}
 
-# PlantUML
+[comment]: <> (# PlantUML)
 
-```plantuml format="png" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram" width="300px" height="300px"
-  Goofy ->  MickeyMouse: calls
-  Goofy <-- MickeyMouse: responds
-```
+[comment]: <> (```plantuml format="png" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram" width="300px" height="300px")
 
-::uml:: format="png" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram" width="300px" height="300px"
-  Goofy ->  MickeyMouse: calls
-  Goofy <-- MickeyMouse: responds
-::end-uml::
+[comment]: <> (  Goofy ->  MickeyMouse: calls)
+
+[comment]: <> (  Goofy <-- MickeyMouse: responds)
+
+[comment]: <> (```)
+
+[comment]: <> (::uml:: format="png" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram" width="300px" height="300px")
+
+[comment]: <> (  Goofy ->  MickeyMouse: calls)
+
+[comment]: <> (  Goofy <-- MickeyMouse: responds)
+
+[comment]: <> (::end-uml::)
 
 
 # Mermaid 
