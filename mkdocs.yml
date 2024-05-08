@@ -8,6 +8,7 @@ nav:
   - Subdir 2: feature-testing.md
 
 theme:
+  name: material
   features:
     - navigation.instant
 plugins:
