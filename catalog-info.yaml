@@ -36,6 +36,9 @@ metadata:
     datadoghq.com/monitor_tags: sample-service
     backstage.io/code-coverage: enabled
     endoflife.date/products: nodejs
+custom:
+  em: user:dtuite
+  product: user:samnixon87
 spec:
   type: service
   owner: group:roadiehq/engineering
