@@ -12,5 +12,5 @@ spec:
   owner: sblausten
   dependsOn:
     - system:sample-system-2
-  hasPart:
+  partOf:
     - system:sample-system-3
