@@ -1,11 +1,5 @@
 site_name: Root docs new
 docs_dir: docs
-nav:
-  - Docs: index.md
-  - AutoIndex:
-      - folder/index.md
-      - Test 2: folder/feature-testing-2.md
-  - Subdir 2: feature-testing.md
 
 plugins:
   - techdocs-core
