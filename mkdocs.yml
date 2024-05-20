@@ -7,9 +7,6 @@ nav:
       - Test 2: folder/feature-testing-2.md
   - Subdir 2: feature-testing.md
 
-theme:
-  name: material
-  features:
-    - navigation.instant
 plugins:
   - techdocs-core
+  - with-pdf
