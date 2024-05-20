@@ -1,23 +1,33 @@
 # Physical Diagram
 
 
-```plantuml format="png"
-@startuml PhysicalDiagram
+[comment]: <> (```plantuml format="png")
 
-!include <kubernetes/k8s-sprites-unlabeled-25pct>
-!theme carbon-gray
+[comment]: <> (@startuml PhysicalDiagram)
 
-participant "<img:images/snyk.puml{scale=0.5}>" as snyk
-snyk -> A : Hello
+[comment]: <> (!include <kubernetes/k8s-sprites-unlabeled-25pct>)
 
-skinparam DefaultTextAlignment center
-skinparam rectangle {
-    FontSize 14
-    Style normal
-}
+[comment]: <> (!theme carbon-gray)
+
+[comment]: <> (participant "<img:images/snyk.puml{scale=0.5}>" as snyk)
+
+[comment]: <> (snyk -> A : Hello)
+
+[comment]: <> (skinparam DefaultTextAlignment center)
+
+[comment]: <> (skinparam rectangle {)
+
+[comment]: <> (    FontSize 14)
+
+[comment]: <> (    Style normal)
+
+[comment]: <> (})
 
 
-Gloo as gloo
-Waf as waf
-@enduml
-```
+[comment]: <> (Gloo as gloo)
+
+[comment]: <> (Waf as waf)
+
+[comment]: <> (@enduml)
+
+[comment]: <> (```)
