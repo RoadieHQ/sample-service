@@ -1,6 +1,7 @@
 site_name: Root docs new
 docs_dir: docs
-
+markdown_extensions:
+  - markdown_inline_mermaid
 plugins:
   - techdocs-core
   - exporter
