@@ -4,7 +4,5 @@ markdown_extensions:
   - markdown_inline_mermaid
 plugins:
   - techdocs-core
-  - exporter
-  - exporter-pdf:
-      concurrency: 8
-      enabled: true
+  - search
+  - print-site
