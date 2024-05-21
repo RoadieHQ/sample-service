@@ -22,23 +22,15 @@ Graphvis:
   }
 %}
 
-[comment]: <> (```mermaid)
-
-[comment]: <> (%%{init: {'theme': 'forest'}}%%)
-
-[comment]: <> (graph LR)
-
-[comment]: <> (  A[Start] --> B{Error?};)
-
-[comment]: <> (  B -->|Yes| C[Hmm...];)
-
-[comment]: <> (  C --> D[Debug];)
-
-[comment]: <> (  D --> B;)
-
-[comment]: <> (  B ---->|No| E[Yay!];)
-
-[comment]: <> (```)
+```mermaid
+%%{init: {'theme': 'forest'}}%%
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
 
 
 
