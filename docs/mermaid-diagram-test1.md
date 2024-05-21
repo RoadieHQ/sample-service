@@ -11,17 +11,6 @@ graph TD
 A[Client] --> B[Load Balancer]
 ```
 
-
-Graphvis:
-{% dot attack_plan.svg
-  digraph G {
-    rankdir=LR
-      Earth [peripheries=2]
-      Mars
-      Earth -> Mars
-  }
-%}
-
 ```mermaid
 %%{init: {'theme': 'forest'}}%%
 graph LR
