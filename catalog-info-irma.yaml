@@ -16,6 +16,7 @@ metadata:
     pagerduty.com/service-id: P2RXCGR
     github.com/project-slug: RoadieHQ/sample-service
     argocd/app-name: guestbooks
+    gitlab.com/project-id: 'roadie-entities' #1234. This must be in quotes and can be found under Settings --> Genera
   labels:
     label1: test-label
     label2/label2: test-label2
