@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tags-test
+  name: no-owner-test
   title: generated-component-tags
   annotations:
     github.com/project-slug: sblausten/sample-service
