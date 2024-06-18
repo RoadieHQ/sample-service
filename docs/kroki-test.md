@@ -13,7 +13,7 @@ It is comprised of a number of different services each of which can be used to g
 
 kroki-excalidraw
 ```kroki-excalidraw
-@from_file:assets/concepts.excalidraw
+@from_file:assets/diagram.excalidraw
 ```
 
 kroki-plantuml
@@ -25,7 +25,7 @@ participant Paul
 
 kroki-plantuml
 ```kroki-plantuml
-@from-file:assets/concepts.plantuml
+@from-file:assets/diagram.plantuml
 ```
 
 kroki-blockdiag
@@ -33,7 +33,7 @@ kroki-blockdiag
 @from-file:assets/blocdiag
 ```
 
-bpmn
+kroki-bpmn
 ```kroki-bpmn
 @from_file:assets/diagram.bpmn
 ```
