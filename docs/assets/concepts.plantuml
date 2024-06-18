@@ -1,2 +1,3 @@
-participant John
-participant Paul
+@startuml
+Bob -> Alice : hello
+@enduml
