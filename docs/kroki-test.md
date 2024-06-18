@@ -33,6 +33,10 @@ kroki-blockdiag
 @from-file:assets/blocdiag
 ```
 
+bpmn
+```kroki-bpmn
+@from_file:assets/diagram.bpmn
+```
 
 kroki-mermaid
 ```kroki-mermaid
