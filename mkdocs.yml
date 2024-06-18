@@ -6,6 +6,7 @@ plugins:
   - techdocs-core
   - kroki:
       FileTypes:
-        - bpmn
-        - plantuml
-        - excalidraw
+        - svg
+        - png
+        - txt
+        - base64
