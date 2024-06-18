@@ -1,4 +1,4 @@
-# Docs for sample-service-1
+# Kroki test
 
 Anyone who has spent more than a month working in a decently sized software engineering department
 can tell you the pain of finding documentation. Everyone wishes that great docs for internal
@@ -11,19 +11,24 @@ The Quiz Brain is suite of APIs is designed to assist users in excelling at pub 
 
 It is comprised of a number of different services each of which can be used to gain an advantage in a pub, charity or fun family quiz.
 
+kroki-excalidraw
 ```kroki-excalidraw
-@from_file:./concepts.excalidraw
+@from_file:assets/concepts.excalidraw
 ```
 
+kroki-plantuml
 ```kroki-plantuml
 participant John
 participant Paul
 ```
 
+
+kroki-plantuml
 ```kroki-plantuml
-@from-file:concepts.plantuml
+@from-file:assets/concepts.plantuml
 ```
 
+kroki-mermaid
 ```kroki-mermaid
 sequenceDiagram
 GitLab->>Kroki: Request rendering
