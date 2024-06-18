@@ -28,6 +28,12 @@ kroki-plantuml
 @from-file:assets/concepts.plantuml
 ```
 
+kroki-blockdiag
+```kroki-blockdiag
+@from-file:assets/blocdiag
+```
+
+
 kroki-mermaid
 ```kroki-mermaid
 sequenceDiagram
