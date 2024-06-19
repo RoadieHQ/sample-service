@@ -4,9 +4,4 @@ markdown_extensions:
   - markdown_inline_mermaid
 plugins:
   - techdocs-core
-  - kroki:
-      FileTypes:
-        - svg
-        - png
-        - txt
-        - base64
+  - kroki

@@ -648,6 +648,58 @@
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
+    },
+    {
+      "id": "6rVwDoCEW5jUxrYcpm5sw",
+      "type": "arrow",
+      "x": 865.5234375,
+      "y": 647.2890625,
+      "width": 42.04296875,
+      "height": 37.19140625,
+      "angle": 0,
+      "strokeColor": "#2f9e44",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 228155995,
+      "version": 46,
+      "versionNonce": 1696482997,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718180996092,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          42.04296875,
+          37.19140625
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "OcYBSVpn1L_WBhpByyU28",
+        "focus": -0.0732829629537902,
+        "gap": 17.0234375
+      },
+      "endBinding": {
+        "elementId": "blKMKhcYH3YBr-FAMr8iu",
+        "focus": 0.13539037948622135,
+        "gap": 15.7578125
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
     }
   ],
   "appState": {
