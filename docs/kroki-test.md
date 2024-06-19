@@ -9,7 +9,7 @@ docs a reality.
 
 The Quiz Brain is suite of APIs is designed to assist users in excelling at pub quizzes by providing various services including collective noun identification, famous person recognition, numerical guessing, anagram solving, riddle deduction, and educated guessing. Each API offers a unique functionality aimed at enhancing the quiz experience and improving the chances of winning.
 
-It is comprised of a number of different services each of which can be used to gain an advantage in a pub, charity or family quiz.
+It is comprised of aaa number of different services each of which can be used to gain an advantage in a pub, charity or family quiz.
 
 kroki-excalidraw
 ```kroki-excalidraw
