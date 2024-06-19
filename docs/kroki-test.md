@@ -40,7 +40,6 @@ participant Paul
 kroki-mermaid inline
 ```kroki-mermaid
 sequenceDiagram
-GitLab->>Kroki: Request rendering
 Kroki->>Mermaid: Request rendering
 Mermaid-->>Kroki: Image
 ```
