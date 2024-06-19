@@ -18,13 +18,6 @@ kroki-excalidraw
 
 kroki-plantuml
 ```kroki-plantuml
-participant John
-participant Paul
-```
-
-
-kroki-plantuml
-```kroki-plantuml
 @from-file:assets/diagram.plantuml
 ```
 
@@ -38,7 +31,13 @@ kroki-bpmn
 @from_file:assets/diagram.bpmn
 ```
 
-kroki-mermaid
+kroki-plantuml inline
+```kroki-plantuml
+participant John
+participant Paul
+```
+
+kroki-mermaid inline
 ```kroki-mermaid
 sequenceDiagram
 GitLab->>Kroki: Request rendering
