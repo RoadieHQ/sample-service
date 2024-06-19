@@ -13,7 +13,7 @@ It is comprised of a number of different services each of which can be used to g
 
 kroki-excalidraw
 ```kroki-excalidraw
-@from_file:assets/diagram.excalidraw
+@from_file:assets/concepts.excalidraw
 ```
 
 kroki-plantuml
