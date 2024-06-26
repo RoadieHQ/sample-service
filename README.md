@@ -1,6 +1,6 @@
 ![relative-image](docs/assets/headline.png)
 
-[![Private Image](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)
+![Private Image](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)
 
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
