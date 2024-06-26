@@ -2,6 +2,8 @@
 
 ![Private Image](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)
 
+![External public image](https://img.shields.io/badge/amazon%20alexa-52b5f7?style=for-the-badge&logo=amazon%20alexa&logoColor=white)
+
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
 - [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
