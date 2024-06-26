@@ -1,6 +1,6 @@
-![alt-text](docs/assets/headline.png "CC BY-NC-SA 4.0")
+![relative-image](docs/assets/headline.png)
 
-[![Tag Releases](https://github.com/YotpoLtd/ci-utils/actions/workflows/tag-release.yaml/badge.svg?branch=master)](https://github.com/YotpoLtd/ci-utils/actions/workflows/tag-release.yaml)
+[![Private Image](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)](https://github.com/sblausten/sample-service-sam-2/blob/main/techdocs/aws-cowbell-prod/docs/assets/headline.png)
 
 ## Test docs link
 - [Features testing](docs/feature-testing.md) - Features testing
