@@ -1,0 +1,40 @@
+---
+name: Record executed workflow steps in Roadie
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  send_actions_to_roadie:
+    runs-on: ubuntu-latest
+
+    env:
+      CI: true
+      NODE_ENV: test
+
+    steps:
+      - name: Log node version
+        run: node --version
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+
+      - name: Write json to file
+        run: |
+          date=$(date +"%Y-%m-%dT%H:%M:%S%z")
+          string_list_of_actions=$(grep --ignore-case --no-filename -Po 'uses:\s([\w\/\@\-\.]+)' .github/workflows/* | cut -c 7- | tr '\n' ',')
+
+          echo "$string_list_of_actions"
+
+          cat << EOF > ./payload.json
+            { "items": [{ "timestamp": "$date", "entity": "component:default/sample-service", "facts": [{ "id": "6f108369-8e28-4dca-a98d-66e02e7d226a", "value": "$string_list_of_actions" }] }] }
+          EOF
+
+      - name: Output file
+        run: cat payload.json
+
+      - name: List of actions
+        run: "curl -vvv -d @payload.json -H 'Content-Type:application/json' -H 'Authorization: bearer ${{ secrets.ROADIE_DEMO2_API_KEY }}' -X POST https://api.roadie.so/api/tech-insights/v1/facts/9de42668-7c6a-4512-893a-b4b2f257944e"
