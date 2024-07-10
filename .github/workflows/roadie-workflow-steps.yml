@@ -35,7 +35,10 @@ jobs:
 
       - name: Write json to file
         run: |
-          echo '{"items": [{"timestamp":"$ROADIE_DATE"}] }' > "payload.json"
+          date=$(date +"%Y-%m-%dT%H:%M:%S%z")
+          cat << EOF > /payload.json
+          {"commit_id": "$date" }
+          EOF
 
       - name: Output file
         run: cat payload.json
