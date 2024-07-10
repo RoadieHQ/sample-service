@@ -22,17 +22,6 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - name: Capture the actons used
-        run: |
-          echo "ROADIE_LIST_OF_ACTIONS=$(grep --ignore-case --no-filename -Po 'uses:\s([\w\/\@\-\.]+)' .github/workflows/* | tr '\n' ',')" >> "$GITHUB_ENV"
-
-      - name: Capture the date
-        run: |
-          echo "ROADIE_DATE=$(date +"%Y-%m-%dT%H:%M:%S%z")" >> "$GITHUB_ENV"
-
-      - name: Log github env
-        run: echo "$GITHUB_ENV"
-
       - name: Write json to file
         run: |
           date=$(date +"%Y-%m-%dT%H:%M:%S%z")
@@ -45,5 +34,5 @@ jobs:
       - name: Output file
         run: cat payload.json
 
-      - name: Send file
-        run: curl -d @payload.json -H 'Content-Type:application/json' -X POST https://webhook.site/03b412f4-caa2-4ed1-9675-2163d2dda07a
+      - name: List of actions
+        run: curl -d @payload.json -H 'Content-Type:application/json' -H 'Authorization: bearer ${{ secrets.ROADIE_DEMO2_API_TOKEN }}' -X POST https://api.roadie.so/api/tech-insights/v1/facts/9de42668-7c6a-4512-893a-b4b2f257944e
