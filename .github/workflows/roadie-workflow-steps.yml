@@ -35,4 +35,4 @@ jobs:
         run: cat payload.json
 
       - name: List of actions
-        run: "curl -vvv -d @payload.json -H 'Content-Type:application/json' -H 'Authorization: bearer ${{ secrets.ROADIE_DEMO2_API_TOKEN }}' -X POST https://api.roadie.so/api/tech-insights/v1/facts/9de42668-7c6a-4512-893a-b4b2f257944e"
+        run: "curl -vvv -d @payload.json -H 'Content-Type:application/json' -H 'Authorization: bearer ${{ secrets.ROADIE_DEMO2_API_KEY }}' -X POST https://api.roadie.so/api/tech-insights/v1/facts/9de42668-7c6a-4512-893a-b4b2f257944e"
