@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build_and_test:
+  send_actions_to_roadie:
     runs-on: ubuntu-latest
 
     env:
@@ -32,36 +32,3 @@ jobs:
 
       - name: Log github env
         run: echo "$GITHUB_ENV"
-
-      - name: Deploy Stage
-        uses: juancolchete/batch-http-request
-        with:
-          url: 'https://api.roadie.so/api/tech-insights/v1/facts/9de42668-7c6a-4512-893a-b4b2f257944e'
-          method: 'POST'
-          customHeaders: '{"Content-Type": "application/json","Accepts":"application/json","Authorization":"bearer ${{ secrets.ROADIE_DEMO2_API_KEY}}"}'
-          data: '{
-            "items": [{
-              "timestamp": "$ROADIE_DATE",
-              "entity": "component:default/sample-service",
-              "facts": [{
-                "id": "6f108369-8e28-4dca-a98d-66e02e7d226a",
-                "value": "uses: ksdfjksdfk"
-              }, {
-                "id": "fce91a61-d7b1-4b7f-91fa-e3a7446f1443",
-                "value": [
-                  "uses: actions/checkout@v2",
-                  "uses: github/codeql-action/init@v1",
-                  "uses: github/codeql-action/autobuild@v1",
-                  "uses: github/codeql-action/analyze@v1",
-                  "uses: actions/checkout@v2",
-                  "uses: actions/setup-node@v1",
-                  "uses: actions/checkout@v2",
-                  "uses: actions/setup-node@v2",
-                  "uses: actions/setup-python@v2",
-                  "uses: actions/checkout@v3"
-                ]
-              }]
-            }]
-          }'
-
-
