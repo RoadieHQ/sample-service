@@ -4,7 +4,7 @@ metadata:
   name: sample-service-techdocs-test-techdocs-entity
   description: A service for testing TechDocs.
   annotations:
-    backstage:io/techdocs-entity: component:default/sample-service-techdocs-test
+    backstage.io/techdocs-entity: component:default/sample-service-techdocs-test
 spec:
   type: service
   owner: guest
