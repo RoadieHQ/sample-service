@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: test-domain-1
+spec:
+  owner: sblausten
+  hasPart:
+    - 'System:test-system-1'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: test-domain-2
+spec:
+  owner: sblausten
+  hasPart:
+    - 'System:test-system-1'
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: test-system-1
+spec:
+  owner: sblausten
+  partOf:
+    - 'Domain:test-domain-2'
+    - 'Domain:test-domain-1'
+---
