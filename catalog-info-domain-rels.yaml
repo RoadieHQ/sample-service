@@ -26,3 +26,12 @@ spec:
     - 'Domain:test-sample-domain-2'
     - 'Domain:test-sample-domain-1'
 ---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: test-sample-system-2
+spec:
+  owner: sblausten
+  dependsOn:
+    - 'System:test-sample-system-1'
+---

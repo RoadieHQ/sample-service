@@ -1,0 +1,84 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: enum-objects-template-conditional
+  title: Enum objects cond
+  description: Merge in some json to an existing file and open a pull request for it.
+spec:
+  owner: roadie
+  type: service
+
+  parameters:
+    properties:
+      repository:
+        title: Repository name
+        type: string
+        description: The name of the repository
+      org:
+        title: Repository Organisation
+        type: string
+        description: The Github org that the repository is in
+      pr_branch:
+        title: PR Branch
+        type: string
+        description: The new branch to make a pr from
+      path:
+        title: Path
+        type: string
+        description: The path to the desired new file
+      volume_type:
+        title: Volume Type
+        type: string
+        description: The volume type to be used
+        default: gp2
+        enum:
+          - gp2
+          - gp3
+          - io1
+          - io2
+          - sc1
+          - st1
+          - standard
+        enumNames:
+          - 'General Purpose SSD (gp2)'
+          - 'General Purpose SSD (gp3)'
+          - 'Provisioned IOPS (io1)'
+          - 'Provisioned IOPS (io2)'
+          - 'Cold HDD (sc1)'
+          - 'Throughput Optimized HDD (st1)'
+          - 'Magnetic (standard)'
+      content:
+        title: Json
+        type: string
+        description: Json to merge in
+        ui:widget: textarea
+        ui:options:
+          rows: 10
+        ui:placeholder: |
+          {"hello": "world"}
+  steps:
+    - id: fetch-repo
+      name: Fetch repo
+      action: fetch:plain
+      input:
+        url: "https://github.com/${{ parameters.org }}/${{ parameters.repository }}"
+    - id: merge
+      name: Merge json
+      action: json:merge
+      input:
+        path: ${{ parameters.path }}
+        content: ${{ parameters.content }}
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=${{ parameters.repository }}&owner=${{ parameters.org }}
+        branchName: ${{ parameters.pr_branch }}
+        title: Merge json into ${{ parameters.path }}
+        description: This PR was created by a Roadie Backstage scaffolder task
+    - id: log-message
+      name: Log PR URL
+      action: debug:log
+      input:
+        message: 'RemoteURL: ${{ steps["publish-pr"].output.remoteUrl }}'
