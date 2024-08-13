@@ -1,0 +1,23 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Product
+metadata:
+  name: k8s-test-1
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    opsgenie.com/component-selector: sample-service-1
+    bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
+    circleci.com/project-slug: github/RoadieHQ/sample-service
+    rollbar.com/project-slug: roadie/sample-project
+    backstage.io/techdocs-ref: dir:./
+spec:
+  type: internal
+  owner: engineering
+  domain: sample-domain
+  consumesApi:
+    - passengers-api
+  hasPart:
+    - component:default/app-config-backend
+    - repository:default/roadie-charts
