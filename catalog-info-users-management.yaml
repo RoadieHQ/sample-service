@@ -1,0 +1,29 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: test-1
+spec:
+  profile:
+    displayName: Jenny Doe
+    email: jenny-doe@example.com
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf:
+    - engineering
+  managedBy:
+    - user:frank.tiernan
+  manages:
+    - user:janelle.dawe
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: test-1
+spec:
+  type: business-unit
+  profile:
+    displayName: Infra
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  managedBy:
+    - user:frank.tiernan
