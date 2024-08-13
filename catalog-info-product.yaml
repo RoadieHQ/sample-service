@@ -1,8 +1,8 @@
 ---
-apiVersion: backstage.io/v1alpha1
+apiVersion: roadie.io/v1
 kind: Product
 metadata:
-  name: k8s-test-1
+  name: product-test-1
   annotations:
     github.com/project-slug: sblausten/sample-service
     snyk.io/org-name: roadie
