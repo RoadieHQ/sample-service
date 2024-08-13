@@ -5,3 +5,4 @@ markdown_extensions:
 plugins:
   - techdocs-core
   - kroki
+  - print-site
