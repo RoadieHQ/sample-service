@@ -25,6 +25,6 @@ spec:
     displayName: Infra
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  children:
+  children: []
   managedBy:
     - user:frank.tiernan
