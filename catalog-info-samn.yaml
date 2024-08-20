@@ -13,7 +13,7 @@ metadata:
   purple-monkey: dishwasher
 
 spec:
-  type: service
+  type: catalog
   owner: group:roadiehq/engineering
   lifecycle: experimental
   system: sample-system
