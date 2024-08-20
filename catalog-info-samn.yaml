@@ -19,5 +19,5 @@ spec:
   system: sample-system
   providesApis:
     - test-service
-  managedBy: user:samnixon87
+  managedBy: [user:samnixon87]
   parentOf: [sample-system]
