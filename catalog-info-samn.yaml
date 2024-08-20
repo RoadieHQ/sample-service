@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Product
+metadata:
+  name: Product Kind Tester
+  title: Product Kind Tester
+  description: |
+    A service for testing Product functionality. Configured by Samn.
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  labels:
+    label1: test-label
+    label2/label2: product
+  purple-monkey: dishwasher
+
+spec:
+  type: service
+  owner: group:roadiehq/engineering
+  lifecycle: experimental
+  system: sample-system
+  providesApis:
+    - test-service
+  managedBy: user:samnixon87
+  parentOf: sample-system
