@@ -20,4 +20,4 @@ spec:
   providesApis:
     - test-service
   managedBy: user:samnixon87
-  parentOf: sample-system
+  parentOf: [sample-system]
