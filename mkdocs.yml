@@ -7,6 +7,7 @@ nav:
   - Local development: local-development.md
   - Feature Testing: feature-testing.md
   - Mermaiding: mermaiding-er-diag.md
+  - Different Mermain: mermaid-diagram-test1.md 
   - TestDoc: test-doc.md
   - Embedded Lucid Chart: testing-lucid.md
   - Subdirectory docs: "!include ./sub-dir-documentation/mkdocs.yml"
