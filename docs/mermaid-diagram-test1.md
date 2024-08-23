@@ -1,4 +1,4 @@
-```mermaid link_testing.svg
+```mermaid
 %%{init: {'theme': 'forest'}}%%
 graph LR
   A[Start] --> B{Error?};
