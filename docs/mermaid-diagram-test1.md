@@ -4,6 +4,6 @@ graph LR
   A[Start] --> B{Error?};
   B -->|Yes| C[Hmm...];
   C --> D[Debug];
-  D --> <a href='http://google.com'>B</a>;
-  B ---->|No| E[Yay!];
+  D --> B;
+  B ---->|No| E[Y<a href='http://google.com'>ay</a>!];
 ```
