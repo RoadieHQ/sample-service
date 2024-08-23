@@ -5,5 +5,5 @@ graph LR
   B -->|Yes| C[Hmm...];
   C --> D[Debug];
   D --> B;
-  B ---->|No| E[Y<a href='http://google.com'>ay</a>!];
+  B ---->|No| E[Y<a xlink:href="http://google.com" target="__blank">ay</a>!];
 ```
