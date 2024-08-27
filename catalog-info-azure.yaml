@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-azure
+  title: Test Azure
+  annotations:
+    github.com/project-slug: sblausten/sample-service
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: roadie-test/sample-service
+    dev.azure.com/project: roadie-test
+    dev.azure.com/build-definition: sblausten.sample-service
+  tags:
+    - test1
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
