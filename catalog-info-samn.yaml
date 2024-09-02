@@ -16,7 +16,7 @@ spec:
   type: catalog
   owner: group:roadiehq/engineering
   lifecycle: experimental
-  system: sample-system
+  domain: sample-domain
   providesApis:
     - test-service
   managedBy: [user:samnixon87]
