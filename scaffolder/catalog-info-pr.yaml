@@ -2,11 +2,11 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: open-pr-with-catalog-entry
+  name: open-pr-with-catalog-entry-2
   title: Onboard your service to Backstage
   description: Create a new PR with your service's details.
 spec:
-  owner: group:roadiehq/engineering
+  owner: user:sblausten
   type: service
 
   parameters:
