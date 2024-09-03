@@ -36,7 +36,7 @@ spec:
             path: 'catalog/entity-facets'
             params:
               facet: 'spec.type'
-            arraySelector: 'facets.spec.type'
+            arraySelector: "facets['spec.type']"
             valueSelector: 'value'
 
         lifecycle:
