@@ -1,0 +1,112 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: open-pr-with-catalog-entry
+  title: Onboard your service to Backstage
+  description: Create a new PR with your service's details.
+spec:
+  owner: group:roadiehq/engineering
+  type: service
+
+  parameters:
+    - title: What is your service about?
+      required:
+        - name
+        - description
+        - type
+        - lifecycle
+      properties:
+        name:
+          title: Service name
+          type: string
+          description: Human readable name. We'll generate a dasherized version from it.
+
+        description:
+          title: Service description
+          type: string
+
+        type:
+          type: string
+          ui:field: SelectFieldFromApi
+          ui:options:
+            title: Service type
+            description: The type of the component
+            default: service
+            path: 'catalog/entity-facets'
+            params:
+              facet: 'spec.type'
+            arraySelector: 'facets.spec.type'
+            valueSelector: 'value'
+
+        lifecycle:
+          title: Service lifecycle
+          type: string
+          default: production
+          enum: ['production', 'experimental', 'deprecated']
+
+        owner:
+          title: Service Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: Group
+
+    - title: Where is your codebase?
+      required:
+        - repoSlug
+      properties:
+        repoHost:
+          type: string
+          default: github.com
+          ui:widget: hidden
+        repoOrg:
+          type: string
+          default: roadiehq # Change this to match the name of your GitHub org
+          ui:widget: hidden
+        repoSlug:
+          title: Repository name
+          type: string
+
+    - title: Integrations (optional)
+      properties:
+        argoAppName:
+          title: Argo CD App Name
+          type: string
+        pagerdutyServiceId:
+          title: PagerDuty service ID
+          type: string
+
+  steps:
+    - id: fetchTemplate
+      action: fetch:template
+      input:
+        url: ./skeleton
+        templateFileExtension: .njk
+        values:
+          name: ${{ parameters.name }}
+          description: ${{ parameters.description }}
+          owner: ${{ parameters.owner }}
+          type: ${{ parameters.type }}
+          repoOrg: ${{ parameters.repoOrg }}
+          repoSlug: ${{ parameters.repoSlug }}
+          argoAppName: ${{ parameters.argoAppName }}
+          pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
+          lifecycle: ${{ parameters.lifecycle }}
+
+    - id: createPullRequest
+      name: createPullRequest
+      action: publish:github:pull-request
+      input:
+        repoUrl: ${{ parameters.repoHost }}?owner=${{ parameters.repoOrg }}&repo=${{ parameters.repoSlug }}
+        branchName: onboard-to-catalog-${{ '' | now }}
+        title: Onboard service to Catalog
+        description: This PR adds a metadata file about this service so that it can be registered in our software catalog.
+
+  output:
+    links:
+      - title: View the pull request on GitHub
+        icon: github
+        url: ${{ steps['createPullRequest'].output.remoteUrl }}
