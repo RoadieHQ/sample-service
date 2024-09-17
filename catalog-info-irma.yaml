@@ -15,7 +15,7 @@ metadata:
     datadog.eu/tag-name: sample-service
     pagerduty.com/service-id: P2RXCGR
     github.com/project-slug: RoadieHQ/sample-service
-    argocd/app-name: guestbooks
+    argocd/app-name: guestbook
     gitlab.com/project-id: 'roadie-entities'
   labels:
     label1: test-label
