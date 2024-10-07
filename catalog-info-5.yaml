@@ -32,7 +32,7 @@ metadata:
       default_project: https://app.harness.io/ng/account/d5af5z8-RkS5-ehQRNVk9w/module/cd/orgs/default/projects/default_project/services/harnessguestbook
     harness.io/services: |
       default_project: https://app.harness.io/ng/account/d5af5z8-RkS5-ehQRNVk9w/module/cd/orgs/default/projects/default_project/services/harnessguestbook
-    aws.amazon.com/amazon-ecs-service-arn: "arn:aws:ecs:eu-west-1:629158815888:cluster/Testing123"
+    aws.amazon.com/amazon-ecs-service-arn: "arn:aws:ecs:eu-west-1:629158815888:service/Testing123/hello"
   labels: 
     label2/label1: test-label
 spec:
