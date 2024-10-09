@@ -1,58 +1,51 @@
-![alt-text](docs/assets/headline.png "CC BY-NC-SA 4.0")
-
-## Test docs link
-- [Features testing](docs/feature-testing.md) - Features testing
-- [Absolute link](https://roadie.roadie.so/docs/default/Component/sample-service-2/feature-testing/) - Absolute link to another page
-- [Read me](README.md) - Read me document
-- [Link to sibling](./LINK_ME.md) - Link to a markdown file outside the techdocs repo
-
 # Sample Service
 
-A sample service for testing build tools, displaying in Backstage, and whatever
-else you might need it for.
+## Why write a README?
 
-## Development
+ - It is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.
+ - It will make your project standout from a bunch of others. Also be sure your project is good too.
+ - It will help you focus on what your project needs to deliver and how.
 
-First add some secrets to the `.env` file in the root. See the `.env.sample` file for suggestions
-of required environment variables.
+## The most important README sections
 
-Then run it locally like this:
+### 1. Project's Title
 
-```
-yarn dev
-```
+This is the name of the project. It describes the whole project in one sentence, and helps people understand what the main goal and aim of the project is.
 
-## Building, packaging and deployment
+### 2. Project Description
 
-The sample-service is designed to be deployed on multiple platforms. For example,
-kubernetes via Helm and AWS Lambda.
-Some non ASCII code .भारत .网络
+This is an important component of your project that many new developers often overlook.
 
-### Helm
+Your description is an extremely important aspect of your project. A well-crafted description allows you to show off your work to other developers as well as potential employers.
 
-Docker images are automatically built and pushed to Docker Hub by a GitHub action when
-new code is merged into the `master` branch.
+The quality of a README description often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase:
 
-The image will be tagged with the version in the `package.json`.
+ - What your application does,
+ - Why you used the technologies you used,
+ - Some of the challenges you faced and features you hope to implement in the future.
 
-The repo name on Docker Hub is `roadiehq/sample-service`.
+### 3. Table of Contents (Optional)
 
-There is a [helm chart for deployment to Kubernetes](https://github.com/RoadieHQ/helm-charts/tree/master/sample-service).
+If your README is very long, you might want to add a table of contents to make it easy for users to navigate to different sections easily. It will make it easier for readers to move around the project with ease.
 
-### AWS Lambda
+### 4. How to Install and Run the Project
 
-Pre-requisites:
+If you are working on a project that a user needs to install or run locally in a machine like a "POS", you should include the steps required to install your project and also the required dependencies if any.
 
- 1. Install the aws cli (For homebrew, use: `brew install awscli`).
- 2. Authenticate using an access token and secret with `aws configure`.
+Provide a step-by-step description of how to get the development environment set and running.
 
-```shell
-yarn run deploy:lambda
-```
+### 5. How to Use the Project
 
-To invoke it via the API Gateway trigger,
+Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected.
 
-```shell
-curl https://6b2w0lh8p3.execute-api.eu-west-1.amazonaws.com/default/sample-service
-```
-test
+You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.
+
+Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials.
+
+### 6. Include Credits
+
+If you worked on the project as a team or an organization, list your collaborators/team members. You should also include links to their GitHub profiles and social media too.
+
+Also, if you followed tutorials or referenced a certain material that might help the user to build that particular project, include links to those here as well.
+
+This is just a way to show your appreciation and also to help others get a first hand copy of the project.
