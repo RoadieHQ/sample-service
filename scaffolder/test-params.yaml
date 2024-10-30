@@ -1,0 +1,49 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: test-params-1
+  title: Test parameters 1
+spec:
+  owner: sblausten
+  type: infrastructure
+  definitions:
+    cities:
+      enumNames:
+        - New York
+        - Amsterdam
+        - Hong Kong
+      enum:
+        - name: 'New York'
+          lat: 40
+          lon: 74
+        - name: Amsterdam
+          lat: 52
+          lon: 5
+        - name: 'Hong Kong'
+          lat: 22
+          lon: 114
+  parameters:
+    - title: Fill in some steps
+      required:
+        - owner
+      properties:
+        city:
+          title: City
+          type: string
+          $ref: '#/definitions/cities'
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: Group
+
+  steps:
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: 'The city ${{ parameters.city.name }} is at ${{ parameters.city.lat }},${{ parameters.city.lon }}'
