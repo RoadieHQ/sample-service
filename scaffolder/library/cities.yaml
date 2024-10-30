@@ -1,4 +1,3 @@
-product:
-  title: Product
-  type: string
-  enum: ["Search", "CRM", "Onboarding"]
+title: Product
+type: string
+enum: ["Search", "CRM", "Onboarding"]
