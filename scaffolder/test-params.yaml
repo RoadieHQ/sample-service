@@ -8,8 +8,11 @@ spec:
   owner: sblausten
   type: infrastructure
   parameters:
-    - $yaml: './library/cities.yaml'
-      title: Select Productt
+    - title: Select
+      parameters:
+        - $yaml: './library/cities.yaml'
+
+
 
   steps:
     - id: log-message

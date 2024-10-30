@@ -1,5 +1,4 @@
-properties:
-  product:
-    title: Product
-    type: string
-    enum: ["Search", "CRM", "Onboarding"]
+product:
+  title: Product
+  type: string
+  enum: ["Search", "CRM", "Onboarding"]
