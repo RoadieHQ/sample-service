@@ -10,7 +10,7 @@ spec:
   parameters:
     - title: Select
       parameters:
-        - $yaml: './library/cities.yaml'
+        $yaml: './library/cities.yaml'
 
 
 
