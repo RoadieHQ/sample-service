@@ -9,8 +9,6 @@ spec:
   type: infrastructure
   parameters:
     - title: Fill in some steps
-      required:
-        - owner
       $yaml: './library/cities.yaml'
 
   steps:
