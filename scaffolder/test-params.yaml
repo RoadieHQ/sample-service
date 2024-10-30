@@ -8,7 +8,7 @@ spec:
   owner: sblausten
   type: infrastructure
   parameters:
-    - title: Select
+    - title: Select1
       parameters:
         $yaml: './library/cities.yaml'
 
