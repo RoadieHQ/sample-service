@@ -9,6 +9,7 @@ spec:
   type: infrastructure
   parameters:
     - $yaml: './library/cities.yaml'
+      title: Select Productt
 
   steps:
     - id: log-message
