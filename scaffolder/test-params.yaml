@@ -14,7 +14,7 @@ spec:
       properties:
         city:
           title: City
-          type: string
+          type: object
           $yaml: './library/cities.yaml'
         owner:
           title: Owner

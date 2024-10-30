@@ -1,15 +1,14 @@
-        cities:
-          enumNames:
-            - New York
-            - Amsterdam
-            - Hong Kong
-          enum:
-            - name: 'New York'
-              lat: 40
-              lon: 74
-            - name: Amsterdam
-              lat: 52
-              lon: 5
-            - name: 'Hong Kong'
-              lat: 22
-              lon: 114
+enumNames:
+  - New York
+  - Amsterdam
+  - Hong Kong
+enum:
+  - name: 'New York'
+    lat: 40
+    lon: 74
+  - name: Amsterdam
+    lat: 52
+    lon: 5
+  - name: 'Hong Kong'
+    lat: 22
+    lon: 114
