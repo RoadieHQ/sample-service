@@ -8,8 +8,7 @@ spec:
   owner: sblausten
   type: infrastructure
   parameters:
-    - title: Fill in some steps
-      $yaml: './library/cities.yaml'
+    - $yaml: './library/cities.yaml'
 
   steps:
     - id: log-message

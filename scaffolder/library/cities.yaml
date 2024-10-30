@@ -1,4 +1,6 @@
-      properties:
-        city:
-          title: Cityy
-          type: string
+title: Select Product
+properties:
+  product:
+    title: Product
+    type: string
+    enum: ["Search", "CRM", "Onboarding"]
