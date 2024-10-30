@@ -1,4 +1,4 @@
-            enum:
-              - 'New York'
-              - 'Amsterdam'
-              - 'Hong Kong'
+        enum:
+          - 'New York'
+          - 'Amsterdam'
+          - 'Hong Kong'
