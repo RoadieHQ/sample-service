@@ -1,4 +1,8 @@
-        enum:
-          - 'New York'
-          - 'Amsterdam'
-          - 'Hong Kong'
+city:
+  title: Cityy
+  type:
+    string
+  enum:
+    - 'New York'
+    - 'Amsterdam'
+    - 'Hong Kong'

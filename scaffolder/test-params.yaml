@@ -12,10 +12,7 @@ spec:
       required:
         - owner
       properties:
-        city:
-          title: City
-          type: string
-          $yaml: './library/cities.yaml'
+        $yaml: './library/cities.yaml'
         owner:
           title: Owner
           type: string
