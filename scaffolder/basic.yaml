@@ -1,0 +1,16 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: parameters-example
+spec:
+  owner: roadiehq
+  parameters:
+    properties:
+      name:
+        type: string
+  steps:
+    - id: log-message
+      action: debug:log
+      input:
+        message: 'Hello ${{ parameters.name }}'

@@ -12,9 +12,6 @@ spec:
       parameters:
         product:
           $yaml: './library/cities.yaml'
-
-
-
   steps:
     - id: log-message
       name: Log Message
