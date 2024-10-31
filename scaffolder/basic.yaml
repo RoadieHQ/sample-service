@@ -5,6 +5,7 @@ metadata:
   name: parameters-example
 spec:
   owner: roadiehq
+  type: example
   parameters:
     properties:
       name:
