@@ -38,7 +38,6 @@ spec:
         path: "/api/proxy/slack-roadie-customer-support/users.conversations"
     - id: parse-tenants
       name: "Parse tenant channels"
-      if: ${{ steps.get-tenants.output.status == '200' }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps['get-tenants'].output.body }}
