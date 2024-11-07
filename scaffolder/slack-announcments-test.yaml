@@ -35,7 +35,7 @@ spec:
         headers:
           Accept: 'application/json'
 #          - Content-type: application/x-www-form-urlencoded
-        path: "/api/proxy/slack-roadie-customer-support/users.conversations"
+        path: "/proxy/slack-roadie-customer-support/users.conversations"
     - id: parse-tenants
       name: "Parse tenant channels"
       action: roadiehq:utils:jsonata
