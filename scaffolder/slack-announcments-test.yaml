@@ -40,7 +40,7 @@ spec:
       input:
         data: ${{ steps.get-tenants.output.body }}
 #        expression: "channels[$not($contains(name, 'zzz') or $contains(name, 'discord') or $contains(name, 'support') or $contains(name, 'notifications'))]{ name: id}"
-        expression: "channels[$contains(name, 'support') and $contains(name, 'test')]{ name: id}"
+        expression: "channels[$contains(name, 'test-slack-notifications')]{ name: id}"
     - id: log-channels
       action: debug:log
       input:
