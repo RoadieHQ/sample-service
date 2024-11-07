@@ -74,3 +74,7 @@ spec:
               }
             ]
           }
+  output:
+    getResponse: '{{ steps.get-tenants.output.body }}'
+    getCode: '{{ steps.get-tenants.output.code }}'
+    getHeaders: '{{ steps.get-tenants.output.headers }}'
