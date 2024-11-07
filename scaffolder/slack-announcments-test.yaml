@@ -40,7 +40,7 @@ spec:
         message: 'Found following slack channels:  ${{ steps.get-tenants.output.status }} ${{ steps.get-tenants.output.body }}'
     - id: parse-tenants
       name: "Parse tenant channels"
-      if: ${{ steps.get-tenants.output.status == 200 }}
+      if: ${{ steps.get-tenants.output.status == '200' }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.get-tenants.output.body }}
@@ -51,7 +51,7 @@ spec:
       input:
         message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
     - id: send-message
-      if: ${{ steps.get-tenants.output.status == 200 and parameters.sendToClients }}
+      if: ${{ steps.get-tenants.output.status == '200' and parameters.sendToClients }}
       name: "Send message to ${{each.value.name}}"
       each: ${{ steps.parse-tenants.output.result }}
       action: http:backstage:request
