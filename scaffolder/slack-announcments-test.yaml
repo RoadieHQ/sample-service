@@ -34,6 +34,10 @@ spec:
         header:
           - Content-type: application/x-www-form-urlencoded
         path: "/proxy/slack-roadie-customer-support/users.conversations"
+    - id: log-channels
+      action: debug:log
+      input:
+        message: 'Found following slack channels: ${{ steps.get-tenants.output.body }}'
     - id: parse-tenants
       name: "Parse tenant channels"
       action: roadiehq:utils:jsonata
@@ -41,7 +45,7 @@ spec:
         data: ${{ steps.get-tenants.output.body }}
 #        expression: "channels[$not($contains(name, 'zzz') or $contains(name, 'discord') or $contains(name, 'support') or $contains(name, 'notifications'))]{ name: id}"
         expression: "channels[$contains(name, 'test-slack-notifications')]{ name: id}"
-    - id: log-channels
+    - id: log-selected-channels
       action: debug:log
       input:
         message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
