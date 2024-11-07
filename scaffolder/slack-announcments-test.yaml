@@ -37,9 +37,10 @@ spec:
     - id: log-channels
       action: debug:log
       input:
-        message: ${{ steps.get-tenants.output.body }}
+        message: 'Found following slack channels:  ${{ steps.get-tenants.output.status }} ${{ steps.get-tenants.output.body }}'
     - id: parse-tenants
       name: "Parse tenant channels"
+      if: ${{ steps.get-tenants.output.status == 200 }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.get-tenants.output.body }}
