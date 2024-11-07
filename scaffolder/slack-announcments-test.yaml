@@ -33,7 +33,7 @@ spec:
         method: GET
         continueOnBadResponse: false
         headers:
-          - Accept: 'application/json'
+          Accept: 'application/json'
 #          - Content-type: application/x-www-form-urlencoded
         path: "/proxy/slack-roadie-customer-support/users.conversations"
     - id: log-channels
