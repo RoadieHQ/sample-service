@@ -29,6 +29,8 @@ spec:
     - id: get-tenants
       name: "Get slack channels"
       action: http:backstage:request
+      headers:
+        Accept: 'application/json'
       input:
         method: GET
         continueOnBadResponse: false
