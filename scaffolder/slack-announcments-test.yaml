@@ -51,7 +51,7 @@ spec:
       input:
         message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
     - id: send-message
-      if: ${{ parameters.sendToClients }}
+      if: ${{ steps.get-tenants.output.status == 200 and parameters.sendToClients }}
       name: "Send message to ${{each.value.name}}"
       each: ${{ steps.parse-tenants.output.result }}
       action: http:backstage:request
