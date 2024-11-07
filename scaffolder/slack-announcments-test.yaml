@@ -29,12 +29,12 @@ spec:
     - id: get-tenants
       name: "Get slack channels"
       action: http:backstage:request
-      headers:
-        Accept: 'application/json'
+
       input:
         method: GET
         continueOnBadResponse: false
-#        header:
+        headers:
+          - Accept: 'application/json'
 #          - Content-type: application/x-www-form-urlencoded
         path: "/proxy/slack-roadie-customer-support/users.conversations"
     - id: log-channels
