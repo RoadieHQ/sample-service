@@ -42,7 +42,7 @@ spec:
       input:
         data: ${{ steps['get-tenants'].output.body }}
 #        expression: "channels[$not($contains(name, 'zzz') or $contains(name, 'discord') or $contains(name, 'support') or $contains(name, 'notifications'))]{ name: id}"
-        expression: ""
+        expression: "$.channels{ name: id}"
     - id: log-selected-channels
       action: debug:log
       input:
