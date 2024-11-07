@@ -39,7 +39,7 @@ spec:
     - id: log-channels
       action: debug:log
       input:
-        message: ${{ steps['get-tenants'].output.body | dump | safe | string }}
+        message: ${{ steps['get-tenants'].output.body | string }}
     - id: parse-tenants
       name: "Parse tenant channels"
       if: ${{ steps.get-tenants.output.status == '200' }}
