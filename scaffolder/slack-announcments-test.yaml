@@ -46,7 +46,7 @@ spec:
     - id: log-selected-channels
       action: debug:log
       input:
-        message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
+        message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result | string }}'
 #    - id: send-message
 #      if: ${{ steps['get-tenants'].output.status == '200' and parameters.sendToClients }}
 #      name: "Send message to ${{each.value.name}}"
