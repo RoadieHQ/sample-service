@@ -31,19 +31,20 @@ spec:
       action: http:backstage:request
       input:
         method: GET
-        header:
-          - Content-type: application/x-www-form-urlencoded
+        continueOnBadResponse: false
+#        header:
+#          - Content-type: application/x-www-form-urlencoded
         path: "/proxy/slack-roadie-customer-support/users.conversations"
     - id: log-channels
       action: debug:log
       input:
-        message: ${{ steps.get-tenants.output.status }}
+        message: ${{ steps['get-tenants'].output.status }}
     - id: parse-tenants
       name: "Parse tenant channels"
       if: ${{ steps.get-tenants.output.status == '200' }}
       action: roadiehq:utils:jsonata
       input:
-        data: ${{ steps.get-tenants.output.body }}
+        data: ${{ steps['get-tenants'].output.body }}
 #        expression: "channels[$not($contains(name, 'zzz') or $contains(name, 'discord') or $contains(name, 'support') or $contains(name, 'notifications'))]{ name: id}"
         expression: "channels[$contains(name, 'test-slack-notifications')]{ name: id}"
     - id: log-selected-channels
@@ -51,9 +52,9 @@ spec:
       input:
         message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
     - id: send-message
-      if: ${{ steps.get-tenants.output.status == '200' and parameters.sendToClients }}
+      if: ${{ steps['get-tenants'].output.status == '200' and parameters.sendToClients }}
       name: "Send message to ${{each.value.name}}"
-      each: ${{ steps.parse-tenants.output.result }}
+      each: ${{ steps['parse-tenants'].output.result }}
       action: http:backstage:request
       input:
         method: POST
