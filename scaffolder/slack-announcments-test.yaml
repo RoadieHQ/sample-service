@@ -1,0 +1,69 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: notify-slack-clients-test-1
+  title: Notify Slack Clients Test
+  description: Send a notification to all client external slack channels
+
+spec:
+  owner: user:sam.blausten
+  type: none
+  parameters:
+    - title: Define the message
+      required:
+        - message
+      properties:
+        message:
+          title: Message
+          description: I support markdown!
+          type: string
+          ui:widget: textarea
+          ui:options:
+            rows: 30
+        sendToClients:
+          title: Send to Clients
+          description: Send this message to the all Client channels.
+          type: boolean
+
+  steps:
+    - id: get-tenants
+      name: "Get slack channels"
+      action: http:backstage:request
+      input:
+        method: GET
+        header:
+          - Content-type: application/x-www-form-urlencoded
+        path: "/proxy/slack-roadie-customer-support/users.conversations"
+    - id: parse-tenants
+      name: "Parse tenant channels"
+      action: roadiehq:utils:jsonata
+      input:
+        data: ${{ steps.get-tenants.output.body }}
+#        expression: "channels[$not($contains(name, 'zzz') or $contains(name, 'discord') or $contains(name, 'support') or $contains(name, 'notifications'))]{ name: id}"
+        expression: "channels[$contains(name, 'support') and $contains(name, 'test')]{ name: id}"
+    - id: log-channels
+      action: debug:log
+      input:
+        message: 'Sending message to the following slack channels: ${{ steps.parse-tenants.output.result }}'
+    - id: send-message
+      if: ${{ parameters.sendToClients }}
+      name: "Send message to ${{each.value.name}}"
+      each: ${{ steps.parse-tenants.output.result }}
+      action: http:backstage:request
+      input:
+        method: POST
+        header:
+          - Content-type: application/json
+        path: /proxy/slack-roadie-announcements/chat.postMessage
+        body: |
+          {
+            'blocks': [
+              {
+                'type': 'section',
+                'text': {
+                  'type': 'mrkdwn',
+                  'text': '${{ parameters.message }}'
+                }
+              }
+            ]
+          }
