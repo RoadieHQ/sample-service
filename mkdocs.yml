@@ -25,6 +25,7 @@ markdown_extensions:
   - mkdocs_graphviz
   - markdown_inline_mermaid   
   - attr_list  
+  - git-revision-date-localized
 
 extra_javascript:
   - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
