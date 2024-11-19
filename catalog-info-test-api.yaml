@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
-  name: sample-service-with-test-data-api
+  name: roadie-plugins-api
   description: |
-    A service linked to the test data API.
-  annotations:
-    roadie.io/test-data-api-project: "1"
+    The Plugins API endpoints for Roadie
 spec:
-  type: service
-  owner: david@roadie.io
-  lifecycle: experimental
+  type: openapi
+  owner: engineering
+  lifecycle: production
+  definition:
+    $openapi: https://github.com/RoadieHQ/marketing-site/blob/main/static/plugins-openapi.json
