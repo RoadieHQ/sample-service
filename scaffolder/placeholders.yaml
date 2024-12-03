@@ -1,0 +1,19 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: placeholder-steps-example
+spec:
+  owner: sblausten
+  type: example
+  parameters:
+    properties:
+      name:
+        type: string
+  steps:
+    - id: log-message
+      action: debug:log
+      input:
+        message: 'Starting'
+    - $yaml: 'https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/step-log.yaml'
+    - $yaml: 'https://raw.githubusercontent.com/sblausten/sample-service/refs/heads/main/scaffolder/constants/step-log.yaml'
