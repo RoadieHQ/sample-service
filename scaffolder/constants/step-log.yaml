@@ -1,4 +1,4 @@
-- id: log-message
-  action: debug:log
-  input:
-    message: 'Hello ${{ parameters.name }}'
+id: log-message
+action: debug:log
+input:
+  message: 'Hello ${{ parameters.name }}'
