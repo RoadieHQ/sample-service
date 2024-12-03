@@ -16,5 +16,3 @@ spec:
       input:
         message: 'Starting'
     - $yaml: 'https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/step-log.yaml'
-    - $yaml: 'https://github.com/sblausten/sample-service/tree/main/scaffolder/constants/step-log.yaml'
-#    - $yaml: 'https://raw.githubusercontent.com/sblausten/sample-service/refs/heads/main/scaffolder/constants/step-log.yaml'
