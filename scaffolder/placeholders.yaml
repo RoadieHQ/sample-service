@@ -15,4 +15,4 @@ spec:
       action: debug:log
       input:
         message: 'Starting'
-    - $yaml: 'https://github.com/sblausten/sample-service/tree/main/scaffolder/constants/step-log.yaml'
+    - $yaml: 'https://github.com/sblausten/sample-service/blob/main/scaffolder/constants/step-log.yaml'
