@@ -36,10 +36,10 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following root location by uuid: ${{ steps.parse.output.result | string }}'
+        message: 'Deleting the following entities with uuids: ${{ steps.parse.output.result | string }}'
     - id: delete-all
       if: ${{ steps.parse.output.result is iterable }}
-      name: Delete root
+      name: Delete entities
       each: ${{ steps.parse.output.result }}
       action: http:backstage:request
       input:
@@ -47,13 +47,20 @@ spec:
         path: '/catalog/entities/by-uid/${{ each.value }}'
     - id: delete-one
       if: ${{ steps.parse.output.result is string }}
-      name: Delete root
+      name: Delete entity
       action: http:backstage:request
       input:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: refresh-catalog
       name: Refresh
+      each: ${{ steps.parse.output.result }}
+      action: http:backstage:request
+      input:
+        method: 'POST'
+        path: '/catalog-extensions/refresh-state/${{ each.value }}/force-refresh'
+    - id: clean-catalog
+      name: Clean
       action: http:backstage:request
       input:
         method: 'POST'
