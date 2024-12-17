@@ -23,6 +23,10 @@ spec:
       input:
         method: 'GET'
         path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] }}&fields=metadata.uid,metadata.name'
+    - id: log-to-delete
+      action: debug:log
+      input:
+        message: 'Found the following location: ${{ steps.get-location-to-delete.output.body }}'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
