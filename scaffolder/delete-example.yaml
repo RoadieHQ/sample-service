@@ -40,14 +40,13 @@ spec:
     - id: delete-root
       name: Delete root
       action: http:backstage:request
-#      each: ${{ steps.parse.output.result }}
       input:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following root locations for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result }}'
+        message: 'Deleted the following root location for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result }}'
 
   output:
     path: ${{ steps.parse.output.result }}
