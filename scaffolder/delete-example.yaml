@@ -33,7 +33,7 @@ spec:
       input:
         data: ${{ steps.location.output.body }}
         expression: '$.metadata.uid'
-    - id: parse-names
+    - id: parseNames
       name: Parse entity names
       action: roadiehq:utils:jsonata
       input:
@@ -42,7 +42,7 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following entities: ${{ steps.["parse-names"].output.result | string }}'
+        message: 'Deleting the following entities: ${{ steps.parseNames.output.result | string }}'
     - id: delete-all
       if: ${{ steps.parse.output.result is not string }}
       name: Delete entities
@@ -57,7 +57,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ steps.["parse-names"].output.result }}'
+        path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: refresh-all-in-catalog
       name: Refresh all
       if: ${{ steps.parse.output.result is not string }}
@@ -85,7 +85,7 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} with names: ${{ steps.["parse-names"].output.result | string }}'
+        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} with names: ${{ steps.parseNames.output.result | string }}'
 
 
   output:
