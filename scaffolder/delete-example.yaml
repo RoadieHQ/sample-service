@@ -9,8 +9,7 @@ spec:
   owner: roadie
   type: template
   parameters:
-    delete:
-      title: Entities to delete
+    - title: Entities to delete
       properties:
         catalog-info-url:
           title: Catalog info url
@@ -23,7 +22,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/api/catalog/entities?filter=spec.target=${{ parameters.delete.catalog-info-url }}&fields=metadata.uid,metadata.name'
+        path: '/api/catalog/entities?filter=spec.target=${{ parameters.catalog-info-url }}&fields=metadata.uid,metadata.name'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
