@@ -75,6 +75,7 @@ spec:
       input:
         method: 'POST'
         path: '/catalog-extensions/refresh-state/garbage-collection'
+        continueOnBadResponse: true
     - id: log-result
       action: debug:log
       input:
