@@ -44,11 +44,11 @@ spec:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: refresh-catalog
-      name: Delete root
+      name: Refresh
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/refresh-state/garbage-collection'
+        path: '/catalog-extensions/refresh-state/garbage-collection'
     - id: log-result
       action: debug:log
       input:
