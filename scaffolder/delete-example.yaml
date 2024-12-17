@@ -1,0 +1,48 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: Delete entities
+  title: Deletes root entities for a given yaml file
+  description: Example
+spec:
+  owner: roadie
+  parameters:
+    - id: delete
+      title: Entities to delete
+      properties:
+        catalog-info-url:
+          title: Catalog info url
+          type: string
+          description: The full url to the yaml file you want to remove entities for from the catalog
+
+  steps:
+    - id: get-location-to-delete
+      name: Get Root Location
+      action: http:backstage:request
+      input:
+        method: 'GET'
+        path: '/api/catalog/entities?filter=spec.target=${{ parameters.delete.catalog-info-url }}&fields=metadata.uid,metadata.name'
+    - id: parse
+      name: Jsonata parse
+      action: roadiehq:utils:jsonata
+      input:
+        data: ${{ steps.get-location-to-delete.output.body }}
+        expression: '$.metadata.uid'
+    - id: delete-root
+      name: Delete root
+      action: http:backstage:request
+      each: ${{ steps.parse.output.result }}
+      input:
+        method: 'DELETE'
+        path: '/api/catalog/entities/by-uid/${{ each.value }}'
+    - id: log-result
+      action: debug:log
+      input:
+        message: 'Deleted the following root locations by uuid: ${{ steps.parse.output.result }}'
+
+  output:
+    path: ${{ steps.parse.output.result }}
+    getResponse: '{{ steps["delete-root"].output.body }}'
+    getCode: '{{ steps["delete-root"].output.code }}'
+    getHeaders: '{{ steps["delete-root"].output.headers }}'
