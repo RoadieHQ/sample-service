@@ -47,7 +47,7 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following root locations by uuid: ${{ steps.parse.output.result }}'
+        message: 'Deleted the following root locations for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result }}'
 
   output:
     path: ${{ steps.parse.output.result }}
