@@ -52,13 +52,21 @@ spec:
       input:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
-    - id: refresh-catalog
-      name: Refresh
+    - id: refresh-all-in-catalog
+      name: Refresh all
+      if: ${{ steps.parse.output.result is not string }}
       each: ${{ steps.parse.output.result }}
       action: http:backstage:request
       input:
         method: 'POST'
         path: '/catalog-extensions/refresh-state/${{ each.value }}/force-refresh'
+    - id: refresh-catalog
+      name: Refresh
+      if: ${{ steps.parse.output.result is string }}
+      action: http:backstage:request
+      input:
+        method: 'POST'
+        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result }}/force-refresh'
     - id: clean-catalog
       name: Clean
       action: http:backstage:request
