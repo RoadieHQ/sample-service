@@ -7,6 +7,7 @@ metadata:
   description: Example
 spec:
   owner: roadie
+  type: template
   parameters:
     - id: delete
       title: Entities to delete
