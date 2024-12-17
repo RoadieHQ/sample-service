@@ -2,7 +2,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: Delete entities
+  name: delete-entities
   title: Deletes root entities for a given yaml file
   description: Example
 spec:
