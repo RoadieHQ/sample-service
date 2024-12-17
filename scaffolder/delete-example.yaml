@@ -38,7 +38,7 @@ spec:
       input:
         message: 'Deleting the following entities with uuids: ${{ steps.parse.output.result | string }}'
     - id: delete-all
-      if: ${{ steps.parse.output.result is iterable }}
+      if: ${{ steps.parse.output.result is not string }}
       name: Delete entities
       each: ${{ steps.parse.output.result }}
       action: http:backstage:request
