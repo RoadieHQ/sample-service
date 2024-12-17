@@ -28,18 +28,18 @@ spec:
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.get-location-to-delete.output.body }}
-        expression: '$.metadata.uid'
+        expression: '$[0].metadata.uid'
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following root locations by uuid: ${{ steps.parse.output.result }}'
+        message: 'Deleting the following root location by uuid: ${{ steps.parse.output.result }}'
     - id: delete-root
       name: Delete root
       action: http:backstage:request
-      each: ${{ steps.parse.output.result }}
+#      each: ${{ steps.parse.output.result }}
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ each.value }}'
+        path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: log-result
       action: debug:log
       input:
