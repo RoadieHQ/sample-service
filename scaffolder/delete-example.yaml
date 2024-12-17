@@ -22,7 +22,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] }}&filter=metadata.backstage.io/managed-by-origin-location=url:${{ parameters["catalog-info-url"] }}&fields=metadata.uid,metadata.name'
+        path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] | replace("/tree/", "/blob/") }}&filter=metadata.annotations.backstage.io/managed-by-location=url:${{ parameters["catalog-info-url"] | replace("/blob/", "/tree/") }}&fields=metadata.uid,metadata.name'
     - id: log-to-delete
       action: debug:log
       input:
