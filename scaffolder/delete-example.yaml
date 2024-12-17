@@ -36,7 +36,7 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following entities with uuids: ${{ steps.parse.output.result | string }}'
+        message: 'Deleting the following entities: ${{ steps.parse.output.result | selectattr("name") | string }}'
     - id: delete-all
       if: ${{ steps.parse.output.result is not string }}
       name: Delete entities
@@ -78,7 +78,7 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following root location for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result }}'
+        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result | selectattr("name") | string }}'
 
 
   output:
