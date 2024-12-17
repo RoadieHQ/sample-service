@@ -9,7 +9,7 @@ spec:
   owner: roadie
   type: template
   parameters:
-    - id: delete
+    delete:
       title: Entities to delete
       properties:
         catalog-info-url:
