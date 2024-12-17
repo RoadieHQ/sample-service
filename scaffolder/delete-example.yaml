@@ -28,11 +28,11 @@ spec:
       input:
         message: 'Found the following locations ${{ steps.location.output.body | string }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
     - id: parse
-      name: Jsonata parse
+      name: Parse entities response
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
-        expression: '$.metadata.uid'
+        expression: '$.metadata.{"uid": uid, "name": name}'
     - id: log-to-delete
       action: debug:log
       input:
@@ -44,14 +44,14 @@ spec:
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ each.value }}'
+        path: '/catalog/entities/by-uid/${{ each.value.uid }}'
     - id: delete-one
       if: ${{ steps.parse.output.result is string }}
       name: Delete entity
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
+        path: '/catalog/entities/by-uid/${{ steps.parse.output.result.uid }}'
     - id: refresh-all-in-catalog
       name: Refresh all
       if: ${{ steps.parse.output.result is not string }}
@@ -59,14 +59,16 @@ spec:
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ each.value }}/force-refresh'
+        path: '/catalog-extensions/refresh-state/${{ each.value.uid }}/force-refresh'
+        continueOnBadResponse: true
     - id: refresh-catalog
       name: Refresh
       if: ${{ steps.parse.output.result is string }}
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result }}/force-refresh'
+        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result.uid }}/force-refresh'
+        continueOnBadResponse: true
     - id: clean-catalog
       name: Clean
       action: http:backstage:request
