@@ -29,6 +29,10 @@ spec:
       input:
         data: ${{ steps.get-location-to-delete.output.body }}
         expression: '$.metadata.uid'
+    - id: log-to-delete
+      action: debug:log
+      input:
+        message: 'Deleting the following root locations by uuid: ${{ steps.parse.output.result }}'
     - id: delete-root
       name: Delete root
       action: http:backstage:request
