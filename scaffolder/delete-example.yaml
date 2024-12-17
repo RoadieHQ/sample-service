@@ -26,17 +26,23 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Found the following entities ${{ steps.location.output.body | json }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
+        message: 'Found the following entities ${{ steps.location.output.body | string }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
     - id: parse
       name: Parse entities response
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
-        expression: '$.metadata.{"uid": uid, "name": name}'
+        expression: '$.metadata.uid'
+    - id: parse-names
+      name: Parse entity names
+      action: roadiehq:utils:jsonata
+      input:
+        data: ${{ steps.location.output.body }}
+        expression: '$.metadata.name'
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following entities: ${{ steps.parse.output.result | selectattr("name") | string }}'
+        message: 'Deleting the following entities: ${{ steps.parse-names.output.result | string }}'
     - id: delete-all
       if: ${{ steps.parse.output.result is not string }}
       name: Delete entities
@@ -44,14 +50,14 @@ spec:
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ each.value.uid }}'
+        path: '/catalog/entities/by-uid/${{ each.value }}'
     - id: delete-one
       if: ${{ steps.parse.output.result is string }}
       name: Delete entity
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ steps.parse.output.result.uid }}'
+        path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
     - id: refresh-all-in-catalog
       name: Refresh all
       if: ${{ steps.parse.output.result is not string }}
@@ -59,7 +65,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ each.value.uid }}/force-refresh'
+        path: '/catalog-extensions/refresh-state/${{ each.value }}/force-refresh'
         continueOnBadResponse: true
     - id: refresh-catalog
       name: Refresh
@@ -67,7 +73,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result.uid }}/force-refresh'
+        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result }}/force-refresh'
         continueOnBadResponse: true
     - id: clean-catalog
       name: Clean
@@ -79,7 +85,7 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result | selectattr("name") | string }}'
+        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} with names: ${{ steps.parse-names.output.result | string }}'
 
 
   output:
