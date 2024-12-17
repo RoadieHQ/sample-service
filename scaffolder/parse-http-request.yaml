@@ -2,46 +2,47 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: http-request-snyk
-  title: Http request to snyk project
-  description: Example template to perform a http request via proxy
+  name: Delete entities
+  title: Deletes root entities for a given yaml file
+  description: Example
 spec:
   owner: roadie
-  type: service
-
   parameters:
-    - id: snyk-project-id
-      title: Snyk Details
+    - id: delete
+      title: Entities to delete
       properties:
-        orgName:
-          title: Org
+        catalog-info-url:
+          title: Catalog info url
           type: string
-          description: The Snyk Org name or id
-        projectId:
-          title: Project id
-          type: string
-          description: The Snyk Project Id
+          description: The full url to the yaml file you want to remove entities for from the catalog
 
   steps:
-    - id: get-snyk-projects
-      name: Snyk Projects
+    - id: get-location-to-delete
+      name: Get Root Location
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/proxy/snyk/org/${{ parameters.orgName }}/projects'
+        path: '/api/catalog/entities?filter=spec.target=${{ parameters.delete.catalog-info-url }}&fields=metadata.uid,metadata.name'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
       input:
-        data: ${{ steps.snyk-issues.output.body }}
-        expression: '$.projects.[name, id]'
+        data: ${{ steps.get-location-to-delete.output.body }}
+        expression: '$.metadata.uid'
+    - id: delete-root
+      name: Delete root
+      action: http:backstage:request
+      each: ${{ steps.parse.output.result }}
+      input:
+        method: 'DELETE'
+        path: '/api/catalog/entities/by-uid/${{ each.value }}'
     - id: log-result
       action: debug:log
       input:
-        message: 'Available Snyk projects: ${{ steps["parse"].output.result }}'
+        message: 'Deleted the following root locations by uuid: ${{ steps.parse.output.result }}'
 
   output:
     path: ${{ steps.parse.output.result }}
-    getResponse: '{{ steps["get-snyk-projects"].output.body }}'
-    getCode: '{{ steps["get-snyk-projects"].output.code }}'
-    getHeaders: '{{ steps["get-snyk-projects"].output.headers }}'
+    getResponse: '{{ steps["delete-root"].output.body }}'
+    getCode: '{{ steps["delete-root"].output.code }}'
+    getHeaders: '{{ steps["delete-root"].output.headers }}'
