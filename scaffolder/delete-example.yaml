@@ -17,7 +17,7 @@ spec:
           description: The full url to the yaml file you want to remove entities for from the catalog
 
   steps:
-    - id: get-location-to-delete
+    - id: location
       name: Get Root Location
       action: http:backstage:request
       input:
@@ -26,12 +26,12 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Found the following location ${{ steps.get-location-to-delete.output.body }} with response code ${{ steps.get-location-to-delete.output.code }} and message ${{ steps.get-location-to-delete.output.message }}'
+        message: 'Found the following location ${{ steps.location.output.body }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
       input:
-        data: ${{ steps.get-location-to-delete.output.body }}
+        data: ${{ steps.location.output.body }}
         expression: '$[0].metadata.uid'
     - id: log-to-delete
       action: debug:log
