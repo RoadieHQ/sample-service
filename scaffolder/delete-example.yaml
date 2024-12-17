@@ -43,10 +43,17 @@ spec:
       input:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
+    - id: refresh-catalog
+      name: Delete root
+      action: http:backstage:request
+      input:
+        method: 'POST'
+        path: '/refresh-state/garbage-collection'
     - id: log-result
       action: debug:log
       input:
         message: 'Deleted the following root location for YAML file ${{ parameters["catalog-info-url"] }} by uuid: ${{ steps.parse.output.result }}'
+
 
   output:
     path: ${{ steps.parse.output.result }}
