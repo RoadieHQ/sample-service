@@ -42,7 +42,7 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following entities: ${{ steps.parse-names.output.result | string }}'
+        message: 'Deleting the following entities: ${{ steps.["parse-names"].output.result | string }}'
     - id: delete-all
       if: ${{ steps.parse.output.result is not string }}
       name: Delete entities
@@ -57,7 +57,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'DELETE'
-        path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
+        path: '/catalog/entities/by-uid/${{ steps.["parse-names"].output.result }}'
     - id: refresh-all-in-catalog
       name: Refresh all
       if: ${{ steps.parse.output.result is not string }}
@@ -85,11 +85,11 @@ spec:
     - id: log-result
       action: debug:log
       input:
-        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} with names: ${{ steps.parse-names.output.result | string }}'
+        message: 'Deleted the following entities for YAML file ${{ parameters["catalog-info-url"] }} with names: ${{ steps.["parse-names"].output.result | string }}'
 
 
   output:
     path: ${{ steps.parse.output.result }}
-    getResponse: '{{ steps["delete-root"].output.body }}'
-    getCode: '{{ steps["delete-root"].output.code }}'
-    getHeaders: '{{ steps["delete-root"].output.headers }}'
+    getResponse: '{{ steps["delete-one"].output.body }}'
+    getCode: '{{ steps["delete-one"].output.code }}'
+    getHeaders: '{{ steps["delete-one"].output.headers }}'
