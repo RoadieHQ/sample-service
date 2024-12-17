@@ -10,7 +10,7 @@ spec:
   type: service
 
   parameters:
-    - id: snyk-project-id
+    snyk-project-id:
       title: Snyk Details
       properties:
         orgName:
@@ -28,7 +28,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/proxy/snyk/org/${{ parameters.orgName }}/projects'
+        path: '/proxy/snyk/org/${{ parameters.snyk-project-id }}/projects'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
