@@ -26,7 +26,7 @@ spec:
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Found the following location: ${{ steps.get-location-to-delete.output }}'
+        message: 'Found the following location ${{ steps.get-location-to-delete.output.body }} with response code ${{ steps.get-location-to-delete.output.code }} and message ${{ steps.get-location-to-delete.output.message }}'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
