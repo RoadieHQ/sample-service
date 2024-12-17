@@ -22,7 +22,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/api/catalog/entities?filter=spec.target=${{ parameters.catalog-info-url }}&fields=metadata.uid,metadata.name'
+        path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] }}&fields=metadata.uid,metadata.name'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
@@ -35,7 +35,7 @@ spec:
       each: ${{ steps.parse.output.result }}
       input:
         method: 'DELETE'
-        path: '/api/catalog/entities/by-uid/${{ each.value }}'
+        path: '/catalog/entities/by-uid/${{ each.value }}'
     - id: log-result
       action: debug:log
       input:
