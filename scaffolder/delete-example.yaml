@@ -22,22 +22,31 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] }}&fields=metadata.uid,metadata.name'
+        path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] }}&filter=metadata.backstage.io/managed-by-origin-location=url:${{ parameters["catalog-info-url"] }}&fields=metadata.uid,metadata.name'
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Found the following location ${{ steps.location.output.body | string }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
+        message: 'Found the following locations ${{ steps.location.output.body | string }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
     - id: parse
       name: Jsonata parse
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
-        expression: '$[0].metadata.uid'
+        expression: '$.metadata.uid'
     - id: log-to-delete
       action: debug:log
       input:
-        message: 'Deleting the following root location by uuid: ${{ steps.parse.output.result }}'
-    - id: delete-root
+        message: 'Deleting the following root location by uuid: ${{ steps.parse.output.result | string }}'
+    - id: delete-all
+      if: ${{ steps.parse.output.result is iterable }}
+      name: Delete root
+      each: ${{ steps.parse.output.result }}
+      action: http:backstage:request
+      input:
+        method: 'DELETE'
+        path: '/catalog/entities/by-uid/${{ each.value }}'
+    - id: delete-one
+      if: ${{ steps.parse.output.result is string }}
       name: Delete root
       action: http:backstage:request
       input:
