@@ -32,12 +32,14 @@ spec:
         expression: '$.metadata.uid'
     - id: parseNames
       name: Parse entity names
+      if: ${{ steps.location.output.code === "200" }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
         expression: '$.metadata.name'
     - id: log-to-delete
       action: debug:log
+      if: ${{ steps.location.output.code === "200" }}
       input:
         message: 'Deleting the following entities: ${{ steps.parseNames.output.result | string }}'
     - id: delete-all
