@@ -23,12 +23,9 @@ spec:
       input:
         method: 'GET'
         path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] | replace("/tree/", "/blob/") }}&filter=metadata.annotations.backstage.io/managed-by-location=url:${{ parameters["catalog-info-url"] | replace("/blob/", "/tree/") }}&fields=metadata.uid,metadata.name'
-    - id: log-to-delete
-      action: debug:log
-      input:
-        message: 'Found the following entities ${{ steps.location.output.body | string }} with response code ${{ steps.location.output.code }} and message ${{ steps.location.output.message }}'
     - id: parse
       name: Parse entities response
+      if: ${{ steps.location.output.code === "200" }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
@@ -58,23 +55,6 @@ spec:
       input:
         method: 'DELETE'
         path: '/catalog/entities/by-uid/${{ steps.parse.output.result }}'
-    - id: refresh-all-in-catalog
-      name: Refresh all
-      if: ${{ steps.parse.output.result is not string }}
-      each: ${{ steps.parse.output.result }}
-      action: http:backstage:request
-      input:
-        method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ each.value }}/force-refresh'
-        continueOnBadResponse: true
-    - id: refresh-catalog
-      name: Refresh
-      if: ${{ steps.parse.output.result is string }}
-      action: http:backstage:request
-      input:
-        method: 'POST'
-        path: '/catalog-extensions/refresh-state/${{ steps.parse.output.result }}/force-refresh'
-        continueOnBadResponse: true
     - id: clean-catalog
       name: Clean
       action: http:backstage:request
@@ -89,7 +69,4 @@ spec:
 
 
   output:
-    path: ${{ steps.parse.output.result }}
-    getResponse: '{{ steps["delete-one"].output.body }}'
-    getCode: '{{ steps["delete-one"].output.code }}'
-    getHeaders: '{{ steps["delete-one"].output.headers }}'
+    deletedEntityNames: ${{ steps.parseNames.output.result | string }}
