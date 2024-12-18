@@ -25,21 +25,21 @@ spec:
         path: '/catalog/entities?filter=spec.target=${{ parameters["catalog-info-url"] | replace("/tree/", "/blob/") }}&filter=metadata.annotations.backstage.io/managed-by-location=url:${{ parameters["catalog-info-url"] | replace("/blob/", "/tree/") }}&fields=metadata.uid,metadata.name'
     - id: parse
       name: Parse entities response
-      if: ${{ steps.location.output.code === "200" }}
+      if: ${{ steps.location.output.code === 200 }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
         expression: '$.metadata.uid'
     - id: parseNames
       name: Parse entity names
-      if: ${{ steps.location.output.code === "200" }}
+      if: ${{ steps.location.output.code === 200 }}
       action: roadiehq:utils:jsonata
       input:
         data: ${{ steps.location.output.body }}
         expression: '$.metadata.name'
     - id: log-to-delete
       action: debug:log
-      if: ${{ steps.location.output.code === "200" }}
+      if: ${{ steps.location.output.code === 200 }}
       input:
         message: 'Deleting the following entities: ${{ steps.parseNames.output.result | string }}'
     - id: delete-all
