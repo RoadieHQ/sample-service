@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sam-test-comp-1
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sam-test-comp-2
+spec:
+  type: service
+  owner: sblausten
+  lifecycle: experimental
+  providesApis:
+    - sam-test-api-1
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sam-test-api-1
+spec:
+  type: openapi
+  owner: sblausten
+  lifecycle: experimental
+  definition: 
+    $yaml: https://github.com/sblausten/sample-service/blob/main/api-spec.yaml
