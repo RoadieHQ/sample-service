@@ -27,4 +27,4 @@ spec:
   owner: sblausten
   lifecycle: experimental
   definition: 
-    $yaml: https://github.com/sblausten/sample-service/blob/main/api-spec.yaml
+    $text: https://github.com/sblausten/sample-service/blob/main/api-spec.yaml
