@@ -8,7 +8,7 @@
 
 # Sample Service
 
-A sample service for testing build tools, displaying in Backstage, and whatever
+Actual content for testing build tools, displaying in Backstage, and whatever
 else you might need it for.
 
 ## Development
@@ -55,4 +55,7 @@ To invoke it via the API Gateway trigger,
 ```shell
 curl https://6b2w0lh8p3.execute-api.eu-west-1.amazonaws.com/default/sample-service
 ```
-test
+testtest name: test
+ test owner1: group:default/engineers
+ test owner2: group:default/engineers
+ test owner3: poop:default/engineers
