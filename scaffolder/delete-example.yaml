@@ -3,8 +3,8 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: delete-entities
-  title: Deletes root entities for a given yaml file
-  description: Example
+  title: Unregister Entities
+  description: Deletes all entities associated with a given YAML file from the catalog.
 spec:
   owner: roadie
   type: template
@@ -12,9 +12,9 @@ spec:
     - title: Entities to delete
       properties:
         catalog-info-url:
-          title: Catalog info url
+          title: Catalog info file url
           type: string
-          description: The full url to the yaml file you want to remove entities for from the catalog
+          description: The full SCM url to the YAML file you want to remove entities for from the catalog
 
   steps:
     - id: location
