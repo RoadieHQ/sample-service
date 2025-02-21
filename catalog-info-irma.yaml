@@ -1,16 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: irma-test-service
-  title: Irma Test service
+  name: codecov-test-service
+  title: CodeCov Test service
   description: |
-    A service for testing Backstage functionality. Cofigured for Bugsnag.
+    A service for testing Backstage functionality.
   annotations:
     bugsnag.com/project-key: RoadieHQ/93b71ec25fd3e1d803af87d57cea2acd
     bugsnag.com/project-name: Test bugsnag app
     shortcut.com/project-id: '14'
     github.com/public-repository: Public
     github.com/project-slug: roadiehq/sample-service
+    backstage.io/code-coverage: enabled
 spec:
   type: service
   owner: irma
