@@ -13,7 +13,7 @@ spec:
       input:
         repoUrl: 'github.com?repo=sample-service&owner=sblausten'
         webhookUrl: 'https://webhook-handler-service.sblausten/handle-webhook'
-        token: ${{ secrets.CUSTOMER_TOKEN_10 }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         events:
           - push
           - pull_request
