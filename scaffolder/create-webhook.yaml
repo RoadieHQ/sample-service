@@ -3,6 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: create-webhook-test
+  title: Test webhooks
 spec:
   owner: roadie
   type: service
