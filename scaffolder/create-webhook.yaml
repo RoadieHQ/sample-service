@@ -15,7 +15,7 @@ spec:
         repoUrl: 'github.com?repo=fsdkljsdklflksf&owner=roadiehq'
         webhookUrl: 'https://webhook-handler-service.sblausten2/handle-webhook'
         contentType: 'json'
-#        token: ${{ secrets.GITHUB_TOKEN }}
+        token: 'test12389712398172938hjhs0'
     - id: log-message
       name: Log PR URL
       action: debug:log
