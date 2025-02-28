@@ -12,12 +12,10 @@ spec:
       id: add-webhook
       name: Add Webhook
       input:
-        repoUrl: 'github.com?repo=sample-service&owner=sblausten'
+        repoUrl: 'github.com?repo=fsdkljsdklflksf&owner=roadiehq'
         webhookUrl: 'https://webhook-handler-service.sblausten/handle-webhook'
+        contentType: 'json'
 #        token: ${{ secrets.GITHUB_TOKEN }}
-        events:
-          - push
-          - pull_request
     - id: log-message
       name: Log PR URL
       action: debug:log
