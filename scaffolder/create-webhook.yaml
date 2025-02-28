@@ -13,7 +13,7 @@ spec:
       name: Add Webhook
       input:
         repoUrl: 'github.com?repo=fsdkljsdklflksf&owner=roadiehq'
-        webhookUrl: 'https://webhook-handler-service.sblausten/handle-webhook'
+        webhookUrl: 'https://webhook-handler-service.sblausten2/handle-webhook'
         contentType: 'json'
 #        token: ${{ secrets.GITHUB_TOKEN }}
     - id: log-message
