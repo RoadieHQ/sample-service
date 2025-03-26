@@ -57,7 +57,6 @@ spec:
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
-        token: ${{ secrets.GITLAB_TOKEN }}
     - id: register
       name: Register
       action: catalog:register
