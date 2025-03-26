@@ -56,7 +56,7 @@ spec:
       action: publish:gitlab
       input:
         description: This is ${{ parameters.name }}
-        repoUrl: ""${{ parameters.repoUrl }}?owner=roadie-demo"
+        repoUrl: ${{ parameters.repoUrl }}?owner=roadie-demo
         defaultBranch: main
     - id: register
       name: Register
