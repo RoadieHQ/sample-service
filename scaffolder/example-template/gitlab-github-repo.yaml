@@ -2,9 +2,9 @@ apiVersion: scaffolder.backstage.io/v1beta3
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
-  name: create-node-repo
-  title: Create Repo in Github and Gitlab
-  description: Testing Github and Gitlab integrations
+  name: create-gitlab-repo
+  title: Create Repo in Gitlab
+  description: Testing Gitlab integrations
 spec:
   owner: user:sblausten
   type: service
@@ -33,7 +33,6 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - github.com
               - gitlab.com
 
   steps:
@@ -44,19 +43,19 @@ spec:
         url: ./content
         values:
           name: ${{ parameters.name }}
-    - id: publish-github
-      name: Publish Github repo
-      action: publish:github
-      input:
-        allowedHosts: ['github.com']
-        description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}
+#    - id: publish-github
+#      name: Publish Github repo
+#      action: publish:github
+#      input:
+#        allowedHosts: ['github.com']
+#        description: This is ${{ parameters.name }}
+#        repoUrl: ${{ parameters.repoUrl }}
     - id: publish-gitlab
       name: Publish Gitlab Repo
       action: publish:gitlab
       input:
         description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}?owner=roadie-demo
+        repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
     - id: register
       name: Register
