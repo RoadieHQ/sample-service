@@ -11,4 +11,5 @@ kind: User
 metadata:
   name: sblausten
 spec:
-  memberOf: engineering
+  memberOf:
+    - engineering
