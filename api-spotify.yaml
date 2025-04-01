@@ -9,4 +9,4 @@ spec:
   lifecycle: experimental
   owner: sblausten
   definition:
-    $openapi: ./api-spotify.yaml
+    $openapi: ./api-spotify-definition.yaml

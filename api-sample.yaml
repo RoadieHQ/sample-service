@@ -9,4 +9,4 @@ spec:
   lifecycle: experimental
   owner: sblausten
   definition:
-    $openapi: ./api-sample.yaml
+    $openapi: ./api-definition-sample.yaml
