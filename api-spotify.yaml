@@ -4,9 +4,11 @@ kind: API
 metadata:
   name: api-spotify-test-1
   description: The whole spotify api
+  annotations:
+    openapi/ref-basepath: ./
 spec:
   type: openapi
   lifecycle: experimental
   owner: sblausten
   definition:
-    $openapi: api-spotify-definition.yaml
+    $openapi: ./api-spotify-definition.yaml
