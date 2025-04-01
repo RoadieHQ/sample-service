@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: stripe-api-test-2
+  description: The whole stripe api
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: sblausten
+  definition:
+    $openapi: https://raw.githubusercontent.com/stripe/openapi/refs/heads/master/openapi/spec3.json
