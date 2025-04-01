@@ -9,4 +9,4 @@ spec:
   lifecycle: experimental
   owner: sblausten
   definition:
-    $text: https://raw.githubusercontent.com/stripe/openapi/refs/heads/master/openapi/spec3.json
+    $openapi: https://raw.githubusercontent.com/stripe/openapi/refs/heads/master/openapi/spec3.json

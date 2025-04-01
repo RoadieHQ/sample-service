@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-sample-test-1
+  description: A small api spec
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: sblausten
+  definition:
+    $openapi: ./api-sample.yaml
