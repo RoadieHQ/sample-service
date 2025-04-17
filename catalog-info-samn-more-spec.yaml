@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Product
 metadata:
-  name: product-kind-tester
-  title: Product Kind Tester
+  name: product-kind-tester-with-spec-changes
+  title: Product Kind Tester with Spec Changes
   description: |
     A service for testing Product functionality. Configured by Samn.
   annotations:
