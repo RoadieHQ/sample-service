@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  title: Sample open API v3.0.4
+  name: open-api-sample-v304
+  description: The Sample Open API version v3.0.4
+  tags:
+    - unstable
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:roadiehq/engineering
+  system: sample-system
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/3-x-api-spec.yaml
