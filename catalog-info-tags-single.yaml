@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: tags-test-single
   title: generated-component-tags-single
+  description: test
   annotations:
     github.com/project-slug: roadiehq/sample-service
 spec:
