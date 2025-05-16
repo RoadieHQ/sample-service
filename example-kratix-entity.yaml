@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-request-jenkins # Name of the Resource Component
+  title: "my-request Jenkins" # Title to be displayed in Backstage
+  description: "my-request Jenkins created via cicd Promise" # Description of the resource
+  annotations:
+    backstage.io/kubernetes-label-selector: cicd-cr=my-request
+    kratix.io/type: resource # This tells the front-end plugin that this is a Kratix Resource
+    kratix.io/status: |
+      {"message": "Some Status Message"}
+    kratix.io/promise-name: postgresqls.marketplace.kratix.io # The Jenkins Promise's metadata.name
+    kratix.io/group: "marketplace.kratix.io" # Promise API Group    
+    kratix.io/version: "v1alpha1" # Promise API Version
+    kratix.io/kind: pod # Promise API Kind
+    kratix.io/name: postgresql # Name of the Resource
+    kratix.io/namespace: default # Namespace of the Resource
+    kratix.io/backstage-promise-template: jenkins-promise-template # metadata.name of the Backstage Template used to create the resource
+spec:
+  type: kratix-resource # Alternatively, you can set this to `kratix-resource` to indicate that this is a Kratix Resource
+  lifecycle: production
+  owner: kratix-platform
+  dependsOn:
+    - component:default/jenkins-promise
+  # remainder of the component spec...
