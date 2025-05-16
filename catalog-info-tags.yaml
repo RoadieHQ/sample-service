@@ -9,5 +9,6 @@ metadata:
     - test
     - generated
 spec:
+  owner: user:sblausten
   type: service
   lifecycle: experimental
