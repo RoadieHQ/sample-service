@@ -12,7 +12,7 @@ metadata:
     kratix.io/promise-name: postgresqls.marketplace.kratix.io # The Jenkins Promise's metadata.name
     kratix.io/group: "marketplace.kratix.io" # Promise API Group    
     kratix.io/version: "v1alpha1" # Promise API Version
-    kratix.io/kind: Jenkins # Promise API Kind
+    kratix.io/kind: postgresql # Promise API Kind
     kratix.io/name: postgresql # Name of the Resource
     kratix.io/namespace: default # Namespace of the Resource
     kratix.io/backstage-promise-template: jenkins-promise-template # metadata.name of the Backstage Template used to create the resource
