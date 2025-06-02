@@ -1,4 +1,4 @@
-# Docs for sample-service-1
+# Docs for sample-service test
 
 Anyone who has spent more than a month working in a decently sized software engineering department
 can tell you the pain of finding documentation. Everyone wishes that great docs for internal
