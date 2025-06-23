@@ -1,3 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: github
+  description: Github Administration and Automation
+  tags:
+    - exclude-from-maturity-report
+spec:
+  type: saas
+  lifecycle: production
+  owner: ptci-13743137
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -10,5 +21,21 @@ metadata:
 spec:
   type: service
   lifecycle: production
+  owner: ptci-13743137
+  system: github
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: github-2fa-workflow
+  description: |
+    This component is a GitHub workflow that generates a TOTP passcode for a GitHub account that requires 2FA and used in automation.
+  annotations:
+    github.com/project-slug: relativityone/github-2fa-workflow
+    backstage.io/techdocs-ref: dir:. # This assumes you have a /docs folder
+spec:
+  type: github action
+  lifecycle: experimental
   owner: ptci-13743137
   system: github
