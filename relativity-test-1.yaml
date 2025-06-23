@@ -23,7 +23,6 @@ spec:
   lifecycle: production
   owner: ptci-13743137
   system: github
-
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -39,3 +38,4 @@ spec:
   lifecycle: experimental
   owner: ptci-13743137
   system: github
+---
