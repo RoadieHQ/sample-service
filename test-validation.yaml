@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test-verylongname-verylongname-verylongname-verylongname-verylongname-verylongname-verylongname
+  name: redshift-table-42matters_app_data-android_apps_countries_availability
   description: A test service
   annotations:
     github.com/project-slug: sblausten/sample-service
