@@ -9,7 +9,14 @@ spec:
   type: service
 
   steps:
-    # 1️⃣ Read both .tf files
+    # 1️⃣ Copy everything in the same directory into the workspace
+    - id: fetch
+      name: Fetch template directory
+      action: fetch:template
+      input:
+        url: ./
+
+    # 2️⃣ Read both .tf files
     - id: readA
       name: Read base HCL file
       action: fs:read
@@ -22,7 +29,7 @@ spec:
       input:
         path: ./override.tf
 
-    # 2️⃣ Merge them
+    # 3️⃣ Merge them
     - id: merge
       name: Merge HCL files
       action: hcl:merge
@@ -30,7 +37,7 @@ spec:
         aSourceContent: ${{ steps.readA.output.content }}
         bSourceContent: ${{ steps.readB.output.content }}
 
-    # 3️⃣ Write result
+    # 4️⃣ Write result
     - id: write
       name: Write merged HCL
       action: fs:write
