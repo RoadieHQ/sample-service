@@ -1,32 +1,37 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: hcl-merge-test
-  title: HCL Merge Inline Test
-  description: Minimal template to verify hcl:merge runs
+  name: hcl-merge-map-inline
+  title: HCL Merge Map Inline
+  description: Minimal template to test hcl:merge with map-style HCL
 spec:
   owner: user:guest
   type: service
 
   steps:
+    # Merge two map-style HCL strings
     - id: merge
-      name: Merge HCL strings
+      name: Merge HCL maps
       action: hcl:merge
       input:
         aSourceContent: |
-          resource "null_resource" "example" {
-            provisioner "local-exec" {
-              command = "echo hello"
+          {
+            "region": "us-east-1",
+            "instance_type": "t2.micro",
+            "tags": {
+              "env": "dev"
             }
           }
 
         bSourceContent: |
-          resource "null_resource" "example" {
-            provisioner "local-exec" {
-              command = "echo world"
+          {
+            "region": "eu-central-1",
+            "tags": {
+              "team": "engineering"
             }
           }
 
+    # Log the merged result
     - id: log
       name: Log merged HCL
       action: debug:log
