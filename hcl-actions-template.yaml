@@ -1,26 +1,27 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: hcl-merge-inline-minimal
-  title: HCL Merge Inline Minimal
-  description: Minimal template to verify hcl:merge runs
+  name: hcl-merge-inline-json
+  title: HCL Merge Inline (map)
+  description: Merge two map-style HCL objects
 spec:
   owner: user:guest
   type: service
 
   steps:
     - id: merge
-      name: Merge HCL content
+      name: Merge map-style HCL
       action: hcl:merge
       input:
         aSourceContent: |
-          variable "region" {
-            default = "us-east-1"
+          {
+            "region": "us-east-1",
+            "instance_type": "t2.micro"
           }
 
         bSourceContent: |
-          variable "region" {
-            default = "eu-central-1"
+          {
+            "region": "eu-central-1"
           }
 
     - id: log
