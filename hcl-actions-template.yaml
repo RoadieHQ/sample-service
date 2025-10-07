@@ -3,30 +3,32 @@ kind: Template
 metadata:
   name: hcl-merge-test
   title: HCL Merge Test
-  description: Minimal template to verify hcl:merge action runs
+  description: Minimal example verifying hcl:merge runs
 spec:
   owner: user:guest
   type: service
 
-  parameters:
-    - title: Input
-      required: [name]
-      properties:
-        name:
-          type: string
-          description: Just a test parameter
-
   steps:
     - id: merge
-      name: Merge HCL files
+      name: Merge HCL content
       action: hcl:merge
       input:
-        files:
-          - path: ./base.tf
-          - path: ./override.tf
-        outputPath: ./merged.tf
+        aSourceContent: |
+          variable "region" {
+            default = "us-east-1"
+          }
+
+        bSourceContent: |
+          variable "region" {
+            default = "eu-central-1"
+          }
+          
+      - id: write
+        name: Write merged HCL
+        action: fs:write
+        input:
+          path: ./merged.tf
+          content: ${{ steps.merge.output.merged }}
 
   output:
-    links:
-      - title: Merged HCL
-        url: ./merged.tf
+    merged: ${{ steps.merge.output.merged }}
