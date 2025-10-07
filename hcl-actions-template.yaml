@@ -18,38 +18,15 @@ spec:
         name:
           title: Component Name
           type: string
-          description: Name of the component
-          pattern: '^[a-z]([-a-z0-9]*[a-z0-9])?$'
+          description: Name of the component (lowercase, letters, numbers, and hyphens only)
+          pattern: '^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
           ui:autofocus: true
+          ui:help: 'Use lowercase letters, numbers, and hyphens. Must start and end with alphanumeric character.'
 
   steps:
     - id: test-hcl-merge
       name: Test HCL Merge
       action: hcl:merge
-      input:
-        aSourceContent: |
-          resource "aws_instance" "example" {
-            ami           = "ami-12345678"
-            instance_type = "t2.micro"
-            tags = {
-              Name = "Example"
-              Environment = "dev"
-            }
-          }
-        bSourceContent: |
-          resource "aws_instance" "example" {
-            instance_type = "t3.small"
-            tags = {
-              Environment = "production"
-              Owner = "devops"
-            }
-          }
-        options:
-          mergeMapKeys: false
-
-    - id: test-hcl-merge-write
-      name: Test HCL Merge Write
-      action: hcl:merge:write
       input:
         aSourceContent: |
           variable "region" {
@@ -63,9 +40,24 @@ spec:
             type        = string
             default     = "t2.micro"
           }
+
+    - id: test-hcl-merge-write
+      name: Test HCL Merge Write
+      action: hcl:merge:write
+      input:
+        aSourceContent: |
+          variable "environment" {
+            description = "Environment name"
+            type        = string
+            default     = "development"
+          }
+        bSourceContent: |
+          variable "owner" {
+            description = "Resource owner"
+            type        = string
+            default     = "devops"
+          }
         outputPath: ./merged-variables.tf
-        options:
-          mergeMapKeys: false
 
     - id: create-basic-file
       name: Create basic file
