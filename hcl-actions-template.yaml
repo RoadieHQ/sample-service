@@ -1,39 +1,81 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: hcl-merge-map-inline
-  title: HCL Merge Map Inline
-  description: Minimal template to test hcl:merge with map-style HCL
+  name: hcl-merge-test
+  title: HCL Merge Test
+  description: Minimal template to test hcl:merge action
+  tags:
+    - hcl
+    - test
 spec:
-  owner: user:guest
+  owner: backstage/techdocs-core
   type: service
+  parameters:
+    - title: Basic Information
+      required:
+        - name
+      properties:
+        name:
+          title: Component Name
+          type: string
+          description: Name of the component
+          pattern: '^[a-z]([-a-z0-9]*[a-z0-9])?$'
+          ui:autofocus: true
 
   steps:
-    # Merge two map-style HCL strings
-    - id: merge
-      name: Merge HCL maps
+    - id: test-hcl-merge
+      name: Test HCL Merge
       action: hcl:merge
       input:
         aSourceContent: |
-          {
-            "region": "us-east-1",
-            "instance_type": "t2.micro",
-            "tags": {
-              "env": "dev"
+          resource "aws_instance" "example" {
+            ami           = "ami-12345678"
+            instance_type = "t2.micro"
+            tags = {
+              Name = "Example"
+              Environment = "dev"
             }
           }
-
         bSourceContent: |
-          {
-            "region": "eu-central-1",
-            "tags": {
-              "team": "engineering"
+          resource "aws_instance" "example" {
+            instance_type = "t3.small"
+            tags = {
+              Environment = "production"
+              Owner = "devops"
             }
           }
+        options:
+          mergeMapKeys: false
 
-    # Log the merged result
-    - id: log
-      name: Log merged HCL
-      action: debug:log
+    - id: test-hcl-merge-write
+      name: Test HCL Merge Write
+      action: hcl:merge:write
       input:
-        message: ${{ steps.merge.output.merged }}
+        aSourceContent: |
+          variable "region" {
+            description = "AWS region"
+            type        = string
+            default     = "us-west-2"
+          }
+        bSourceContent: |
+          variable "instance_type" {
+            description = "Instance type"
+            type        = string
+            default     = "t2.micro"
+          }
+        outputPath: ./merged-variables.tf
+        options:
+          mergeMapKeys: false
+
+    - id: create-basic-file
+      name: Create basic file
+      action: fetch:template
+      input:
+        url: ./files
+        values:
+          name: ${{ parameters.name }}
+
+  output:
+    links:
+      - title: View merged result
+        url: ./merged-variables.tf
