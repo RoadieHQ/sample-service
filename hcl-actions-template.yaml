@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: hcl-merge-inline-json
-  title: HCL Merge Inline (map)
+  name: hcl-merge-test
+  title: HCL Merge Test
   description: Merge two map-style HCL objects
 spec:
   owner: user:guest
@@ -10,22 +10,27 @@ spec:
 
   steps:
     - id: merge
-      name: Merge map-style HCL
+      name: Merge HCL content
       action: hcl:merge
       input:
         aSourceContent: |
           {
             "region": "us-east-1",
-            "instance_type": "t2.micro"
+            "instance_type": "t2.micro",
+            "tags": {
+              "env": "dev"
+            }
           }
-
         bSourceContent: |
           {
-            "region": "eu-central-1"
+            "region": "eu-central-1",
+            "tags": {
+              "team": "engineering"
+            }
           }
 
     - id: log
-      name: Log merged HCL
+      name: Log merged result
       action: debug:log
       input:
         message: ${{ steps.merge.output.merged }}
