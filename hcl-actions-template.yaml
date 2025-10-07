@@ -3,19 +3,23 @@ kind: Template
 metadata:
   name: hcl-merge-test
   title: HCL Merge Test
-  description: Minimal example verifying hcl:merge runs
+  description: Minimal working test for hcl:merge
 spec:
   owner: user:guest
   type: service
 
   steps:
     - id: merge
-      name: Merge HCL content
+      name: Merge HCL variables
       action: hcl:merge
       input:
         aSourceContent: |
           variable "region" {
             default = "us-east-1"
+          }
+
+          variable "instance_type" {
+            default = "t2.micro"
           }
 
         bSourceContent: |
