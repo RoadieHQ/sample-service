@@ -22,13 +22,6 @@ spec:
           variable "region" {
             default = "eu-central-1"
           }
-          
-      - id: write
-        name: Write merged HCL
-        action: fs:write
-        input:
-          path: ./merged.tf
-          content: ${{ steps.merge.output.merged }}
 
   output:
     merged: ${{ steps.merge.output.merged }}
