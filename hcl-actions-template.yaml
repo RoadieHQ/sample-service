@@ -1,0 +1,32 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: hcl-merge-test
+  title: HCL Merge Test
+  description: Minimal template to verify hcl:merge action runs
+spec:
+  owner: user:guest
+  type: service
+
+  parameters:
+    - title: Input
+      required: [name]
+      properties:
+        name:
+          type: string
+          description: Just a test parameter
+
+  steps:
+    - id: merge
+      name: Merge HCL files
+      action: hcl:merge
+      input:
+        files:
+          - path: ./base.tf
+          - path: ./override.tf
+        outputPath: ./merged.tf
+
+  output:
+    links:
+      - title: Merged HCL
+        url: ./merged.tf
