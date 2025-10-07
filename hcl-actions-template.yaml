@@ -1,51 +1,30 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: hcl-merge-flat
-  title: HCL Merge (flat structure)
-  description: Minimal example merging two .tf files from same directory
+  name: hcl-merge-inline-minimal
+  title: HCL Merge Inline Minimal
+  description: Minimal template to verify hcl:merge runs
 spec:
   owner: user:guest
   type: service
 
   steps:
-    # 1️⃣ Copy everything in the same directory into the workspace
-    - id: fetch
-      name: Fetch template directory
-      action: fetch:template
-      input:
-        url: ./
-
-    # 2️⃣ Read both .tf files
-    - id: readA
-      name: Read base HCL file
-      action: fs:read
-      input:
-        path: ./base.tf
-
-    - id: readB
-      name: Read override HCL file
-      action: fs:read
-      input:
-        path: ./override.tf
-
-    # 3️⃣ Merge them
     - id: merge
-      name: Merge HCL files
+      name: Merge HCL content
       action: hcl:merge
       input:
-        aSourceContent: ${{ steps.readA.output.content }}
-        bSourceContent: ${{ steps.readB.output.content }}
+        aSourceContent: |
+          variable "region" {
+            default = "us-east-1"
+          }
 
-    # 4️⃣ Write result
-    - id: write
-      name: Write merged HCL
-      action: fs:write
+        bSourceContent: |
+          variable "region" {
+            default = "eu-central-1"
+          }
+
+    - id: log
+      name: Log merged HCL
+      action: debug:log
       input:
-        path: ./merged.tf
-        content: ${{ steps.merge.output.merged }}
-
-  output:
-    links:
-      - title: View merged.tf
-        url: ./merged.tf
+        message: ${{ steps.merge.output.merged }}
