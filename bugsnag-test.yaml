@@ -12,7 +12,7 @@ metadata:
     bugsnag.com/project-key: TestOrganisation/1188e5020539166a9928aa8c8ac35606
 spec:
   type: service
-  owner: user:irma
+  owner: unkown
   lifecycle: experimental
   providesApis:
     - sample-service
