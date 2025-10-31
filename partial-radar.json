@@ -1,0 +1,32 @@
+{
+  "rings": [
+    {
+      "id": "use",
+      "name": "USE",
+      "color": "#93c47d"
+    }
+  ],
+  "quadrants": [
+    {
+      "id": "languages",
+      "name": "Languages"
+    }
+  ],
+  "entries": [
+    {
+      "timeline": [
+        {
+          "moved": 0,
+          "ringId": "use",
+          "date": "2020-08-06T00:00:00.000Z",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        }
+      ],
+      "url": "#",
+      "key": "javascript",
+      "id": "javascript",
+      "title": "JavaScript",
+      "quadrant": "languages"
+    }
+  ]
+}
