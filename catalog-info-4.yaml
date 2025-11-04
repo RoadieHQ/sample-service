@@ -5,6 +5,7 @@ metadata:
   title: Sample Service 4
   tags:
     - test
+    - secondtag
   description: |
     A service for testing Roadie functionality. Configured for GitHub Actions, Sentry, AWS Lambda.
   annotations:
