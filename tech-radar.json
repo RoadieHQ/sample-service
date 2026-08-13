@@ -1,184 +1,92 @@
 {
   "rings": [
-    {
-      "id": "use",
-      "name": "USE",
-      "color": "#93c47d"
-    },
-    {
-      "id": "trial",
-      "name": "TRIAL",
-      "color": "#93d2c2"
-    },
-    {
-      "id": "assess",
-      "name": "ASSESS",
-      "color": "#fbdb84"
-    },
-    {
-      "id": "hold",
-      "name": "HOLD",
-      "color": "#efafa9"
-    }
+    { "id": "use", "name": "USE", "color": "#93c47d" },
+    { "id": "trial", "name": "TRIAL", "color": "#93d2c2" },
+    { "id": "assess", "name": "ASSESS", "color": "#fbdb84" },
+    { "id": "hold", "name": "HOLD", "color": "#efafa9" }
   ],
   "quadrants": [
-    {
-      "id": "infrastructure",
-      "name": "Infrastructure"
-    },
-    {
-      "id": "frameworks",
-      "name": "Frameworks"
-    },
-    {
-      "id": "languages",
-      "name": "Languages"
-    },
-    {
-      "id": "process",
-      "name": "Process"
-    }
+    { "id": "infrastructure", "name": "Infrastructure" },
+    { "id": "frameworks", "name": "Frameworks" },
+    { "id": "languages", "name": "Languages" },
+    { "id": "process", "name": "Process" }
   ],
   "entries": [
     {
+      "key": "note-example",
+      "id": "note-example",
+      "title": "Note",
+      "quadrant": "languages",
+      "description": "Hello\n\n> [!NOTE]\n>\n> Useful information that users should know, even when skimming content.\n\nGoodbye",
+      "url": "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts",
       "timeline": [
         {
           "moved": 0,
           "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          "date": "2026-08-01T00:00:00.000Z",
+          "description": "> [!NOTE]\n>\n> Alerts render in the History table too."
         }
-      ],
-      "url": "#",
-      "key": "javascript",
-      "id": "javascript",
-      "title": "JavaScript",
-      "quadrant": "languages"
+      ]
     },
     {
+      "key": "tip-example",
+      "id": "tip-example",
+      "title": "Tip",
+      "quadrant": "frameworks",
+      "description": "> [!TIP]\n> Helpful advice for doing things better or more easily.\n\nThe body sits on the line straight after the marker here, with no blank quote line.",
+      "timeline": [
+        {
+          "moved": 1,
+          "ringId": "trial",
+          "date": "2026-07-01T00:00:00.000Z",
+          "description": "Moved to trial."
+        }
+      ]
+    },
+    {
+      "key": "important-example",
+      "id": "important-example",
+      "title": "Important",
+      "quadrant": "infrastructure",
+      "description": "> [!IMPORTANT]\n>\n> Key information users need to know to achieve their goal.\n>\n> Alerts can span multiple paragraphs and contain **bold text**, `code`, and [links](https://roadie.io).",
       "timeline": [
         {
           "moved": 0,
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+          "ringId": "assess",
+          "date": "2026-06-01T00:00:00.000Z",
+          "description": "Assessing."
         }
-      ],
-      "url": "#",
-      "key": "typescript",
-      "id": "typescript",
-      "title": "TypeScript",
-      "quadrant": "languages"
+      ]
     },
     {
+      "key": "warning-example",
+      "id": "warning-example",
+      "title": "Warning",
+      "quadrant": "process",
+      "description": "> [!WARNING]\n>\n> Urgent info that needs immediate user attention to avoid problems.\n\nLowercase markers work as well:\n\n> [!caution]\n>\n> Advises about risks or negative outcomes of certain actions.",
       "timeline": [
         {
-          "moved": 0,
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "webpack",
-      "id": "webpack",
-      "title": "Webpack",
-      "quadrant": "frameworks"
-    },
-    {
-      "timeline": [
-        {
-          "moved": 0,
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "react",
-      "id": "react",
-      "title": "React",
-      "quadrant": "frameworks"
-    },
-    {
-      "timeline": [
-        {
-          "moved": 0,
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "code-reviews",
-      "id": "code-reviews",
-      "title": "Code Reviews",
-      "quadrant": "process"
-    },
-    {
-      "timeline": [
-        {
-          "moved": 0,
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "docs-like-code",
-      "id": "docs-like-code",
-      "title": "Docs-like-code",
-      "quadrant": "process"
-    },
-    {
-      "timeline": [
-        {
+          "moved": -1,
           "ringId": "hold",
-          "date": "2020-08-06T00:00:00.000Z"
+          "date": "2026-05-01T00:00:00.000Z",
+          "description": "Moved to hold."
         }
-      ],
-      "url": "#",
-      "key": "force-push",
-      "id": "force-push",
-      "title": "Force push to master",
-      "quadrant": "process"
+      ]
     },
     {
-      "timeline": [
-        {
-          "ringId": "use",
-          "date": "2020-08-06T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "github-actions",
-      "id": "github-actions",
-      "title": "GitHub Actions",
-      "quadrant": "infrastructure"
-    },
-    {
+      "key": "not-an-alert",
+      "id": "not-an-alert",
+      "title": "Control (no alerts)",
+      "quadrant": "languages",
+      "description": "Nothing below should be turned into an alert label.\n\n> A plain blockquote stays a plain blockquote.\n\n> [!SOMETHING]\n>\n> Unknown markers are left alone.\n\nAn inline mention of [!NOTE] in a sentence is untouched.\n\n    > [!NOTE]\n    > Indented code blocks are untouched.",
       "timeline": [
         {
           "moved": 0,
           "ringId": "use",
-          "date": "2021-02-09T00:00:00.000Z"
+          "date": "2026-04-01T00:00:00.000Z",
+          "description": "No alerts here."
         }
-      ],
-      "url": "#",
-      "key": "backstage",
-      "id": "backstage",
-      "title": "Backstage",
-      "quadrant": "infrastructure"
-    },
-        {
-      "timeline": [
-        {
-          "moved": 0,
-          "ringId": "use",
-          "date": "2021-02-09T00:00:00.000Z"
-        }
-      ],
-      "url": "#",
-      "key": "roadie",
-      "id": "roadie",
-      "title": "Roadie",
-      "quadrant": "infrastructure"
+      ]
     }
   ]
 }
